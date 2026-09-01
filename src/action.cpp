@@ -89,6 +89,17 @@ static const int vtolLandingRadius = 23;
 // Sanity checks
 static_assert(MAX_SULK_TIME > MIN_SULK_TIME, "MAX_SULK_TIME must be > MIN_SULK_TIME");
 
+int actionTurretRotationRate(const WEAPON_STATS &weaponStats, bool repairDroid)
+{
+	int rotationRate = DEG(ACTION_TURRET_ROTATION_RATE) * 4;
+	if (weaponStats.weight > HEAVY_WEAPON_WEIGHT && !repairDroid)
+	{
+		const UDWORD excess = DEG(100) * (weaponStats.weight - HEAVY_WEAPON_WEIGHT) / weaponStats.weight;
+		rotationRate = DEG(ACTION_TURRET_ROTATION_RATE) * 2 - excess;
+	}
+	return std::max(gameTimeAdjustedIncrement(rotationRate), DEG(1));
+}
+
 /**
  * @typedef tileMatchFunction
  *
@@ -325,7 +336,7 @@ bool actionTargetTurret(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, WEAPON *
 	bool bRepair = psAttacker->type == OBJ_DROID && ((DROID *)psAttacker)->droidType == DROID_REPAIR;
 
 	// these are constants now and can be set up at the start of the function
-	int rotRate = DEG(ACTION_TURRET_ROTATION_RATE) * 4;
+	int rotRate = actionTurretRotationRate(*psWeapStats, bRepair);
 	int pitchRate = DEG(ACTION_TURRET_ROTATION_RATE) * 2;
 
 	// extra heavy weapons on some structures need to rotate and pitch more slowly
@@ -333,8 +344,7 @@ bool actionTargetTurret(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, WEAPON *
 	{
 		UDWORD excess = DEG(100) * (psWeapStats->weight - HEAVY_WEAPON_WEIGHT) / psWeapStats->weight;
 
-		rotRate = DEG(ACTION_TURRET_ROTATION_RATE) * 2 - excess;
-		pitchRate = rotRate / 2;
+		pitchRate = (DEG(ACTION_TURRET_ROTATION_RATE) * 2 - excess) / 2;
 	}
 
 	tRotation = psWeapon->rot.direction;
@@ -372,8 +382,6 @@ bool actionTargetTurret(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, WEAPON *
 	}
 
 	//get the maximum rotation this frame
-	rotRate = gameTimeAdjustedIncrement(rotRate);
-	rotRate = MAX(rotRate, DEG(1));
 	pitchRate = gameTimeAdjustedIncrement(pitchRate);
 	pitchRate = MAX(pitchRate, DEG(1));
 

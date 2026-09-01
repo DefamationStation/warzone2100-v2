@@ -51,6 +51,9 @@
 #include "gamehistorylogger.h"
 #include "stdinreader.h"
 #include "seqdisp.h"
+#if defined(WZ_ML_EXPERIMENT)
+#include "ml_unit_control.h"
+#endif
 
 #include <cwchar>
 
@@ -96,6 +99,13 @@ static bool wz_lobby_slashcommands = false;
 static bool wz_lobby_slashcommands_hostexit = false;
 static int wz_min_autostart_players = -1;
 static std::string wz_lobby_game_to_connect_str;
+#if defined(WZ_ML_EXPERIMENT)
+static std::string wz_ml_policy;
+static std::string wz_ml_players = "0";
+static std::string wz_ml_trace;
+static std::string wz_ml_resolved_stats;
+static std::string wz_ml_combat_test;
+#endif
 
 #if defined(WZ_OS_WIN)
 
@@ -383,6 +393,13 @@ typedef enum
 	CLI_VIDEOURL,
 #endif
 	CLI_HOST_CONNECTION_PROVIDER,
+#if defined(WZ_ML_EXPERIMENT)
+	CLI_ML_POLICY,
+	CLI_ML_PLAYERS,
+	CLI_ML_TRACE,
+	CLI_ML_RESOLVED_STATS,
+	CLI_ML_COMBAT_TEST,
+#endif
 } CLI_OPTIONS;
 
 // Separate table that avoids *any* translated strings, to avoid any risk of gettext / libintl function calls
@@ -488,6 +505,13 @@ static const struct poptOption *getOptionsTable()
 		{ "videourl", POPT_ARG_STRING, CLI_VIDEOURL,   N_("Base URL for on-demand video downloads"), N_("Base video URL") },
 #endif
 		{ "host-connection-provider", POPT_ARG_STRING, CLI_HOST_CONNECTION_PROVIDER, N_("Specify connection provider type to use when hosting game sessions"), "[tcp]" },
+#if defined(WZ_ML_EXPERIMENT)
+		{ "ml-policy", POPT_ARG_STRING, CLI_ML_POLICY, N_("Select the experimental unit policy"), N_("off, scripted, or native:<manifest>") },
+		{ "ml-players", POPT_ARG_STRING, CLI_ML_PLAYERS, N_("Select ML-controlled player indexes"), N_("comma-separated indexes") },
+		{ "ml-trace", POPT_ARG_STRING, CLI_ML_TRACE, N_("Write quantized ML actions to a JSONL file"), N_("file") },
+		{ "ml-resolved-stats", POPT_ARG_STRING, CLI_ML_RESOLVED_STATS, N_("Write resolved ML scenario stats to a JSON file"), N_("file") },
+		{ "ml-combat-test", POPT_ARG_STRING, CLI_ML_COMBAT_TEST, N_("Run the fixed experimental 2v2 test from a JSON spec"), N_("file") },
+#endif
 
 		// Terminating entry
 		{ nullptr, 0, 0,              nullptr,                                    nullptr },
@@ -1496,8 +1520,52 @@ bool ParseCommandLine(int argc, const char * const *argv)
 			war_setHostConnectionProvider(pt);
 			break;
 
+#if defined(WZ_ML_EXPERIMENT)
+		case CLI_ML_POLICY:
+			token = poptGetOptArg(poptCon);
+			if (token == nullptr) qFatal("Missing --ml-policy value");
+			wz_ml_policy = token;
+			break;
+		case CLI_ML_PLAYERS:
+			token = poptGetOptArg(poptCon);
+			if (token == nullptr) qFatal("Missing --ml-players value");
+			wz_ml_players = token;
+			break;
+		case CLI_ML_TRACE:
+			token = poptGetOptArg(poptCon);
+			if (token == nullptr) qFatal("Missing --ml-trace value");
+			wz_ml_trace = token;
+			break;
+		case CLI_ML_RESOLVED_STATS:
+			token = poptGetOptArg(poptCon);
+			if (token == nullptr) qFatal("Missing --ml-resolved-stats value");
+			wz_ml_resolved_stats = token;
+			break;
+		case CLI_ML_COMBAT_TEST:
+			token = poptGetOptArg(poptCon);
+			if (token == nullptr) qFatal("Missing --ml-combat-test value");
+			wz_ml_combat_test = token;
+			break;
+#endif
+
 		} // switch (option)
 	} // while
+
+#if defined(WZ_ML_EXPERIMENT)
+	if (!wz_ml_combat_test.empty() && wz_ml_policy.empty())
+	{
+		wz_ml_policy = "scripted";
+		wz_ml_players = "0,1";
+	}
+	if (!wz_ml_policy.empty() && !wzml::configure(wz_ml_policy, wz_ml_players, wz_ml_trace, wz_ml_resolved_stats))
+	{
+		qFatal("Invalid or unusable ML policy configuration");
+	}
+	if (!wz_ml_combat_test.empty() && !wzml::configureCombatTest(wz_ml_combat_test))
+	{
+		qFatal("Invalid or unusable ML combat-test specification");
+	}
+#endif
 
 	return true;
 }

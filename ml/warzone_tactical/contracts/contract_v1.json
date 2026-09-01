@@ -1,0 +1,86 @@
+{
+  "contract": "warzone-tactical-v1",
+  "update_ticks": 100,
+  "engine_ticks_per_second": 1000,
+  "action": {
+    "heading_delta_q": {"minimum": -2048, "maximum": 2047, "steps_per_turn": 4096},
+    "speed_fraction_q": {"minimum": 0, "maximum": 256},
+    "target_slot_q": {"none": -1, "minimum": 0, "maximum": 7},
+    "fire_q": {"minimum": 0, "maximum": 1},
+    "rounding": "half_away_from_zero_cpp_std_lround",
+    "reverse_supported": false
+  },
+  "observation": {
+    "size": 200,
+    "storage": "signed_q15",
+    "model_scale": "2^-15",
+    "blocks": [
+      {"name": "self_weapon_turret", "offset": 0, "size": 20},
+      {"name": "boundary_obstacle_rays", "offset": 20, "size": 8},
+      {"name": "allies", "offset": 28, "slots": 7, "slot_size": 10},
+      {"name": "enemies", "offset": 98, "slots": 8, "slot_size": 11},
+      {"name": "recovery", "offset": 186, "size": 4},
+      {"name": "time_previous_action", "offset": 190, "size": 10}
+    ],
+    "slot_assignment": "ascending_droid_id_at_scenario_start",
+    "compact_after_death": false
+  },
+  "network": [200, 256, 256, 12],
+  "hidden_activation": "tanh",
+  "native_operations": ["Gemm", "Bias", "Tanh"],
+  "scenario_components": {
+    "body": "Body1REC",
+    "propulsion": "tracked01",
+    "weapon": "Rocket-Pod",
+    "weapon_role": "direct_fire_anti_tank_no_splash_no_magazine_reload"
+  },
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "combat_target_position": "cached_observation_batch_position",
+  "stage_2_range_contract": {
+    "lower_bound": 512,
+    "lower_bound_inclusive": false,
+    "upper_bound": 1088,
+    "upper_bound_inclusive": true,
+    "definition": "short_range < distance <= long_range",
+    "reason": "Rocket-Pod has 41 successful integer hit rolls at short range and 51 at long range. Distance at or below short_range is worse."
+  },
+  "stage_time_limits_ticks": {
+    "stage_2": 30000,
+    "stage_3": 60000,
+    "stage_4": 90000
+  },
+  "combat_ordering": {
+    "status": "eliminated_by_engine_tick_start_snapshot",
+    "verification": "Zero combat-order mismatches verify the snapshot fix. They do not show that live sequential positions were equal.",
+    "ml_behavior": "Aim, range, turret alignment, and fire use the observation-batch target position.",
+    "stock_asymmetry": "Stock droids use live sequential target positions. Record this asymmetry in the incumbent benchmark report.",
+    "instant_hit_warning": "Re-audit the temporary target-position override before an instant-hit weapon is used."
+  },
+  "post_fire_turret_pitch": "restore_action_target_pitch",
+  "accepted_divergences": [
+    {
+      "id": "V1-COMBAT-001",
+      "area": "projectile target lead",
+      "detail": "The simulator does not model the engine bumpTime gate or moving-target lead for misses.",
+      "scope": "Accepted only for Rocket-Pod V1 with no splash damage.",
+      "follow_up": "Model bump bookkeeping and target lead before mixed weapons or splash damage."
+    },
+    {
+      "id": "V1-COMBAT-003",
+      "area": "projectile impact timing",
+      "detail": "The simulator uses center distance. The engine can collide with the target surface earlier.",
+      "scope": "The simulator must never apply damage before the engine trace. It may lag by at most one 100 ms update.",
+      "follow_up": "Model projectile and target collision shapes before the one-update lag bound becomes material."
+    }
+  ],
+  "v2_slot_rule_required_before_expansion": {
+    "topics": ["mid-game spawns", "more than eight enemies", "all assigned enemy slots dead"],
+    "v1_behavior": "The fixed roster is assigned on the first observation and never compacted."
+  },
+  "result": {
+    "win": "opposing team loses all combat units first",
+    "loss": "evaluated team loses all combat units first",
+    "draw": "both teams lose their final unit in the same engine update",
+    "unfinished": "time limit expires while both teams have a combat unit"
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"seed": 1,
+	"duration_ticks": 90000,
+	"report_path": "ml-combat-result.json",
+	"range_invariant": false,
+	"hit_rate_samples": 0,
+	"hit_rate_band": "short"
+}

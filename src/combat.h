@@ -33,6 +33,11 @@ bool objectBelowHealthLevel(BASE_OBJECT *psObj, const unsigned int percentage);
 /* Fire a weapon at something added int weapon_slot*/
 bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, int weapon_slot);
 
+#if defined(WZ_ML_EXPERIMENT)
+void combSetMlTestHitRoll(int roll);
+int combGetMlTestHitResult();
+#endif
+
 /*checks through the target players list of structures and droids to see
 if any support a counter battery sensor*/
 void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget);

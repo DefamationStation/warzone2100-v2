@@ -1658,7 +1658,8 @@ static void moveUpdateDroidPos(DROID *psDroid, int32_t dx, int32_t dy)
 }
 
 /* Update a tracked droids position and speed given target values */
-static void moveUpdateGroundModel(DROID *psDroid, SDWORD speed, uint16_t direction)
+static void moveUpdateGroundModel(DROID *psDroid, SDWORD speed, uint16_t direction,
+		bool checkFinalWaypoint = true, bool checkStopped = true)
 {
 	int			fPerpSpeed, fNormalSpeed;
 	uint16_t                iDroidDir;
@@ -1669,7 +1670,7 @@ static void moveUpdateGroundModel(DROID *psDroid, SDWORD speed, uint16_t directi
 	CHECK_DROID(psDroid);
 
 	// nothing to do if the droid is stopped
-	if (moveDroidStopped(psDroid, speed) == true)
+	if (checkStopped && moveDroidStopped(psDroid, speed))
 	{
 		return;
 	}
@@ -1679,7 +1680,10 @@ static void moveUpdateGroundModel(DROID *psDroid, SDWORD speed, uint16_t directi
 	turnSpeed = psDroid->baseSpeed * psPropStats->turnSpeed;
 	spinAngle = DEG(psPropStats->spinAngle);
 
-	moveCheckFinalWaypoint(psDroid, &speed);
+	if (checkFinalWaypoint)
+	{
+		moveCheckFinalWaypoint(psDroid, &speed);
+	}
 
 	moveUpdateDroidDirection(psDroid, &speed, direction, spinAngle, spinSpeed, turnSpeed, &iDroidDir);
 
@@ -2167,6 +2171,50 @@ static void checkLocalFeatures(DROID *psDroid)
 	}
 }
 
+static void moveFinishDroidUpdate(DROID *psDroid, UDWORD oldx, UDWORD oldy,
+		PROPULSION_STATS *psPropStats, bool bStarted, bool bStopped,
+		SDWORD moveSpeed, uint16_t moveDir)
+{
+	Vector3i pos(0, 0, 0);
+
+	if (map_coord(oldx) != map_coord(psDroid->pos.x)
+	    || map_coord(oldy) != map_coord(psDroid->pos.y))
+	{
+		visTilesUpdate((BASE_OBJECT *)psDroid, gameWorld.map);
+		checkLocalFeatures(psDroid);
+		triggerEventDroidMoved(psDroid, oldx, oldy);
+	}
+
+	if ((psPropStats->propulsionType != PROPULSION_TYPE_LIFT) && moveBlocked(psDroid))
+	{
+		objTrace(psDroid->id, "status: id %d blocked", (int)psDroid->id);
+		psDroid->sMove.Status = MOVETURN;
+	}
+
+	if (worldOnMap(gameWorld.map, psDroid->pos.x, psDroid->pos.y)
+	    && terrainType(mapTile(gameWorld.map, map_coord(psDroid->pos.x), map_coord(psDroid->pos.y))) == TER_WATER)
+	{
+		updateDroidOrientation(psDroid, gameWorld.map);
+	}
+
+	if (psDroid->sMove.Status == MOVETURNTOTARGET && psDroid->rot.direction == moveDir)
+	{
+		psDroid->sMove.Status = psPropStats->propulsionType == PROPULSION_TYPE_LIFT ? MOVEPOINTTOPOINT : MOVEINACTIVE;
+		objTrace(psDroid->id, "MOVETURNTOTARGET complete");
+	}
+
+	if (psDroid->periodicalDamageStart != 0 && psDroid->droidType != DROID_PERSON && psDroid->visibleForLocalDisplay())
+	{
+		pos.x = psDroid->pos.x + (18 - rand() % 36);
+		pos.z = psDroid->pos.y + (18 - rand() % 36);
+		pos.y = psDroid->pos.z + (psDroid->sDisplay.imd->max.y / 3);
+		addEffect(&pos, EFFECT_EXPLOSION, EXPLOSION_TYPE_SMALL, false, nullptr, 0, gameTime - deltaGameTime + 1);
+	}
+
+	movePlayAudio(psDroid, bStarted, bStopped, moveSpeed);
+	ASSERT(droidOnMap(psDroid), "%s moved off map (%u, %u)->(%u, %u)", droidGetName(psDroid), oldx, oldy, (UDWORD)psDroid->pos.x, (UDWORD)psDroid->pos.y);
+	CHECK_DROID(psDroid);
+}
 
 /* Frame update for the movement of a tracked droid */
 void moveUpdateDroid(DROID *psDroid)
@@ -2176,7 +2224,6 @@ void moveUpdateDroid(DROID *psDroid)
 	SDWORD				moveSpeed;
 	uint16_t			moveDir;
 	PROPULSION_STATS	*psPropStats;
-	Vector3i 			pos(0, 0, 0);
 	bool				bStarted = false, bStopped;
 
 	CHECK_DROID(psDroid);
@@ -2419,65 +2466,30 @@ void moveUpdateDroid(DROID *psDroid)
 		moveUpdateGroundModel(psDroid, moveSpeed, moveDir);
 	}
 
-	if (map_coord(oldx) != map_coord(psDroid->pos.x)
-	    || map_coord(oldy) != map_coord(psDroid->pos.y))
-	{
-		visTilesUpdate((BASE_OBJECT *)psDroid, gameWorld.map);
+	moveFinishDroidUpdate(psDroid, oldx, oldy, psPropStats, bStarted, bStopped, moveSpeed, moveDir);
+}
 
-		// object moved from one tile to next, check to see if droid is near stuff.(oil)
-		checkLocalFeatures(psDroid);
-
-		triggerEventDroidMoved(psDroid, oldx, oldy);
-	}
-
-	// See if it's got blocked
-	if ((psPropStats->propulsionType != PROPULSION_TYPE_LIFT) && moveBlocked(psDroid))
-	{
-		objTrace(psDroid->id, "status: id %d blocked", (int)psDroid->id);
-		psDroid->sMove.Status = MOVETURN;
-	}
-
-//	// If were in drive mode and the droid is a follower then stop it when it gets within
-//	// range of the driver.
-//	if(driveIsFollower(psDroid)) {
-//		if(DoFollowRangeCheck) {
-//			if(driveInDriverRange(psDroid)) {
-//				psDroid->sMove.Status = MOVEINACTIVE;
-////				ClearFollowRangeCheck = true;
-//			} else {
-//				AllInRange = false;
-//			}
-//		}
-//	}
-
-	/* If it's sitting in water then it's got to go with the flow! */
-	if (worldOnMap(gameWorld.map, psDroid->pos.x, psDroid->pos.y) && terrainType(mapTile(gameWorld.map, map_coord(psDroid->pos.x), map_coord(psDroid->pos.y))) == TER_WATER)
-	{
-		updateDroidOrientation(psDroid, gameWorld.map);
-	}
-
-	if (psDroid->sMove.Status == MOVETURNTOTARGET && psDroid->rot.direction == moveDir)
-	{
-		if (psPropStats->propulsionType == PROPULSION_TYPE_LIFT)
-		{
-			psDroid->sMove.Status = MOVEPOINTTOPOINT;
-		}
-		else
-		{
-			psDroid->sMove.Status = MOVEINACTIVE;
-		}
-		objTrace(psDroid->id, "MOVETURNTOTARGET complete");
-	}
-
-	if (psDroid->periodicalDamageStart != 0 && psDroid->droidType != DROID_PERSON && psDroid->visibleForLocalDisplay()) // display-only check for adding effect
-	{
-		pos.x = psDroid->pos.x + (18 - rand() % 36);
-		pos.z = psDroid->pos.y + (18 - rand() % 36);
-		pos.y = psDroid->pos.z + (psDroid->sDisplay.imd->max.y / 3);
-		addEffect(&pos, EFFECT_EXPLOSION, EXPLOSION_TYPE_SMALL, false, nullptr, 0, gameTime - deltaGameTime + 1);
-	}
-
-	movePlayAudio(psDroid, bStarted, bStopped, moveSpeed);
-	ASSERT(droidOnMap(psDroid), "%s moved off map (%u, %u)->(%u, %u)", droidGetName(psDroid), oldx, oldy, (UDWORD)psDroid->pos.x, (UDWORD)psDroid->pos.y);
+void moveUpdateDroidDirect(DROID *psDroid, SDWORD desiredSpeed, uint16_t desiredDirection)
+{
 	CHECK_DROID(psDroid);
+
+	PROPULSION_STATS *psPropStats = psDroid->getPropulsionStats();
+	ASSERT_OR_RETURN(, psPropStats != nullptr, "Invalid propulsion stats pointer");
+	ASSERT_OR_RETURN(, psDroid->droidType != DROID_PERSON && !psDroid->isCyborg()
+	                 && psPropStats->propulsionType != PROPULSION_TYPE_LIFT,
+	                 "Direct movement supports ground droids only");
+
+	if (psDroid->lastHitWeapon == WSC_EMP && gameTime - psDroid->timeLastHit < EMP_DISABLE_TIME)
+	{
+		return;
+	}
+
+	desiredSpeed = std::max<SDWORD>(desiredSpeed, 0);
+	const bool bStopped = moveDroidStopped(psDroid, 0);
+	const bool bStarted = psDroid->sMove.speed == 0 && desiredSpeed > 0;
+	const UDWORD oldx = psDroid->pos.x;
+	const UDWORD oldy = psDroid->pos.y;
+
+	moveUpdateGroundModel(psDroid, desiredSpeed, desiredDirection, false, false);
+	moveFinishDroidUpdate(psDroid, oldx, oldy, psPropStats, bStarted, bStopped, desiredSpeed, desiredDirection);
 }

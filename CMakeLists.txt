@@ -897,6 +897,12 @@ add_subdirectory(data)
 add_subdirectory(lib)
 add_subdirectory(doc)
 add_subdirectory(po)
+
+# Local, Windows-only unit-policy experiment. It is off for normal builds.
+option(WZ_ML_EXPERIMENT "Build the experimental learned ground-droid controller" OFF)
+if(WZ_ML_EXPERIMENT AND NOT WIN32)
+	message(FATAL_ERROR "WZ_ML_EXPERIMENT is a Windows-only local experiment in Contract V1")
+endif()
 add_subdirectory(src)
 add_subdirectory(pkg)
 

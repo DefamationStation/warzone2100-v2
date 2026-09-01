@@ -83,6 +83,9 @@ void actionDroid(DROID *psDroid, DROID_ACTION action,
 /** Rotate turret toward  target return True if locked on (Droid and Structure). */
 bool actionTargetTurret(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, WEAPON *psWeapon);
 
+/** Get the turret rotation limit for the current engine update. */
+int actionTurretRotationRate(const WEAPON_STATS &weaponStats, bool repairDroid);
+
 /** Realign turret. */
 void actionAlignTurret(BASE_OBJECT *psObj, int weapon_slot);
 

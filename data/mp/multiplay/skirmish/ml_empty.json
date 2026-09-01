@@ -1,0 +1,10 @@
+{
+	"AI": {
+		"js": "ml_empty.js",
+		"name": "ML Empty Controller",
+		"tip": "Used only by the local learned-unit experiment.",
+		"wins": 0,
+		"losses": 0,
+		"draws": 0
+	}
+}

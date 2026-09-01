@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "warzone-tactical"
+version = "0.1.0"
+description = "GPU simulator and training tools for the Warzone tactical unit contract."
+requires-python = "==3.11.*"
+dependencies = [
+	"numpy==2.1.*",
+	"onnx==1.17.*",
+	"pytest==8.*",
+	"setuptools>=75; sys_platform == 'win32'",
+	"torch==2.5.1",
+	"triton-windows==3.1.0.post17; sys_platform == 'win32'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+
+[tool.setuptools.packages.find]
+include = ["warzone_tactical*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+	"gpu: CUDA performance and learning tests.",
+	"engine: Tests that need a built Warzone executable.",
+]

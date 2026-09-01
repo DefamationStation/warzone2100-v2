@@ -52,6 +52,25 @@
 #define DROID_SHIELD_DAMAGE_SPREAD	(16 - rand()%32)
 #define DROID_SHIELD_PARTICLES		(6 + rand()%8)
 
+#if defined(WZ_ML_EXPERIMENT)
+namespace
+{
+int mlTestForcedHitRoll = -1;
+int mlTestLastHitResult = -1;
+}
+
+void combSetMlTestHitRoll(int roll)
+{
+	mlTestForcedHitRoll = std::max(-1, std::min(99, roll));
+	mlTestLastHitResult = -1;
+}
+
+int combGetMlTestHitResult()
+{
+	return mlTestLastHitResult;
+}
+#endif
+
 // Check if an object is below a certain HP threshold. Primarily used for a campaign tweak option to restore
 // original behavior to reduce speed and ROF if heavily damaged.
 bool objectBelowHealthLevel(BASE_OBJECT *psObj, const unsigned int percentage)
@@ -318,7 +337,16 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
 	bool bVisibleAnyway = psTarget->player == selectedPlayer;
 
 	// see if we were lucky to hit the target
-	bool isHit = static_cast<int>(gameRand(100)) <= resultHitChance;
+	int hitRoll = static_cast<int>(gameRand(100));
+#if defined(WZ_ML_EXPERIMENT)
+	if (mlTestForcedHitRoll >= 0)
+	{
+		hitRoll = mlTestForcedHitRoll;
+		mlTestForcedHitRoll = -1;
+	}
+	mlTestLastHitResult = hitRoll <= resultHitChance ? 1 : 0;
+#endif
+	bool isHit = hitRoll <= resultHitChance;
 	if (isHit)
 	{
 		/* Kerrrbaaang !!!!! a hit */

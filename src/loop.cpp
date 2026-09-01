@@ -91,6 +91,9 @@
 #include "gamehistorylogger.h"
 #include "profiling.h"
 #include "wzapi.h"
+#if defined(WZ_ML_EXPERIMENT)
+#include "ml_unit_control.h"
+#endif
 
 #include "warzoneconfig.h"
 
@@ -511,6 +514,11 @@ void countUpdate(bool synch)
 static void gameStateUpdate()
 {
 	WZ_PROFILE_SCOPE(gameStateUpdate);
+#if defined(WZ_ML_EXPERIMENT)
+	// Initialize the fixed combat fixture before the first sync boundary.
+	// Its seed and sync reset must apply before a game-time CRC is sent.
+	wzml::combatTestUpdate();
+#endif
 	syncDebug("map = \"%s\", pseudorandom 32-bit integer = 0x%08X, allocated = %d %d %d %d %d %d %d %d %d %d, position = %d %d %d %d %d %d %d %d %d %d", game.map, gameRandU32(),
 	          NetPlay.players[0].allocated, NetPlay.players[1].allocated, NetPlay.players[2].allocated, NetPlay.players[3].allocated, NetPlay.players[4].allocated, NetPlay.players[5].allocated, NetPlay.players[6].allocated, NetPlay.players[7].allocated, NetPlay.players[8].allocated, NetPlay.players[9].allocated,
 	          NetPlay.players[0].position, NetPlay.players[1].position, NetPlay.players[2].position, NetPlay.players[3].position, NetPlay.players[4].position, NetPlay.players[5].position, NetPlay.players[6].position, NetPlay.players[7].position, NetPlay.players[8].position, NetPlay.players[9].position
@@ -539,7 +547,6 @@ static void gameStateUpdate()
 
 	// Update abandoned structures
 	handleAbandonedStructures();
-
 	// Update the visibility change stuff
 	visUpdateLevel();
 
@@ -548,6 +555,10 @@ static void gameStateUpdate()
 
 	// Check which objects are visible.
 	processVisibility();
+
+#if defined(WZ_ML_EXPERIMENT)
+	wzml::combatTestApplyFullVisibility();
+#endif
 
 	// Update the map.
 	mapUpdate(gameWorld);

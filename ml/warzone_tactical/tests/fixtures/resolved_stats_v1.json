@@ -1,0 +1,48 @@
+{
+  "contract": "warzone-tactical-v1",
+  "bMultiPlayer": true,
+  "campaign_tweak_heavy_damage_fire_pause": false,
+  "body": {
+    "id": "Body1REC",
+    "health": 290,
+    "armour": 10,
+    "thermal": 4,
+    "weight": 600
+  },
+  "propulsion": {
+    "id": "tracked01",
+    "base_speed": 127,
+    "calculated_max_speed": 125,
+    "max_speed": 125,
+    "acceleration": 250,
+    "deceleration": 800,
+    "skid_deceleration": 600,
+    "turn_speed": 60,
+    "spin_speed": 136,
+    "spin_angle": 65
+  },
+  "weapon": {
+    "id": "Rocket-Pod",
+    "damage": 22,
+    "effective_damage_before_armour": 26,
+    "effective_hit_damage_zero_experience": 16,
+    "short_range": 512,
+    "long_range": 1088,
+    "minimum_range": 128,
+    "short_hit_chance": 40,
+    "long_hit_chance": 50,
+    "fire_pause": 1000,
+    "reload_time": 0,
+    "projectile_speed": 2250,
+    "rotate": 180,
+    "weight": 200,
+    "turret_rotation_rate": 3276,
+    "turret_pitch_rate": 1638,
+    "muzzle_base_connector": [0, 10, 23],
+    "direct": true,
+    "max_elevation": 90,
+    "min_elevation": -60,
+    "fire_on_move": true,
+    "movement_model": 0
+  }
+}

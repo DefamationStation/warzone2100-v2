@@ -1,0 +1,35 @@
+{
+  "contract": "warzone-tactical-v1",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "scenario_components": ["Body1REC", "tracked01", "Rocket-Pod"],
+  "training_seeds": [4, 17, 31],
+  "screening_episode_seeds": {"first": 0, "last_inclusive": 999},
+  "promotion_episode_seeds": {"first": 0, "last_inclusive": 9999},
+  "engine_incumbent_seeds": {"first": 0, "last_inclusive": 499, "side_swap": "alternating"},
+  "time_limit_ticks": 90000,
+  "stage_time_limit_ticks": {"stage_2": 30000, "stage_3": 60000, "stage_4": 90000},
+  "stage_2_gate": {
+    "range_band": "512 < distance <= 1088",
+    "mean_time_in_band_fraction_minimum": 0.70,
+    "per_seed_time_in_band_fraction_minimum": 0.65,
+    "mean_normalized_band_violation_maximum": 0.10
+  },
+  "rehearsal": {
+    "starts_at_stage": 2,
+    "current_stage_fraction": 0.80,
+    "earlier_stage_fraction": 0.20,
+    "prior_stage_retention_is_reported_from_stage": 2,
+    "maximum_prior_gate_regression_percentage_points": 5
+  },
+  "benchmarks": [
+    {"name": "scripted_nearest_v1", "version": 1},
+    {"name": "scripted_rangekeeper_v1", "version": 1},
+    {"name": "wz_stock_attack_v1", "version": 1},
+    {"name": "ml_anchor_1_v1", "model_sha256": null},
+    {"name": "ml_anchor_2_v1", "model_sha256": null},
+    {"name": "ml_anchor_3_v1", "model_sha256": null}
+  ],
+  "anchor_rule": "Set all three null hashes after the first accepted 1v1 run. Never replace them in Contract V1.",
+  "seed_floor_percentage_points": 5,
+  "league_is_a_training_opponent_source_only": true
+}

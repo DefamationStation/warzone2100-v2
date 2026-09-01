@@ -51,6 +51,9 @@ void moveReallyStopDroid(DROID *psDroid);
 /* Get a droid to do a frame's worth of moving */
 void moveUpdateDroid(DROID *psDroid);
 
+/* Update a ground droid with a direct desired speed and heading. */
+void moveUpdateDroidDirect(DROID *psDroid, SDWORD desiredSpeed, uint16_t desiredDirection);
+
 SDWORD moveCalcDroidSpeed(DROID *psDroid);
 
 /* update body and turret to local slope */

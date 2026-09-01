@@ -77,6 +77,9 @@
 #include "template.h"
 #include "qtscript.h"
 #include "campaigninfo.h"
+#if defined(WZ_ML_EXPERIMENT)
+#include "ml_unit_control.h"
+#endif
 
 #define DEFAULT_RECOIL_TIME	(GAME_TICKS_PER_SEC/4)
 #define	DROID_DAMAGE_SPREAD	(16 - rand()%32)
@@ -935,22 +938,40 @@ void droidUpdate(DROID *psDroid)
 		droidWasFullyRepairedBase(psDroid);
 	}
 
-	// ai update droid
-	aiUpdateDroid(psDroid);
-
-	// Update the droids order.
-	if (!orderUpdateDroid(psDroid))
+#if defined(WZ_ML_EXPERIMENT)
+	if (wzml::controlsDroid(psDroid))
 	{
-		return; // skip further processing - droid was moved to a different list!
+		syncDebugDroid(psDroid, 'M');
+		const wzml::UpdateResult result = wzml::updateDroid(psDroid);
+		if (result == wzml::UpdateResult::FatalError)
+		{
+			return;
+		}
+		if (result == wzml::UpdateResult::NoAction)
+		{
+			moveReallyStopDroid(psDroid);
+		}
 	}
+	else
+#endif
+	{
+		// ai update droid
+		aiUpdateDroid(psDroid);
 
-	// update the action of the droid
-	actionUpdateDroid(psDroid);
+		// Update the droids order.
+		if (!orderUpdateDroid(psDroid))
+		{
+			return; // skip further processing - droid was moved to a different list!
+		}
 
-	syncDebugDroid(psDroid, 'M');
+		// update the action of the droid
+		actionUpdateDroid(psDroid);
 
-	// update the move system
-	moveUpdateDroid(psDroid);
+		syncDebugDroid(psDroid, 'M');
+
+		// update the move system
+		moveUpdateDroid(psDroid);
+	}
 
 	/* Only add smoke if they're visible */
 	if (psDroid->visibleForLocalDisplay() && psDroid->droidType != DROID_PERSON)
