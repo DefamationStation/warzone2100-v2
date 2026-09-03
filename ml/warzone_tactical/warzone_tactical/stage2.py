@@ -56,6 +56,11 @@ class Stage2Config:
     log_std_anneal_iterations: int = 0
     clip_level_violation: bool = False
     heading_output_scale: int = 2048
+    preactivation_penalty: float = 0.0
+    diagnostics_every: int = 0
+    final_entropy_coefficient: float | None = None
+    entropy_anneal_iterations: int = 0
+    critic_extra_epochs: int = 0
     compile_simulator: bool = True
     stagger_initial_episode_phase: bool = True
     training_in_band_spawn_fraction: float | None = None
@@ -126,6 +131,63 @@ def explained_variance(returns: Tensor, values: Tensor) -> Tensor:
         1.0 - residual_variance / return_variance,
         torch.zeros_like(return_variance),
     )
+
+
+def _pearson(a: Tensor, b: Tensor) -> float:
+    """Return the Pearson correlation, or 0.0 when a series has no spread."""
+
+    if a.numel() < 2:
+        return 0.0
+    a = a.to(torch.float64)
+    b = b.to(torch.float64)
+    a = a - a.mean()
+    b = b - b.mean()
+    denominator = torch.sqrt((a * a).sum() * (b * b).sum())
+    if float(denominator) < 1.0e-12:
+        return 0.0
+    return float((a * b).sum() / denominator)
+
+
+def learning_signal_diagnostics(buffers: dict[str, Tensor], advantage: Tensor, returns: Tensor) -> dict[str, float]:
+    """Measure whether the advantage carries information about the action.
+
+    A healthy signal has a positive correlation between commanded speed and
+    advantage while the unit is out of the band, because a faster unit closes
+    the distance. A correlation near zero means the policy cannot learn speed.
+    """
+
+    with torch.no_grad():
+        flat_advantage = advantage.reshape(-1)
+        speed = buffers["drive"][..., 1].reshape(-1).to(torch.float32)
+        heading = buffers["drive"][..., 0].reshape(-1).abs().to(torch.float32)
+        in_band = buffers["in_band"].reshape(-1)
+        value = buffers["value"].reshape(-1)
+        out_of_band = ~in_band
+        result = {
+            "signal_in_band_fraction": float(in_band.to(torch.float32).mean()),
+            "signal_advantage_std": float(flat_advantage.std(unbiased=False)),
+            "signal_corr_advantage_in_band": _pearson(in_band.to(torch.float32), flat_advantage),
+            "signal_corr_speed_advantage_out": _pearson(speed[out_of_band], flat_advantage[out_of_band]),
+            "signal_corr_speed_advantage_in": _pearson(speed[in_band], flat_advantage[in_band]),
+            "signal_corr_heading_advantage_out": _pearson(heading[out_of_band], flat_advantage[out_of_band]),
+            "signal_value_mean_in_band": float(value[in_band].mean()) if bool(in_band.any()) else 0.0,
+            "signal_value_mean_out_of_band": float(value[out_of_band].mean()) if bool(out_of_band.any()) else 0.0,
+            "signal_speed_std": float(speed.std(unbiased=False)),
+        }
+        # Critic bias by speed. A positive value means the critic predicts a
+        # higher return than the data gives, so fast actions look bad.
+        flat_returns = returns.reshape(-1)
+        bias = value - flat_returns
+        if int(out_of_band.sum()) > 8:
+            speed_out = speed[out_of_band]
+            bias_out = bias[out_of_band]
+            high = speed_out >= torch.quantile(speed_out.to(torch.float32), 0.75)
+            low = speed_out <= torch.quantile(speed_out.to(torch.float32), 0.25)
+            result["signal_critic_bias_fast_out"] = float(bias_out[high].mean()) if bool(high.any()) else 0.0
+            result["signal_critic_bias_slow_out"] = float(bias_out[low].mean()) if bool(low.any()) else 0.0
+            result["signal_corr_speed_value_out"] = _pearson(speed_out, value[out_of_band])
+            result["signal_corr_speed_return_out"] = _pearson(speed_out, flat_returns[out_of_band])
+    return result
 
 
 def _distance(simulator: TacticalSimulator) -> Tensor:
@@ -202,6 +264,24 @@ def scheduled_log_std(config: Stage2Config, iteration: int) -> float | None:
     return config.initial_log_std + progress * (config.final_log_std - config.initial_log_std)
 
 
+def scheduled_entropy_coefficient(config: Stage2Config, iteration: int) -> float:
+    """Anneal exploration pressure from the start value to the final value.
+
+    Fault T-12 forms while the critic is still moving, in the first few hundred
+    iterations. Hold entropy high through that window, then lower it so the
+    policy can sharpen.
+    """
+
+    if config.final_entropy_coefficient is None or config.entropy_anneal_iterations <= 0:
+        return config.entropy_coefficient
+    if config.entropy_anneal_iterations == 1 or iteration >= config.entropy_anneal_iterations:
+        return config.final_entropy_coefficient
+    progress = (iteration - 1) / (config.entropy_anneal_iterations - 1)
+    return config.entropy_coefficient + progress * (
+        config.final_entropy_coefficient - config.entropy_coefficient
+    )
+
+
 def quantize_drive(latent: Tensor, heading_output_scale: int = 2048) -> Tensor:
     if latent.shape[-1] != 2:
         raise ValueError("the Stage 2 drive latent must have two values")
@@ -210,8 +290,15 @@ def quantize_drive(latent: Tensor, heading_output_scale: int = 2048) -> Tensor:
     return torch.stack((heading.clamp(-2048, 2047), speed.clamp(0, 256)), dim=-1)
 
 
+_WRAPPED_OFFSET_CACHE: dict[tuple[torch.device, torch.dtype], Tensor] = {}
+
+
 def _wrapped_normal_log_probability(mean: Tensor, standard_deviation: Tensor, value: Tensor) -> Tensor:
-    offsets = torch.arange(-3, 4, device=value.device, dtype=value.dtype) * 2.0
+    key = (value.device, value.dtype)
+    offsets = _WRAPPED_OFFSET_CACHE.get(key)
+    if offsets is None:
+        offsets = torch.arange(-3, 4, device=value.device, dtype=value.dtype) * 2.0
+        _WRAPPED_OFFSET_CACHE[key] = offsets
     expanded_distribution = Normal(mean.unsqueeze(-1), standard_deviation)
     return torch.logsumexp(
         expanded_distribution.log_prob(value.unsqueeze(-1) + offsets), dim=-1
@@ -225,8 +312,12 @@ def drive_policy_action(
     *,
     deterministic: bool,
     heading_output_scale: int = 2048,
+    output: Tensor | None = None,
 ) -> tuple[Tensor, Tensor, Tensor, Tensor]:
-    output = actor(observation_q15)
+    # The caller can pass a precomputed actor output so the rollout does not
+    # run the actor a second time only to record telemetry.
+    if output is None:
+        output = actor(observation_q15)
     heading_mean = torch.tanh(output[..., 0])
     heading_distribution = Normal(heading_mean, log_std[0].exp())
     speed_distribution = Normal(output[..., 1], log_std[1].exp())
@@ -279,6 +370,19 @@ class Stage2Environment(BatchedEpisodeEnvironment):
         self._compiled_simulator_step = (
             torch.compile(
                 self.simulator.step,
+                mode="reduce-overhead",
+                fullgraph=True,
+                dynamic=False,
+            )
+            if compile_simulator and device.type == "cuda"
+            else None
+        )
+        # The staggered reset builds the observation after the reset, outside
+        # simulator.step. Compile that call too, or it runs in eager Python on
+        # every training step and costs about 186 kernel launches.
+        self._compiled_build_observation = (
+            torch.compile(
+                self.simulator.build_observation,
                 mode="reduce-overhead",
                 fullgraph=True,
                 dynamic=False,
@@ -476,6 +580,9 @@ class Stage2Environment(BatchedEpisodeEnvironment):
             self.stats.calculated_max_speed, 1
         )
         speed_quality = torch.where(in_band, 1.0 - speed_fraction, speed_fraction)
+        # Diagnostics read these. They do not change the reward or the contract.
+        self.last_in_band = in_band
+        self.last_violation = violation
         self.in_band_steps += in_band.to(torch.float32)
         self.violation_sum += violation
         range_progress = before_violation - violation
@@ -507,7 +614,10 @@ class Stage2Environment(BatchedEpisodeEnvironment):
             elif reset_due:
                 self.reset(done)
         if staggered_reset or reset_due:
-            observation, _mask = self.simulator.build_observation()
+            if self._compiled_build_observation is None:
+                observation, _mask = self.simulator.build_observation()
+            else:
+                observation, _mask = self._compiled_build_observation()
         else:
             if step_result is None:
                 raise RuntimeError("the simulator did not build the Stage 2 observation")
@@ -520,7 +630,7 @@ def _evaluate_drive_action(
     log_std: Tensor,
     observation: Tensor,
     latent: Tensor,
-) -> tuple[Tensor, Tensor]:
+) -> tuple[Tensor, Tensor, Tensor]:
     output = actor(observation)
     heading_distribution = Normal(torch.tanh(output[..., 0]), log_std[0].exp())
     speed_distribution = Normal(output[..., 1], log_std[1].exp())
@@ -529,7 +639,7 @@ def _evaluate_drive_action(
     )
     log_probability = heading_log_probability + speed_distribution.log_prob(latent[..., 1])
     entropy = heading_distribution.entropy() + speed_distribution.entropy()
-    return log_probability, entropy
+    return log_probability, entropy, output[..., :2]
 
 
 def _ppo_update(
@@ -543,11 +653,17 @@ def _ppo_update(
     return_normalizer: RunningReturnNormalizer,
     config: Stage2Config,
     profile: dict[str, object] | None = None,
+    entropy_coefficient: float | None = None,
 ) -> dict[str, float]:
+    if entropy_coefficient is None:
+        entropy_coefficient = config.entropy_coefficient
     if config.rehearsal_fraction <= 0.0 or config.rehearsal_fraction >= 1.0:
         raise ValueError("the rehearsal fraction must be above zero and below one")
     sample_count = buffers["reward"].numel()
     observation = buffers["observation"].reshape(sample_count, 200)
+    # The actor accepts float32 directly, so convert once instead of once for
+    # the actor and again for the critic in every minibatch.
+    observation_float = q15_to_float(observation)
     latent = buffers["latent"].reshape(sample_count, 2)
     old_log_probability = buffers["log_probability"].reshape(sample_count)
     advantage = buffers["advantage"].reshape(sample_count)
@@ -555,7 +671,7 @@ def _ppo_update(
     normalized_returns = return_normalizer.normalize(returns)
     advantage = (advantage - advantage.mean()) / (advantage.std(unbiased=False) + 1.0e-8)
     batch_size = sample_count // config.minibatches
-    totals = torch.zeros(9, device=observation.device)
+    totals = torch.zeros(10, device=observation.device)
     updates = 0
     early_stopped = False
     stop_kl = 0.0
@@ -571,10 +687,11 @@ def _ppo_update(
                 torch.cuda.synchronize(observation.device)
                 minibatch_started = time.perf_counter()
             index = permutation[start : start + batch_size]
-            new_log_probability, entropy = _evaluate_drive_action(
-                actor, log_std, observation[index], latent[index]
+            observation_batch = observation_float[index]
+            new_log_probability, entropy, drive_preactivation = _evaluate_drive_action(
+                actor, log_std, observation_batch, latent[index]
             )
-            value = critic(q15_to_float(observation[index]))
+            value = critic(observation_batch)
             ratio = torch.exp(new_log_probability - old_log_probability[index])
             with torch.no_grad():
                 approximate_kl = ((ratio - 1.0) - torch.log(ratio)).mean()
@@ -610,11 +727,16 @@ def _ppo_update(
             )
             retained = actor(rehearsal_observation[rehearsal_index])[..., 2:]
             retention_loss = F.mse_loss(retained, rehearsal_output[rehearsal_index, 2:])
+            # Keep the drive pre-activations away from the tanh tails. A
+            # saturated speed head has no gradient and the policy cannot leave
+            # a stopped or a full-speed command. See fault T-11.
+            preactivation_loss = drive_preactivation.square().mean()
             loss = (
                 policy_loss
                 + config.value_coefficient * value_loss
-                - config.entropy_coefficient * entropy_mean
+                - entropy_coefficient * entropy_mean
                 + config.retention_coefficient * retention_loss
+                + config.preactivation_penalty * preactivation_loss
             )
             optimizer.zero_grad(set_to_none=True)
             loss.backward()
@@ -640,6 +762,7 @@ def _ppo_update(
                         actor_grad_norm,
                         critic_grad_norm,
                         final_layer_gradient_norm,
+                        preactivation_loss.detach(),
                     )
                 )
             updates += 1
@@ -663,6 +786,19 @@ def _ppo_update(
             )
         if early_stopped:
             break
+    # Extra critic-only passes. Fault T-12 is a stale critic: the value function
+    # lags the policy and over-values states the policy has stopped visiting.
+    # These passes let the critic catch up without touching the policy.
+    for _ in range(config.critic_extra_epochs):
+        permutation = torch.randperm(sample_count, device=observation.device)
+        for start in range(0, sample_count, batch_size):
+            index = permutation[start : start + batch_size]
+            critic_value = critic(observation_float[index])
+            critic_only_loss = 0.5 * (critic_value - normalized_returns[index]).square().mean()
+            optimizer.zero_grad(set_to_none=True)
+            critic_only_loss.backward()
+            nn.utils.clip_grad_norm_(critic.parameters(), config.max_grad_norm)
+            optimizer.step()
     totals /= updates
     names = (
         "policy_loss",
@@ -674,6 +810,7 @@ def _ppo_update(
         "actor_grad_norm",
         "critic_grad_norm",
         "final_policy_layer_grad_norm",
+        "drive_preactivation_mean_square",
     )
     metrics = {name: float(value.item()) for name, value in zip(names, totals)}
     metrics.update(
@@ -774,6 +911,28 @@ def train_stage2_seed(
     kl_stop_count = 0
     started = time.perf_counter()
     with telemetry_path.open("w", encoding="utf-8") as telemetry:
+        # Allocate the rollout buffers once. Every element is overwritten in
+        # each rollout, so reuse is safe and avoids 7 allocations per iteration.
+        buffers = {
+            "observation": torch.empty((config.rollout_steps, config.arenas, 200), dtype=torch.int16, device=device),
+            "latent": torch.empty((config.rollout_steps, config.arenas, 2), device=device),
+            "log_probability": torch.empty((config.rollout_steps, config.arenas), device=device),
+            "reward": torch.empty((config.rollout_steps, config.arenas), device=device),
+            "done": torch.empty((config.rollout_steps, config.arenas), dtype=torch.bool, device=device),
+            "value": torch.empty((config.rollout_steps, config.arenas), device=device),
+            "drive": torch.empty(
+                (config.rollout_steps, config.arenas, 2), dtype=torch.int64, device=device
+            ),
+            "actor_raw": torch.empty(
+                (config.rollout_steps, config.arenas, 2), device=device
+            ),
+            "critic_raw": torch.empty(
+                (config.rollout_steps, config.arenas), device=device
+            ),
+            "in_band": torch.empty(
+                (config.rollout_steps, config.arenas), dtype=torch.bool, device=device
+            ),
+        }
         for iteration in range(1, config.iterations + 1):
             scheduled_value = scheduled_log_std(config, iteration)
             if scheduled_value is not None:
@@ -782,34 +941,27 @@ def train_stage2_seed(
             range_progress_coefficient, heading_alignment_coefficient = (
                 approach_reward_coefficients(config, iteration)
             )
-            buffers = {
-                "observation": torch.empty((config.rollout_steps, config.arenas, 200), dtype=torch.int16, device=device),
-                "latent": torch.empty((config.rollout_steps, config.arenas, 2), device=device),
-                "log_probability": torch.empty((config.rollout_steps, config.arenas), device=device),
-                "reward": torch.empty((config.rollout_steps, config.arenas), device=device),
-                "done": torch.empty((config.rollout_steps, config.arenas), dtype=torch.bool, device=device),
-                "value": torch.empty((config.rollout_steps, config.arenas), device=device),
-                "drive": torch.empty(
-                    (config.rollout_steps, config.arenas, 2), dtype=torch.int64, device=device
-                ),
-            }
             for step in range(config.rollout_steps):
                 with torch.no_grad():
+                    observation_float = q15_to_float(observation)
+                    actor_raw = actor(observation)
                     drive, latent, log_probability, _entropy = drive_policy_action(
                         actor,
                         log_std,
                         observation,
                         deterministic=False,
                         heading_output_scale=config.heading_output_scale,
+                        output=actor_raw,
                     )
-                    value = return_normalizer.denormalize(
-                        critic(q15_to_float(observation))
-                    )
+                    critic_raw = critic(observation_float)
+                    value = return_normalizer.denormalize(critic_raw)
                 buffers["observation"][step] = observation
                 buffers["latent"][step] = latent
                 buffers["log_probability"][step] = log_probability
                 buffers["value"][step] = value
                 buffers["drive"][step] = drive
+                buffers["actor_raw"][step] = actor_raw[..., :2]
+                buffers["critic_raw"][step] = critic_raw
                 observation, reward, done = environment.step(
                     drive,
                     range_objective_coefficient=config.range_objective_coefficient,
@@ -820,14 +972,16 @@ def train_stage2_seed(
                 )
                 buffers["reward"][step] = reward
                 buffers["done"][step] = done
+                buffers["in_band"][step] = environment.last_in_band
             with torch.no_grad():
                 last_value = return_normalizer.denormalize(
                     critic(q15_to_float(observation))
                 )
-                actor_output = actor(buffers["observation"].reshape(-1, 200))[:, :2]
-                critic_raw_output = critic(
-                    q15_to_float(buffers["observation"].reshape(-1, 200))
-                )
+                # Reuse the rollout outputs. Running the actor and the critic
+                # again over every rollout sample only to log statistics cost
+                # two full forward passes for each iteration.
+                actor_output = buffers["actor_raw"].reshape(-1, 2)
+                critic_raw_output = buffers["critic_raw"].reshape(-1)
                 output_mean = actor_output.mean(dim=0)
                 output_std = actor_output.std(dim=0, unbiased=False)
                 output_saturation = (torch.tanh(actor_output).abs() > 0.99).to(
@@ -852,8 +1006,12 @@ def train_stage2_seed(
             normalized_value_target = return_normalizer.normalize(returns)
             normalized_value_target_mean = normalized_value_target.mean()
             normalized_value_target_std = normalized_value_target.std(unbiased=False)
+            signal_metrics: dict[str, float] = {}
+            if config.diagnostics_every > 0 and iteration % config.diagnostics_every == 0:
+                signal_metrics = learning_signal_diagnostics(buffers, advantage, returns)
             buffers["advantage"] = advantage
             buffers["returns"] = returns
+            iteration_entropy_coefficient = scheduled_entropy_coefficient(config, iteration)
             metrics = _ppo_update(
                 actor,
                 critic,
@@ -864,7 +1022,9 @@ def train_stage2_seed(
                 rehearsal_output,
                 return_normalizer,
                 config,
+                entropy_coefficient=iteration_entropy_coefficient,
             )
+            metrics["entropy_coefficient"] = iteration_entropy_coefficient
             kl_stop_count += int(metrics["kl_early_stopped"])
             global_steps += config.rollout_steps * config.arenas
             completed_episodes, completed_time_sum, completed_violation_sum = (
@@ -877,6 +1037,7 @@ def train_stage2_seed(
                 "mean_completed_time_in_band_fraction": completed_time_sum / max(completed_episodes, 1),
                 "mean_completed_normalized_band_violation": completed_violation_sum / max(completed_episodes, 1),
                 "mean_reward": float(buffers["reward"].mean().item()),
+                **signal_metrics,
                 "explained_variance": float(critic_explained_variance.item()),
                 "return_running_mean": float(return_normalizer.mean.item()),
                 "return_running_std": float(return_normalizer.standard_deviation.item()),
@@ -1178,6 +1339,12 @@ def main() -> None:
     parser.add_argument("--stage1-checkpoint-seed", type=int)
     parser.add_argument("--actor-initial-checkpoint", type=Path)
     parser.add_argument("--heading-output-scale", type=int, default=2048)
+    parser.add_argument("--preactivation-penalty", type=float, default=0.0)
+    parser.add_argument("--diagnostics-every", type=int, default=0)
+    parser.add_argument("--entropy-coefficient", type=float, default=0.002)
+    parser.add_argument("--final-entropy-coefficient", type=float)
+    parser.add_argument("--entropy-anneal-iterations", type=int, default=0)
+    parser.add_argument("--critic-extra-epochs", type=int, default=0)
     parser.add_argument("--initial-log-std", type=float, default=-0.35)
     parser.add_argument("--final-log-std", type=float)
     parser.add_argument("--log-std-anneal-iterations", type=int, default=0)
@@ -1201,6 +1368,12 @@ def main() -> None:
         log_std_anneal_iterations=args.log_std_anneal_iterations,
         clip_level_violation=args.clip_level_violation,
         heading_output_scale=args.heading_output_scale,
+        preactivation_penalty=args.preactivation_penalty,
+        diagnostics_every=args.diagnostics_every,
+        entropy_coefficient=args.entropy_coefficient,
+        final_entropy_coefficient=args.final_entropy_coefficient,
+        entropy_anneal_iterations=args.entropy_anneal_iterations,
+        critic_extra_epochs=args.critic_extra_epochs,
         compile_simulator=not args.eager_simulator,
         training_in_band_spawn_fraction=args.training_in_band_spawn_fraction,
     )

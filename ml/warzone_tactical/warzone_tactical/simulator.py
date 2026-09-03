@@ -125,10 +125,10 @@ class ResolvedStats:
 def trunc_div(numerator: Tensor, denominator: Tensor | int) -> Tensor:
     """Use C++ signed integer division, which truncates toward zero."""
 
-    denominator_tensor = torch.as_tensor(denominator, dtype=numerator.dtype, device=numerator.device)
-    quotient = torch.div(numerator.abs(), denominator_tensor.abs(), rounding_mode="floor")
-    sign = torch.sign(numerator) * torch.sign(denominator_tensor)
-    return quotient * sign
+    # torch.div with rounding_mode="trunc" is C-style truncation toward zero,
+    # which is what the engine does. It is one fused kernel and it takes a
+    # Python int denominator without allocating a CUDA tensor for it.
+    return torch.div(numerator, denominator, rounding_mode="trunc")
 
 
 def quantise_fraction(numerator: Tensor, denominator: int, new_time: Tensor, old_time: Tensor) -> Tensor:

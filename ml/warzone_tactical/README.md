@@ -40,37 +40,77 @@ uv run --project ml\warzone_tactical python -m warzone_tactical.stage2 `
   --training-seeds 4 --episodes 1000
 ```
 
-Stage 2 is implemented but is not promoted. Review 5 showed that the fixed
-continuous gate can separate policies, but seed 4 stayed below the 70 percent
-time-in-band gate. Review 6 found that this result was close to the one-third
-do-nothing floor. The Stage 2 report now includes that floor. The range-dwell
-objective is the main reward, progress is shaping only, and no scripted drive
-target enters training. The default run uses 1,500 PPO iterations. Run seed 4
-first. Run seeds 17 and 31 only if seed 4 reaches about 60 percent time in band.
+Stage 2 is implemented but is not promoted. The task is to enter and hold the
+range band `512 < distance <= 1088`. The gate needs a mean of 70 percent time in
+band and 65 percent for every seed. The do-nothing floor is 33 percent, because
+one spawn in three starts inside the band. The scripted controller reaches 93.11
+percent.
 
-The Review 6 screen reached 60.33 percent for seed 4, 32.41 percent for seed 17,
-and 60.06 percent for seed 31. The three-seed mean was 50.93 percent. Seed 31
-also lost eight percentage points on Stage 1 retention. Under Contract V1, seed
-31 failed the retention gate. Stage 2 is not promoted. This screen was made
-before the KL stop was added. The KL stop has had a smoke test only.
-The 10,000-spawn Q15 check showed distinct, ordered near, in-band, and far
-position values. The failed seed is not caused by a degenerate position signal.
-Training telemetry showed large KL and clip spikes. The next run stops a PPO
-update when approximate KL is above 0.015.
+Two environment faults blocked all early work. Both are corrected.
 
-Contract V1 now starts the 80/20 earlier-stage rehearsal mix at Stage 2. Each
-Stage 2 and later report must show all earlier-stage retention results. A stage
-cannot pass if an earlier gate falls by more than five percentage points.
-Screening uses 1,000 fixed episodes. Promotion uses 10,000 fixed episodes.
+1. All arenas shared one episode clock. Each PPO update therefore saw one
+   episode phase only. Explained variance fell to a large negative value at
+   every multiple of 37.5 iterations, which is one episode. A random start
+   phase for each arena corrected it. The mean rose from 35.48 to 50.01 percent.
+   The same fault was present in Stage 1. A shared `environment.py` now supplies
+   the clock, so Stages 3 to 8 inherit the correction.
+2. A stale critic over-valued fast states, so the advantage gave speed a
+   negative value and the policy drove itself to zero speed. The correlation
+   between commanded speed and advantage reached -0.41 in a failing seed while
+   a passing seed stayed positive. Two independent corrections both work: a
+   higher entropy coefficient of 0.01, or four extra critic-only epochs for each
+   iteration. Both remove the floor. Four extra critic epochs keep the original
+   entropy of 0.002 and reach a higher peak, so that is the recommended setting.
 
-The Review 7 performance refactor removed CUDA-to-host episode counters from
-the rollout loop. A fixed seed produced identical values in all 50 iterations.
-The run took 68.76 seconds before the change and 70.94 seconds after it. Thus,
-the change is neutral for results but did not make training faster. A new sweep
-measured about 39 ms for each simulator step from 512 through 8,192 arenas.
-The simulator kernel sequence is still the main cost. Three concurrent jobs did
-not complete one iteration in 90 seconds and were stopped. Use sequential seed
-runs on this test system.
+Explained variance alone does not show either fault. Log the speed-advantage
+correlation with `--diagnostics-every`.
+
+Use 12 seeds, not 3. The result has two modes, and 3 seeds cannot separate two
+conditions. A 4-seed partial once gave a gain of 6.3 points where the full 12
+seeds gave a loss of 8.15 points. The sign changed.
+
+All 12 seeds still improve at iteration 1,500 at about 0.9 points for each 100
+iterations. The 1,500-iteration default was chosen for an earlier fault and is
+too short. Every published Stage 2 number comes from an unfinished run.
+
+Stage 2 training options:
+
+```text
+--entropy-coefficient        exploration pressure, default 0.002
+--final-entropy-coefficient  end value for an entropy schedule
+--entropy-anneal-iterations  length of that schedule
+--critic-extra-epochs        extra critic-only passes for each iteration
+--preactivation-penalty      weight on the squared drive pre-activations
+--diagnostics-every          log the learning-signal diagnostics every N iterations
+--heading-output-scale       action scale for the heading head, use 128
+```
+
+Do not reduce the entropy after the start when entropy is the only correction.
+An anneal from 0.01 to 0.002 returned one seed to the floor.
+
+## Speed of test runs
+
+A three-seed test took 2 hours at the start. One seed of 1,500 iterations now
+takes about 4.3 minutes.
+
+Two corrections gave all of the gain. Compiling `build_observation` gave 2.17
+times the speed, because the episode-phase correction had moved that call out of
+the compiled region. Reusing the rollout outputs for telemetry, converting Q15
+once for each minibatch, allocating the rollout buffers once, and caching the
+wrapped-normal offsets gave the rest. Warm iteration time fell from 381.9 to
+145.1 milliseconds. All three parity metrics stayed identical to the last bit.
+
+Three measured claims that are false on this system:
+
+- Host synchronization does not control the environment step time. Removing it
+  made the run 3 percent slower.
+- KL checks do not control the PPO update time. They use 2.69 ms of 103.59 ms.
+- Mixed precision does not help. The GEMM operations use about 1 percent of the
+  iteration time.
+
+Run 3 seed groups at the same time. Do not run 6. Give each group its own
+`TORCHINDUCTOR_CACHE_DIR`. Two processes that compile the same new kernel at the
+same time both fail on Windows with `FileExistsError`.
 
 Normal builds do not contain an active ML controller. The CMake option is off by default. Network games do not use the experiment.
 
