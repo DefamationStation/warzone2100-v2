@@ -1,0 +1,27 @@
+{
+  "contract": "warzone-tactical-v1",
+  "format_version": 1,
+  "observation": {
+    "size": 200,
+    "storage": "signed_q15",
+    "model_scale": "2^-15"
+  },
+  "action": {
+    "heading_steps_per_turn": 4096,
+    "speed_steps": 256,
+    "enemy_slots": 8,
+    "none_target": -1
+  },
+  "network": [
+    200,
+    256,
+    256,
+    12
+  ],
+  "onnx_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\engine-spike-100\\stop-turn-fixture\\policy.onnx",
+  "onnx_sha256": "956ad0e08d982c7907a73d3d625629672d21a99c82fb14f6f9f1f65c98863d19",
+  "wzml_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\engine-spike-100\\stop-turn-fixture\\policy.wzml",
+  "wzml_sha256": "e126cc63839999e2abfe03d9ebd3c47e741c4c2090af06ac60c93f417d16ccb6",
+  "resolved_stats_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\engine-spike-100\\seed-0\\resolved-stats.json",
+  "resolved_stats_sha256": "d92db44730535131988b243d8e2b1ec65fcaec6ac95d18aa612ff21a28fd939f"
+}

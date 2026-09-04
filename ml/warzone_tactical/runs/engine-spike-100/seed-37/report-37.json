@@ -1,0 +1,16 @@
+{
+  "contract": "warzone-tactical-v1",
+  "seed": 37,
+  "start_game_time": 102,
+  "end_game_time": 90102,
+  "elapsed_ticks": 90000,
+  "result": "unfinished",
+  "team_0_alive": 2,
+  "team_1_alive": 2,
+  "droid_ids": [
+    160325,
+    160327,
+    160329,
+    160331
+  ]
+}
