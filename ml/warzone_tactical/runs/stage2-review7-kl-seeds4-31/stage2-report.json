@@ -1,0 +1,124 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 2,
+  "kind": "three_seed_screening",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 32,
+    "iterations": 1500,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "target_kl": 0.015,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.002,
+    "retention_coefficient": 0.1,
+    "rehearsal_fraction": 0.2,
+    "range_objective_coefficient": 1.0,
+    "range_progress_coefficient": 0.1,
+    "heading_alignment_coefficient": 0.02,
+    "speed_settling_coefficient": 0.02,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5,
+    "initial_log_std": -0.35
+  },
+  "evaluation_episodes_per_seed": 1000,
+  "evaluation_tier": "screening",
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 999,
+  "range_band": {
+    "lower": 512,
+    "lower_inclusive": false,
+    "upper": 1088,
+    "upper_inclusive": true
+  },
+  "primary_metric": "episode_time_in_band_fraction",
+  "scripted_rangekeeper_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.9219767451286316,
+    "median_time_in_band_fraction": 0.9399999976158142,
+    "p10_time_in_band_fraction": 0.7833333611488342,
+    "mean_normalized_band_violation": 0.04023345559835434,
+    "median_normalized_band_violation": 0.008964120410382748,
+    "mean_final_distance": 799.0530395507812
+  },
+  "do_nothing_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.33000001311302185,
+    "median_time_in_band_fraction": 0.0,
+    "p10_time_in_band_fraction": 0.0,
+    "mean_normalized_band_violation": 0.401154488325119,
+    "median_normalized_band_violation": 0.234375,
+    "mean_final_distance": 910.7290649414062
+  },
+  "seeds": [
+    {
+      "seed": 4,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.39978888630867004,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 909.3820190429688
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 0.999000072479248,
+      "stage1_regression": 0.0009999275207519531,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 0.999000072479248,
+        "regression": 0.0009999275207519531,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 205
+    },
+    {
+      "seed": 31,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.3310333788394928,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.4042809009552002,
+        "median_normalized_band_violation": 0.22700811922550201,
+        "mean_final_distance": 954.4540405273438
+      },
+      "stage1_clear_rate_before": 0.9970000386238098,
+      "stage1_clear_rate_after": 0.9970000386238098,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 0.9970000386238098,
+        "clear_rate_after": 0.9970000386238098,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0010333657264709473,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 87
+    }
+  ],
+  "mean_time_in_band_fraction": 0.3305166959762573,
+  "mean_time_in_band_above_do_nothing": 0.0005166828632354736,
+  "lowest_seed_time_in_band_fraction": 0.33000001311302185,
+  "mean_normalized_band_violation": 0.4020348936319351,
+  "mean_gate_passed": false,
+  "five_point_seed_floor_passed": false,
+  "violation_gate_passed": false,
+  "retention_gate_passed": true,
+  "screening_gate_passed": false,
+  "promotion_gate_passed": null
+}

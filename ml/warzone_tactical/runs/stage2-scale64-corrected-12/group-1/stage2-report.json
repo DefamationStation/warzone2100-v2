@@ -1,0 +1,189 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 2,
+  "kind": "three_seed_screening",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 8,
+    "iterations": 1500,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "target_kl": 0.015,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.002,
+    "retention_coefficient": 0.1,
+    "rehearsal_fraction": 0.2,
+    "range_objective_coefficient": 1.0,
+    "range_progress_coefficient": 0.1,
+    "heading_alignment_coefficient": 0.02,
+    "range_progress_start_coefficient": 0.1,
+    "heading_alignment_start_coefficient": 0.02,
+    "approach_anneal_iterations": 0,
+    "speed_settling_coefficient": 0.02,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5,
+    "initial_log_std": -0.35,
+    "final_log_std": null,
+    "log_std_anneal_iterations": 0,
+    "clip_level_violation": false,
+    "heading_output_scale": 64,
+    "compile_simulator": true,
+    "stagger_initial_episode_phase": true
+  },
+  "stage1_checkpoint_seed": 4,
+  "actor_initial_checkpoint": null,
+  "evaluation_episodes_per_seed": 1000,
+  "evaluation_tier": "screening",
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 999,
+  "range_band": {
+    "lower": 512,
+    "lower_inclusive": false,
+    "upper": 1088,
+    "upper_inclusive": true
+  },
+  "primary_metric": "episode_time_in_band_fraction",
+  "scripted_rangekeeper_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.9219767451286316,
+    "median_time_in_band_fraction": 0.9399999976158142,
+    "p10_time_in_band_fraction": 0.7833333611488342,
+    "mean_normalized_band_violation": 0.04023345559835434,
+    "median_normalized_band_violation": 0.008964120410382748,
+    "mean_final_distance": 799.0530395507812
+  },
+  "do_nothing_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.33000001311302185,
+    "median_time_in_band_fraction": 0.0,
+    "p10_time_in_band_fraction": 0.0,
+    "mean_normalized_band_violation": 0.401154488325119,
+    "median_normalized_band_violation": 0.234375,
+    "mean_final_distance": 910.7290649414062
+  },
+  "seeds": [
+    {
+      "seed": 4,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.5918033719062805,
+        "median_time_in_band_fraction": 0.7900000214576721,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.3028368651866913,
+        "median_normalized_band_violation": 0.032928239554166794,
+        "mean_final_distance": 1132.4300537109375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.26180335879325867,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1151
+    },
+    {
+      "seed": 5,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.6051133871078491,
+        "median_time_in_band_fraction": 0.7366666793823242,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.1718335598707199,
+        "median_normalized_band_violation": 0.04487847536802292,
+        "mean_final_distance": 694.6720581054688
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.27511337399482727,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 634
+    },
+    {
+      "seed": 6,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.48807334899902344,
+        "median_time_in_band_fraction": 0.46000000834465027,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.21267183125019073,
+        "median_normalized_band_violation": 0.10763918608427048,
+        "mean_final_distance": 655.8470458984375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.1580733358860016,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 693
+    },
+    {
+      "seed": 7,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.2683599889278412,
+        "median_time_in_band_fraction": 0.21666666865348816,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.3970305621623993,
+        "median_normalized_band_violation": 0.26363426446914673,
+        "mean_final_distance": 522.0970458984375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.061640024185180664,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1137
+    }
+  ],
+  "mean_time_in_band_fraction": 0.48833752423524857,
+  "mean_time_in_band_above_do_nothing": 0.15833751112222672,
+  "lowest_seed_time_in_band_fraction": 0.2683599889278412,
+  "mean_normalized_band_violation": 0.2710932046175003,
+  "mean_gate_passed": false,
+  "five_point_seed_floor_passed": false,
+  "violation_gate_passed": false,
+  "retention_gate_passed": true,
+  "screening_gate_passed": false,
+  "promotion_gate_passed": null
+}

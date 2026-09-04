@@ -1,0 +1,29 @@
+{
+  "contract": "warzone-tactical-v1",
+  "kind": "stage2_performance_refactor_acceptance",
+  "fixed_seed": 17,
+  "iterations": 50,
+  "rollout_steps": 32,
+  "arenas": 2048,
+  "target_kl_disabled": true,
+  "exact_metric_keys": [
+    "mean_completed_time_in_band_fraction",
+    "mean_completed_normalized_band_violation",
+    "mean_reward"
+  ],
+  "all_50_rows_bit_identical": true,
+  "before_elapsed_seconds": 68.76419069999247,
+  "after_elapsed_seconds": 70.9396512000094,
+  "measured_speedup": 0.9693336453842525,
+  "sync_removal_speedup_claim_supported": false,
+  "post_refactor_throughput_report": "throughput-review7.json",
+  "post_refactor_simulator_ms_range": {
+    "minimum": 38.44622999924468,
+    "maximum": 39.71812799863983
+  },
+  "concurrent_three_seed_check": {
+    "result": "stopped",
+    "reason": "No process completed its first iteration in 90 seconds.",
+    "use_concurrent_seed_runs": false
+  }
+}

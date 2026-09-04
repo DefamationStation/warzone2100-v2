@@ -1,0 +1,2905 @@
+{
+  "metric": "completed_episode_block_time_in_band_fraction",
+  "smoothing": "five completed-episode blocks",
+  "warning": "This is on-policy training telemetry. It is not a fixed deterministic evaluation.",
+  "series": [
+    {
+      "label": "seed-4",
+      "path": "ml/warzone_tactical/runs/stage2-review6-seed4/seed-4/training.jsonl",
+      "blocks": [
+        {
+          "iteration": 10.0,
+          "time_in_band_fraction": 0.3408626317977905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3408626317977905
+        },
+        {
+          "iteration": 19.0,
+          "time_in_band_fraction": 0.3403955101966858,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34062907099723816
+        },
+        {
+          "iteration": 29.0,
+          "time_in_band_fraction": 0.3392155170440674,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3401578863461812
+        },
+        {
+          "iteration": 38.0,
+          "time_in_band_fraction": 0.34070637822151184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3402950093150139
+        },
+        {
+          "iteration": 47.0,
+          "time_in_band_fraction": 0.3418375849723816,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34060352444648745
+        },
+        {
+          "iteration": 57.0,
+          "time_in_band_fraction": 0.3424414098262787,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3409192800521851
+        },
+        {
+          "iteration": 66.0,
+          "time_in_band_fraction": 0.34421059489250183,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3416822969913483
+        },
+        {
+          "iteration": 75.0,
+          "time_in_band_fraction": 0.3539811372756958,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.344635421037674
+        },
+        {
+          "iteration": 85.0,
+          "time_in_band_fraction": 0.3512369692325592,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34674153923988343
+        },
+        {
+          "iteration": 94.0,
+          "time_in_band_fraction": 0.34609538316726685,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3475930988788605
+        },
+        {
+          "iteration": 104.0,
+          "time_in_band_fraction": 0.35044920444488525,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3491946578025818
+        },
+        {
+          "iteration": 113.0,
+          "time_in_band_fraction": 0.35188478231430054,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35072949528694153
+        },
+        {
+          "iteration": 122.0,
+          "time_in_band_fraction": 0.3537776470184326,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3506887972354889
+        },
+        {
+          "iteration": 132.0,
+          "time_in_band_fraction": 0.3451985716819763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3494811177253723
+        },
+        {
+          "iteration": 141.0,
+          "time_in_band_fraction": 0.33828288316726685,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3479186177253723
+        },
+        {
+          "iteration": 150.0,
+          "time_in_band_fraction": 0.3395051956176758,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3457298159599304
+        },
+        {
+          "iteration": 160.0,
+          "time_in_band_fraction": 0.3320833444595337,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34176952838897706
+        },
+        {
+          "iteration": 169.0,
+          "time_in_band_fraction": 0.3289371728897095,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33680143356323244
+        },
+        {
+          "iteration": 179.0,
+          "time_in_band_fraction": 0.32763510942459106,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3332887411117554
+        },
+        {
+          "iteration": 188.0,
+          "time_in_band_fraction": 0.3332828879356384,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3322887420654297
+        },
+        {
+          "iteration": 197.0,
+          "time_in_band_fraction": 0.33239418268203735,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.330866539478302
+        },
+        {
+          "iteration": 207.0,
+          "time_in_band_fraction": 0.3397737443447113,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3324046194553375
+        },
+        {
+          "iteration": 216.0,
+          "time_in_band_fraction": 0.347412109375,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33609960675239564
+        },
+        {
+          "iteration": 225.0,
+          "time_in_band_fraction": 0.34746745228767395,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3400660753250122
+        },
+        {
+          "iteration": 235.0,
+          "time_in_band_fraction": 0.3467952609062195,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3427685499191284
+        },
+        {
+          "iteration": 244.0,
+          "time_in_band_fraction": 0.36147135496139526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.348583984375
+        },
+        {
+          "iteration": 254.0,
+          "time_in_band_fraction": 0.3650536835193634,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35363997220993043
+        },
+        {
+          "iteration": 263.0,
+          "time_in_band_fraction": 0.3554573655128479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3552490234375
+        },
+        {
+          "iteration": 272.0,
+          "time_in_band_fraction": 0.3639144003391266,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35853841304779055
+        },
+        {
+          "iteration": 282.0,
+          "time_in_band_fraction": 0.37610840797424316,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36440104246139526
+        },
+        {
+          "iteration": 291.0,
+          "time_in_band_fraction": 0.37119466066360474,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36634570360183716
+        },
+        {
+          "iteration": 300.0,
+          "time_in_band_fraction": 0.36949869990348816,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3672347068786621
+        },
+        {
+          "iteration": 310.0,
+          "time_in_band_fraction": 0.38028156757354736,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.372199547290802
+        },
+        {
+          "iteration": 319.0,
+          "time_in_band_fraction": 0.3723958134651184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.37389582991600034
+        },
+        {
+          "iteration": 329.0,
+          "time_in_band_fraction": 0.35883787274360657,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.37044172286987304
+        },
+        {
+          "iteration": 338.0,
+          "time_in_band_fraction": 0.36361491680145264,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36892577409744265
+        },
+        {
+          "iteration": 347.0,
+          "time_in_band_fraction": 0.3633610010147095,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3676982343196869
+        },
+        {
+          "iteration": 357.0,
+          "time_in_band_fraction": 0.3651123046875,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3646643817424774
+        },
+        {
+          "iteration": 366.0,
+          "time_in_band_fraction": 0.3543294072151184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3610511004924774
+        },
+        {
+          "iteration": 375.0,
+          "time_in_band_fraction": 0.35340654850006104,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3599648356437683
+        },
+        {
+          "iteration": 385.0,
+          "time_in_band_fraction": 0.3524479269981384,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35773143768310545
+        },
+        {
+          "iteration": 394.0,
+          "time_in_band_fraction": 0.3599267601966858,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35704458951950074
+        },
+        {
+          "iteration": 404.0,
+          "time_in_band_fraction": 0.37266114354133606,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35855435729026797
+        },
+        {
+          "iteration": 413.0,
+          "time_in_band_fraction": 0.3759830594062805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36288508772850037
+        },
+        {
+          "iteration": 422.0,
+          "time_in_band_fraction": 0.39370280504226685,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3709443390369415
+        },
+        {
+          "iteration": 432.0,
+          "time_in_band_fraction": 0.4166243374347687,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.38377962112426756
+        },
+        {
+          "iteration": 441.0,
+          "time_in_band_fraction": 0.42992186546325684,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3977786421775818
+        },
+        {
+          "iteration": 450.0,
+          "time_in_band_fraction": 0.4282503128051758,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.40889647603034973
+        },
+        {
+          "iteration": 460.0,
+          "time_in_band_fraction": 0.4233642518520355,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.41837271451950075
+        },
+        {
+          "iteration": 469.0,
+          "time_in_band_fraction": 0.39315104484558105,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4182623624801636
+        },
+        {
+          "iteration": 479.0,
+          "time_in_band_fraction": 0.42745441198349,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.42042837738990785
+        },
+        {
+          "iteration": 488.0,
+          "time_in_band_fraction": 0.3521158695220947,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4048671782016754
+        },
+        {
+          "iteration": 497.0,
+          "time_in_band_fraction": 0.31595540046691895,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.38240819573402407
+        },
+        {
+          "iteration": 507.0,
+          "time_in_band_fraction": 0.3613118529319763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3699977159500122
+        },
+        {
+          "iteration": 516.0,
+          "time_in_band_fraction": 0.3956298828125,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.370493483543396
+        },
+        {
+          "iteration": 525.0,
+          "time_in_band_fraction": 0.38777342438697815,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36255728602409365
+        },
+        {
+          "iteration": 535.0,
+          "time_in_band_fraction": 0.38392579555511475,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3689192712306976
+        },
+        {
+          "iteration": 544.0,
+          "time_in_band_fraction": 0.3979654908180237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3853212893009186
+        },
+        {
+          "iteration": 554.0,
+          "time_in_band_fraction": 0.3941178321838379,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.39188248515129087
+        },
+        {
+          "iteration": 563.0,
+          "time_in_band_fraction": 0.39903807640075684,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.39256412386894224
+        },
+        {
+          "iteration": 572.0,
+          "time_in_band_fraction": 0.39465492963790894,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3939404249191284
+        },
+        {
+          "iteration": 582.0,
+          "time_in_band_fraction": 0.3739323019981384,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.39194172620773315
+        },
+        {
+          "iteration": 591.0,
+          "time_in_band_fraction": 0.3266552686691284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3776796817779541
+        },
+        {
+          "iteration": 600.0,
+          "time_in_band_fraction": 0.32586586475372314,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36402928829193115
+        },
+        {
+          "iteration": 610.0,
+          "time_in_band_fraction": 0.3103564381599426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3462929606437683
+        },
+        {
+          "iteration": 619.0,
+          "time_in_band_fraction": 0.3055126667022705,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3284645080566406
+        },
+        {
+          "iteration": 629.0,
+          "time_in_band_fraction": 0.28307944536209106,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3102939367294312
+        },
+        {
+          "iteration": 638.0,
+          "time_in_band_fraction": 0.27647459506988525,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3002578020095825
+        },
+        {
+          "iteration": 647.0,
+          "time_in_band_fraction": 0.2594905495643616,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2869827389717102
+        },
+        {
+          "iteration": 657.0,
+          "time_in_band_fraction": 0.2460481822490692,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.27412108778953553
+        },
+        {
+          "iteration": 666.0,
+          "time_in_band_fraction": 0.22000324726104736,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2570192039012909
+        },
+        {
+          "iteration": 675.0,
+          "time_in_band_fraction": 0.2119596302509308,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.24279524087905885
+        },
+        {
+          "iteration": 685.0,
+          "time_in_band_fraction": 0.21585774421691895,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.23067187070846557
+        },
+        {
+          "iteration": 694.0,
+          "time_in_band_fraction": 0.22157877683639526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.22308951616287231
+        },
+        {
+          "iteration": 704.0,
+          "time_in_band_fraction": 0.22796550393104908,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.21947298049926828
+        },
+        {
+          "iteration": 713.0,
+          "time_in_band_fraction": 0.23391112685203197,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.22225455641746522
+        },
+        {
+          "iteration": 722.0,
+          "time_in_band_fraction": 0.2350732386112213,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.22687727808952332
+        },
+        {
+          "iteration": 732.0,
+          "time_in_band_fraction": 0.2425650954246521,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.23221874833106995
+        },
+        {
+          "iteration": 741.0,
+          "time_in_band_fraction": 0.25304198265075684,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.23851138949394227
+        },
+        {
+          "iteration": 750.0,
+          "time_in_band_fraction": 0.25277179479599,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.24347264766693044
+        },
+        {
+          "iteration": 760.0,
+          "time_in_band_fraction": 0.2600244283676183,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2486953079700477
+        },
+        {
+          "iteration": 769.0,
+          "time_in_band_fraction": 0.27465659379959106,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.25661197900772165
+        },
+        {
+          "iteration": 779.0,
+          "time_in_band_fraction": 0.2889664769172633,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2658922553062439
+        },
+        {
+          "iteration": 788.0,
+          "time_in_band_fraction": 0.30107584595680237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.275499027967453
+        },
+        {
+          "iteration": 797.0,
+          "time_in_band_fraction": 0.2995393872261012,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.28485254645347524
+        },
+        {
+          "iteration": 807.0,
+          "time_in_band_fraction": 0.3203971385955846,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2969270884990685
+        },
+        {
+          "iteration": 816.0,
+          "time_in_band_fraction": 0.32964518666267395,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.30792480707168507
+        },
+        {
+          "iteration": 825.0,
+          "time_in_band_fraction": 0.3400228023529053,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.31813607215881345
+        },
+        {
+          "iteration": 835.0,
+          "time_in_band_fraction": 0.34603026509284973,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3271269559860229
+        },
+        {
+          "iteration": 844.0,
+          "time_in_band_fraction": 0.3447265625,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3361643910408027
+        },
+        {
+          "iteration": 854.0,
+          "time_in_band_fraction": 0.3535432815551758,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3427936196327209
+        },
+        {
+          "iteration": 863.0,
+          "time_in_band_fraction": 0.3768652379512787,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3522376298904419
+        },
+        {
+          "iteration": 872.0,
+          "time_in_band_fraction": 0.40057942271232605,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.364348953962326
+        },
+        {
+          "iteration": 882.0,
+          "time_in_band_fraction": 0.4075179100036621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.37664648294448855
+        },
+        {
+          "iteration": 891.0,
+          "time_in_band_fraction": 0.41957521438598633,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3916162133216858
+        },
+        {
+          "iteration": 900.0,
+          "time_in_band_fraction": 0.4221305549144745,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.40533366799354553
+        },
+        {
+          "iteration": 910.0,
+          "time_in_band_fraction": 0.4373942017555237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.41743946075439453
+        },
+        {
+          "iteration": 919.0,
+          "time_in_band_fraction": 0.46229982376098633,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4297835409641266
+        },
+        {
+          "iteration": 929.0,
+          "time_in_band_fraction": 0.48879069089889526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4460380971431732
+        },
+        {
+          "iteration": 938.0,
+          "time_in_band_fraction": 0.4990918040275574,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.46194141507148745
+        },
+        {
+          "iteration": 947.0,
+          "time_in_band_fraction": 0.5129232406616211,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4800999522209167
+        },
+        {
+          "iteration": 957.0,
+          "time_in_band_fraction": 0.5171695947647095,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.49605503082275393
+        },
+        {
+          "iteration": 966.0,
+          "time_in_band_fraction": 0.5088313817977905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5053613424301148
+        },
+        {
+          "iteration": 975.0,
+          "time_in_band_fraction": 0.516772449016571,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5109576940536499
+        },
+        {
+          "iteration": 985.0,
+          "time_in_band_fraction": 0.5190023183822632,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.514939796924591
+        },
+        {
+          "iteration": 994.0,
+          "time_in_band_fraction": 0.4966357350349426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5116822957992554
+        },
+        {
+          "iteration": 1004.0,
+          "time_in_band_fraction": 0.5010123252868652,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5084508419036865
+        },
+        {
+          "iteration": 1013.0,
+          "time_in_band_fraction": 0.5072932839393616,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5081432223320007
+        },
+        {
+          "iteration": 1022.0,
+          "time_in_band_fraction": 0.5325536727905273,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.511299467086792
+        },
+        {
+          "iteration": 1032.0,
+          "time_in_band_fraction": 0.5097705125808716,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5094531059265137
+        },
+        {
+          "iteration": 1041.0,
+          "time_in_band_fraction": 0.5277718305587769,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5156803250312805
+        },
+        {
+          "iteration": 1050.0,
+          "time_in_band_fraction": 0.5286376476287842,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5212053894996643
+        },
+        {
+          "iteration": 1060.0,
+          "time_in_band_fraction": 0.5397021174430847,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.527687156200409
+        },
+        {
+          "iteration": 1069.0,
+          "time_in_band_fraction": 0.5627050399780273,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5337174296379089
+        },
+        {
+          "iteration": 1079.0,
+          "time_in_band_fraction": 0.5688378810882568,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.545530903339386
+        },
+        {
+          "iteration": 1088.0,
+          "time_in_band_fraction": 0.5669515132904053,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5533668398857117
+        },
+        {
+          "iteration": 1097.0,
+          "time_in_band_fraction": 0.5749446749687195,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5626282453536987
+        },
+        {
+          "iteration": 1107.0,
+          "time_in_band_fraction": 0.5768098831176758,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5700497984886169
+        },
+        {
+          "iteration": 1116.0,
+          "time_in_band_fraction": 0.5805371403694153,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5736162185668945
+        },
+        {
+          "iteration": 1125.0,
+          "time_in_band_fraction": 0.5800504684448242,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.575858736038208
+        },
+        {
+          "iteration": 1135.0,
+          "time_in_band_fraction": 0.5817056894302368,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5788095712661743
+        },
+        {
+          "iteration": 1144.0,
+          "time_in_band_fraction": 0.582334041595459,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5802874445915223
+        },
+        {
+          "iteration": 1154.0,
+          "time_in_band_fraction": 0.5868831872940063,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5823021054267883
+        },
+        {
+          "iteration": 1163.0,
+          "time_in_band_fraction": 0.5830354690551758,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5828017711639404
+        },
+        {
+          "iteration": 1172.0,
+          "time_in_band_fraction": 0.5819742679595947,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5831865310668946
+        },
+        {
+          "iteration": 1182.0,
+          "time_in_band_fraction": 0.5833724141120911,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5835198760032654
+        },
+        {
+          "iteration": 1191.0,
+          "time_in_band_fraction": 0.5850081443786621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.584054696559906
+        },
+        {
+          "iteration": 1200.0,
+          "time_in_band_fraction": 0.5837304592132568,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5834241509437561
+        },
+        {
+          "iteration": 1210.0,
+          "time_in_band_fraction": 0.5858756303787231,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5839921832084656
+        },
+        {
+          "iteration": 1219.0,
+          "time_in_band_fraction": 0.5893652439117432,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5854703783988953
+        },
+        {
+          "iteration": 1229.0,
+          "time_in_band_fraction": 0.58867347240448,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5865305900573731
+        },
+        {
+          "iteration": 1238.0,
+          "time_in_band_fraction": 0.5857763290405273,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5866842269897461
+        },
+        {
+          "iteration": 1247.0,
+          "time_in_band_fraction": 0.5826205015182495,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5864622354507446
+        },
+        {
+          "iteration": 1257.0,
+          "time_in_band_fraction": 0.5843245387077332,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5861520171165466
+        },
+        {
+          "iteration": 1266.0,
+          "time_in_band_fraction": 0.5884749889373779,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5859739661216736
+        },
+        {
+          "iteration": 1275.0,
+          "time_in_band_fraction": 0.5883967876434326,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5859186291694641
+        },
+        {
+          "iteration": 1285.0,
+          "time_in_band_fraction": 0.5879703760147166,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.586357438564302
+        },
+        {
+          "iteration": 1294.0,
+          "time_in_band_fraction": 0.5866389870643545,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5871611356735229
+        },
+        {
+          "iteration": 1304.0,
+          "time_in_band_fraction": 0.5925357937812805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5888033866882324
+        },
+        {
+          "iteration": 1313.0,
+          "time_in_band_fraction": 0.5933072566986084,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5897698402404785
+        },
+        {
+          "iteration": 1322.0,
+          "time_in_band_fraction": 0.5917757153511047,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.590445625782013
+        },
+        {
+          "iteration": 1332.0,
+          "time_in_band_fraction": 0.5893505811691284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5907216668128953
+        },
+        {
+          "iteration": 1341.0,
+          "time_in_band_fraction": 0.5890543460845947,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5912047386169433
+        },
+        {
+          "iteration": 1350.0,
+          "time_in_band_fraction": 0.5880990028381348,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5903173804283142
+        },
+        {
+          "iteration": 1360.0,
+          "time_in_band_fraction": 0.5896517038345337,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5895862698554992
+        },
+        {
+          "iteration": 1369.0,
+          "time_in_band_fraction": 0.5903792381286621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5893069744110108
+        },
+        {
+          "iteration": 1379.0,
+          "time_in_band_fraction": 0.5910237431526184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5896416068077087
+        },
+        {
+          "iteration": 1388.0,
+          "time_in_band_fraction": 0.5929052829742432,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5904117941856384
+        },
+        {
+          "iteration": 1397.0,
+          "time_in_band_fraction": 0.5920116901397705,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5911943316459656
+        },
+        {
+          "iteration": 1407.0,
+          "time_in_band_fraction": 0.5847949385643005,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.590222978591919
+        },
+        {
+          "iteration": 1416.0,
+          "time_in_band_fraction": 0.5862011909484863,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5893873691558837
+        },
+        {
+          "iteration": 1425.0,
+          "time_in_band_fraction": 0.5927327275276184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5897291660308838
+        },
+        {
+          "iteration": 1435.0,
+          "time_in_band_fraction": 0.5909961462020874,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5893473386764526
+        },
+        {
+          "iteration": 1444.0,
+          "time_in_band_fraction": 0.5896908044815063,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5888831615447998
+        },
+        {
+          "iteration": 1454.0,
+          "time_in_band_fraction": 0.5906559228897095,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5900553584098815
+        },
+        {
+          "iteration": 1463.0,
+          "time_in_band_fraction": 0.5938916206359863,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5915934443473816
+        },
+        {
+          "iteration": 1472.0,
+          "time_in_band_fraction": 0.5966048240661621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5923678636550903
+        },
+        {
+          "iteration": 1482.0,
+          "time_in_band_fraction": 0.5977148413658142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5937116026878357
+        },
+        {
+          "iteration": 1491.0,
+          "time_in_band_fraction": 0.5958089232444763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5949352264404297
+        },
+        {
+          "iteration": 1500.0,
+          "time_in_band_fraction": 0.5957486629486084,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5959537744522094
+        }
+      ]
+    },
+    {
+      "label": "seed-17",
+      "path": "ml/warzone_tactical/runs/stage2-review6-seeds17-31/seed-17/training.jsonl",
+      "blocks": [
+        {
+          "iteration": 10.0,
+          "time_in_band_fraction": 0.33770179748535156,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33770179748535156
+        },
+        {
+          "iteration": 19.0,
+          "time_in_band_fraction": 0.3379313349723816,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3378165662288666
+        },
+        {
+          "iteration": 29.0,
+          "time_in_band_fraction": 0.3363460302352905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33732638756434125
+        },
+        {
+          "iteration": 38.0,
+          "time_in_band_fraction": 0.34389975666999817,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33896972984075546
+        },
+        {
+          "iteration": 47.0,
+          "time_in_band_fraction": 0.3399544358253479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33916667103767395
+        },
+        {
+          "iteration": 57.0,
+          "time_in_band_fraction": 0.3407454490661621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33977540135383605
+        },
+        {
+          "iteration": 66.0,
+          "time_in_band_fraction": 0.33846515417099,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33988216519355774
+        },
+        {
+          "iteration": 75.0,
+          "time_in_band_fraction": 0.34078776836395264,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34077051281929016
+        },
+        {
+          "iteration": 85.0,
+          "time_in_band_fraction": 0.33818358182907104,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33962727785110475
+        },
+        {
+          "iteration": 94.0,
+          "time_in_band_fraction": 0.34278157353401184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3401927053928375
+        },
+        {
+          "iteration": 104.0,
+          "time_in_band_fraction": 0.33931964635849,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3399075448513031
+        },
+        {
+          "iteration": 113.0,
+          "time_in_band_fraction": 0.33813315629959106,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3398411452770233
+        },
+        {
+          "iteration": 122.0,
+          "time_in_band_fraction": 0.34185874462127686,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3400553405284882
+        },
+        {
+          "iteration": 132.0,
+          "time_in_band_fraction": 0.33253908157348633,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3389264404773712
+        },
+        {
+          "iteration": 141.0,
+          "time_in_band_fraction": 0.33494627475738525,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3373593807220459
+        },
+        {
+          "iteration": 150.0,
+          "time_in_band_fraction": 0.3331429064273834,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3361240327358246
+        },
+        {
+          "iteration": 160.0,
+          "time_in_band_fraction": 0.33363771438598633,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3352249443531036
+        },
+        {
+          "iteration": 169.0,
+          "time_in_band_fraction": 0.3380534052848816,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3344638764858246
+        },
+        {
+          "iteration": 179.0,
+          "time_in_band_fraction": 0.33313801884651184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3345836639404297
+        },
+        {
+          "iteration": 188.0,
+          "time_in_band_fraction": 0.33762696385383606,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33511980175971984
+        },
+        {
+          "iteration": 197.0,
+          "time_in_band_fraction": 0.3407324254512787,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3366377055644989
+        },
+        {
+          "iteration": 207.0,
+          "time_in_band_fraction": 0.33862629532814115,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3376354217529299
+        },
+        {
+          "iteration": 216.0,
+          "time_in_band_fraction": 0.33850258588790805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33772525787353513
+        },
+        {
+          "iteration": 225.0,
+          "time_in_band_fraction": 0.33734700083732605,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.338567054271698
+        },
+        {
+          "iteration": 235.0,
+          "time_in_band_fraction": 0.3358740210533142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33821646571159364
+        },
+        {
+          "iteration": 244.0,
+          "time_in_band_fraction": 0.33674153685569763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3374182879924774
+        },
+        {
+          "iteration": 254.0,
+          "time_in_band_fraction": 0.3329166769981384,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3362763643264769
+        },
+        {
+          "iteration": 263.0,
+          "time_in_band_fraction": 0.3367757201194763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3359309911727905
+        },
+        {
+          "iteration": 272.0,
+          "time_in_band_fraction": 0.33638185262680054,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3357379615306854
+        },
+        {
+          "iteration": 282.0,
+          "time_in_band_fraction": 0.33274251222610474,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33511165976524354
+        },
+        {
+          "iteration": 291.0,
+          "time_in_band_fraction": 0.3347070515155792,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3347047626972198
+        },
+        {
+          "iteration": 300.0,
+          "time_in_band_fraction": 0.33677244186401367,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3354759156703949
+        },
+        {
+          "iteration": 310.0,
+          "time_in_band_fraction": 0.3394758999347687,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3360159516334534
+        },
+        {
+          "iteration": 319.0,
+          "time_in_band_fraction": 0.3337337374687195,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33548632860183714
+        },
+        {
+          "iteration": 329.0,
+          "time_in_band_fraction": 0.3366650342941284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3362708330154419
+        },
+        {
+          "iteration": 338.0,
+          "time_in_band_fraction": 0.33477213978767395,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33628385066986083
+        },
+        {
+          "iteration": 347.0,
+          "time_in_band_fraction": 0.33603188395500183,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3361357390880585
+        },
+        {
+          "iteration": 357.0,
+          "time_in_band_fraction": 0.3361751437187195,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33547558784484866
+        },
+        {
+          "iteration": 366.0,
+          "time_in_band_fraction": 0.33470213413238525,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3356692671775818
+        },
+        {
+          "iteration": 375.0,
+          "time_in_band_fraction": 0.33810871839523315,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33595800399780273
+        },
+        {
+          "iteration": 385.0,
+          "time_in_band_fraction": 0.332989901304245,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33560155630111693
+        },
+        {
+          "iteration": 394.0,
+          "time_in_band_fraction": 0.3385237455368042,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3360999286174774
+        },
+        {
+          "iteration": 404.0,
+          "time_in_band_fraction": 0.3359326124191284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3360514223575592
+        },
+        {
+          "iteration": 413.0,
+          "time_in_band_fraction": 0.3341194689273834,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33593488931655885
+        },
+        {
+          "iteration": 422.0,
+          "time_in_band_fraction": 0.33299967646598816,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3349130809307098
+        },
+        {
+          "iteration": 432.0,
+          "time_in_band_fraction": 0.3306608200073242,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3344472646713257
+        },
+        {
+          "iteration": 441.0,
+          "time_in_band_fraction": 0.3319563865661621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33313379287719724
+        },
+        {
+          "iteration": 450.0,
+          "time_in_band_fraction": 0.3343571126461029,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33281869292259214
+        },
+        {
+          "iteration": 460.0,
+          "time_in_band_fraction": 0.3342154920101166,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3328378975391388
+        },
+        {
+          "iteration": 469.0,
+          "time_in_band_fraction": 0.3362109661102295,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33348015546798704
+        },
+        {
+          "iteration": 479.0,
+          "time_in_band_fraction": 0.3333740234375,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3340227961540222
+        },
+        {
+          "iteration": 488.0,
+          "time_in_band_fraction": 0.33498209714889526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33462793827056886
+        },
+        {
+          "iteration": 497.0,
+          "time_in_band_fraction": 0.33516111969947815,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3347887396812439
+        },
+        {
+          "iteration": 507.0,
+          "time_in_band_fraction": 0.3355843126773834,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33506250381469727
+        },
+        {
+          "iteration": 516.0,
+          "time_in_band_fraction": 0.33652180433273315,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.335124671459198
+        },
+        {
+          "iteration": 525.0,
+          "time_in_band_fraction": 0.333740234375,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.335197913646698
+        },
+        {
+          "iteration": 535.0,
+          "time_in_band_fraction": 0.3362353444099426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33544856309890747
+        },
+        {
+          "iteration": 544.0,
+          "time_in_band_fraction": 0.3337988257408142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3351761043071747
+        },
+        {
+          "iteration": 554.0,
+          "time_in_band_fraction": 0.3345475196838379,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3349687457084656
+        },
+        {
+          "iteration": 563.0,
+          "time_in_band_fraction": 0.334404319524765,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33454524874687197
+        },
+        {
+          "iteration": 572.0,
+          "time_in_band_fraction": 0.3337532877922058,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3345478594303131
+        },
+        {
+          "iteration": 582.0,
+          "time_in_band_fraction": 0.33467936515808105,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3342366635799408
+        },
+        {
+          "iteration": 591.0,
+          "time_in_band_fraction": 0.3336246907711029,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33420183658599856
+        },
+        {
+          "iteration": 600.0,
+          "time_in_band_fraction": 0.33488932251930237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3342701971530914
+        },
+        {
+          "iteration": 610.0,
+          "time_in_band_fraction": 0.3319677710533142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33378288745880125
+        },
+        {
+          "iteration": 619.0,
+          "time_in_band_fraction": 0.3308170735836029,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3331956446170807
+        },
+        {
+          "iteration": 629.0,
+          "time_in_band_fraction": 0.3346891403198242,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3331975996494293
+        },
+        {
+          "iteration": 638.0,
+          "time_in_band_fraction": 0.33613282442092896,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33369922637939453
+        },
+        {
+          "iteration": 647.0,
+          "time_in_band_fraction": 0.3362727761268616,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33397591710090635
+        },
+        {
+          "iteration": 657.0,
+          "time_in_band_fraction": 0.337262362241745,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3350348353385925
+        },
+        {
+          "iteration": 666.0,
+          "time_in_band_fraction": 0.3363606929779017,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3361435592174523
+        },
+        {
+          "iteration": 675.0,
+          "time_in_band_fraction": 0.3383072912693059,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3368671894073486
+        },
+        {
+          "iteration": 685.0,
+          "time_in_band_fraction": 0.3378971219062805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3372200489044189
+        },
+        {
+          "iteration": 694.0,
+          "time_in_band_fraction": 0.33603352308273315,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33717219829559325
+        },
+        {
+          "iteration": 704.0,
+          "time_in_band_fraction": 0.3370426297187805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33712825179100037
+        },
+        {
+          "iteration": 713.0,
+          "time_in_band_fraction": 0.33901527523994446,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3376591682434089
+        },
+        {
+          "iteration": 722.0,
+          "time_in_band_fraction": 0.3368375599384308,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3373652219772339
+        },
+        {
+          "iteration": 732.0,
+          "time_in_band_fraction": 0.3362500071525574,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3370357990264893
+        },
+        {
+          "iteration": 741.0,
+          "time_in_band_fraction": 0.3383479714393616,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33749868869781496
+        },
+        {
+          "iteration": 750.0,
+          "time_in_band_fraction": 0.3351936936378479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33712890148162844
+        },
+        {
+          "iteration": 760.0,
+          "time_in_band_fraction": 0.3347835242748225,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.336282551288604
+        },
+        {
+          "iteration": 769.0,
+          "time_in_band_fraction": 0.33141440153122304,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3351979196071625
+        },
+        {
+          "iteration": 779.0,
+          "time_in_band_fraction": 0.3321012258529663,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3343681633472443
+        },
+        {
+          "iteration": 788.0,
+          "time_in_band_fraction": 0.3310546875,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33290950655937196
+        },
+        {
+          "iteration": 797.0,
+          "time_in_band_fraction": 0.3320198655128479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3322747409343719
+        },
+        {
+          "iteration": 807.0,
+          "time_in_band_fraction": 0.33367836475372314,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3320537090301521
+        },
+        {
+          "iteration": 816.0,
+          "time_in_band_fraction": 0.33340984582901,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3324527978897095
+        },
+        {
+          "iteration": 825.0,
+          "time_in_band_fraction": 0.3329508304595947,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33262271881103517
+        },
+        {
+          "iteration": 835.0,
+          "time_in_band_fraction": 0.33271974325180054,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3329557299613953
+        },
+        {
+          "iteration": 844.0,
+          "time_in_band_fraction": 0.3326122760772705,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3330742120742798
+        },
+        {
+          "iteration": 854.0,
+          "time_in_band_fraction": 0.32999187707901,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33233691453933717
+        },
+        {
+          "iteration": 863.0,
+          "time_in_band_fraction": 0.32943359017372487,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3315416634082801
+        },
+        {
+          "iteration": 872.0,
+          "time_in_band_fraction": 0.33128744363784435,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33120898604393006
+        },
+        {
+          "iteration": 882.0,
+          "time_in_band_fraction": 0.33444660902023315,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33155435919761655
+        },
+        {
+          "iteration": 891.0,
+          "time_in_band_fraction": 0.3367708325386012,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3323860704898827
+        },
+        {
+          "iteration": 900.0,
+          "time_in_band_fraction": 0.33399575948715565,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33318684697151185
+        },
+        {
+          "iteration": 910.0,
+          "time_in_band_fraction": 0.33669108152389526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3346383452415459
+        },
+        {
+          "iteration": 919.0,
+          "time_in_band_fraction": 0.33697426319122314,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33577570915222166
+        },
+        {
+          "iteration": 929.0,
+          "time_in_band_fraction": 0.3399592936038971,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33687824606895445
+        },
+        {
+          "iteration": 938.0,
+          "time_in_band_fraction": 0.3341715335845947,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3363583862781532
+        },
+        {
+          "iteration": 947.0,
+          "time_in_band_fraction": 0.3361344337463379,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3367861211299896
+        },
+        {
+          "iteration": 957.0,
+          "time_in_band_fraction": 0.33251953125,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33595181107521055
+        },
+        {
+          "iteration": 966.0,
+          "time_in_band_fraction": 0.33811521530151367,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3361800014972687
+        },
+        {
+          "iteration": 975.0,
+          "time_in_band_fraction": 0.3361067771911621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33540949821472166
+        },
+        {
+          "iteration": 985.0,
+          "time_in_band_fraction": 0.3361344337463379,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3358020782470703
+        },
+        {
+          "iteration": 994.0,
+          "time_in_band_fraction": 0.3394498825073242,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33646516799926757
+        },
+        {
+          "iteration": 1004.0,
+          "time_in_band_fraction": 0.34366047382354736,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33869335651397703
+        },
+        {
+          "iteration": 1013.0,
+          "time_in_band_fraction": 0.3441634178161621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33990299701690674
+        },
+        {
+          "iteration": 1022.0,
+          "time_in_band_fraction": 0.33168458938598633,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33901855945587156
+        },
+        {
+          "iteration": 1032.0,
+          "time_in_band_fraction": 0.3334277272224426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33847721815109255
+        },
+        {
+          "iteration": 1041.0,
+          "time_in_band_fraction": 0.33356934785842896,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33730111122131345
+        },
+        {
+          "iteration": 1050.0,
+          "time_in_band_fraction": 0.3364502191543579,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3358590602874756
+        },
+        {
+          "iteration": 1060.0,
+          "time_in_band_fraction": 0.3426497280597687,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3355563223361969
+        },
+        {
+          "iteration": 1069.0,
+          "time_in_band_fraction": 0.3357177674770355,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33636295795440674
+        },
+        {
+          "iteration": 1079.0,
+          "time_in_band_fraction": 0.33896157145500183,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3374697268009186
+        },
+        {
+          "iteration": 1088.0,
+          "time_in_band_fraction": 0.33444660902023315,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3376451790332794
+        },
+        {
+          "iteration": 1097.0,
+          "time_in_band_fraction": 0.3376399874687195,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3378831326961517
+        },
+        {
+          "iteration": 1107.0,
+          "time_in_band_fraction": 0.3278645873069763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33492610454559324
+        },
+        {
+          "iteration": 1116.0,
+          "time_in_band_fraction": 0.32890135049819946,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33356282114982605
+        },
+        {
+          "iteration": 1125.0,
+          "time_in_band_fraction": 0.3326822817325592,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33230696320533754
+        },
+        {
+          "iteration": 1135.0,
+          "time_in_band_fraction": 0.3310888707637787,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33163541555404663
+        },
+        {
+          "iteration": 1144.0,
+          "time_in_band_fraction": 0.33320802450180054,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33074902296066283
+        },
+        {
+          "iteration": 1154.0,
+          "time_in_band_fraction": 0.33693522214889526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3325631499290466
+        },
+        {
+          "iteration": 1163.0,
+          "time_in_band_fraction": 0.3339892625808716,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33358073234558105
+        },
+        {
+          "iteration": 1172.0,
+          "time_in_band_fraction": 0.3353336453437805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3341110050678253
+        },
+        {
+          "iteration": 1182.0,
+          "time_in_band_fraction": 0.336687833070755,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3352307975292206
+        },
+        {
+          "iteration": 1191.0,
+          "time_in_band_fraction": 0.332989901304245,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33518717288970945
+        },
+        {
+          "iteration": 1200.0,
+          "time_in_band_fraction": 0.33279949426651,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33436002731323244
+        },
+        {
+          "iteration": 1210.0,
+          "time_in_band_fraction": 0.3393864035606384,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3354394555091858
+        },
+        {
+          "iteration": 1219.0,
+          "time_in_band_fraction": 0.34205567836761475,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3367838621139526
+        },
+        {
+          "iteration": 1229.0,
+          "time_in_band_fraction": 0.33740559220314026,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3369274139404297
+        },
+        {
+          "iteration": 1238.0,
+          "time_in_band_fraction": 0.33652669191360474,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33763477206230164
+        },
+        {
+          "iteration": 1247.0,
+          "time_in_band_fraction": 0.33475422859191895,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3380257189273834
+        },
+        {
+          "iteration": 1257.0,
+          "time_in_band_fraction": 0.3374413847923279,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3376367151737213
+        },
+        {
+          "iteration": 1266.0,
+          "time_in_band_fraction": 0.3355078101158142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3363271415233612
+        },
+        {
+          "iteration": 1275.0,
+          "time_in_band_fraction": 0.3301302194595337,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3348720669746399
+        },
+        {
+          "iteration": 1285.0,
+          "time_in_band_fraction": 0.33072102069854736,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33371093273162844
+        },
+        {
+          "iteration": 1294.0,
+          "time_in_band_fraction": 0.3316894769668579,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3330979824066162
+        },
+        {
+          "iteration": 1304.0,
+          "time_in_band_fraction": 0.33143556118011475,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33189681768417356
+        },
+        {
+          "iteration": 1313.0,
+          "time_in_band_fraction": 0.3332568407058716,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33144662380218504
+        },
+        {
+          "iteration": 1322.0,
+          "time_in_band_fraction": 0.3304866552352905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3315179109573364
+        },
+        {
+          "iteration": 1332.0,
+          "time_in_band_fraction": 0.32976236939430237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33132618069648745
+        },
+        {
+          "iteration": 1341.0,
+          "time_in_band_fraction": 0.33217936754226685,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3314241588115692
+        },
+        {
+          "iteration": 1350.0,
+          "time_in_band_fraction": 0.3317984938621521,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3314967453479767
+        },
+        {
+          "iteration": 1360.0,
+          "time_in_band_fraction": 0.33244791626930237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33133496046066285
+        },
+        {
+          "iteration": 1369.0,
+          "time_in_band_fraction": 0.33352214097975974,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3319420576095567
+        },
+        {
+          "iteration": 1379.0,
+          "time_in_band_fraction": 0.3312695026397776,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33224348425865174
+        },
+        {
+          "iteration": 1388.0,
+          "time_in_band_fraction": 0.3327571749687195,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33235904574394226
+        },
+        {
+          "iteration": 1397.0,
+          "time_in_band_fraction": 0.3379443287849426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33358821272850037
+        },
+        {
+          "iteration": 1407.0,
+          "time_in_band_fraction": 0.3369254469871521,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3344837188720703
+        },
+        {
+          "iteration": 1416.0,
+          "time_in_band_fraction": 0.3379329442977905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3353658795356765
+        },
+        {
+          "iteration": 1425.0,
+          "time_in_band_fraction": 0.34080076217651367,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3372721314430237
+        },
+        {
+          "iteration": 1435.0,
+          "time_in_band_fraction": 0.3413378894329071,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3389882743358612
+        },
+        {
+          "iteration": 1444.0,
+          "time_in_band_fraction": 0.3421289324760508,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3398251950740828
+        },
+        {
+          "iteration": 1454.0,
+          "time_in_band_fraction": 0.33905598521231894,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3402513027191162
+        },
+        {
+          "iteration": 1463.0,
+          "time_in_band_fraction": 0.34195476770401,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3410556674003601
+        },
+        {
+          "iteration": 1472.0,
+          "time_in_band_fraction": 0.3375244140625,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3404003977775574
+        },
+        {
+          "iteration": 1482.0,
+          "time_in_band_fraction": 0.33507001399994607,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3391468226909652
+        },
+        {
+          "iteration": 1491.0,
+          "time_in_band_fraction": 0.33849444985389,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.338419926166533
+        },
+        {
+          "iteration": 1500.0,
+          "time_in_band_fraction": 0.3395654261112213,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33852181434631345
+        }
+      ]
+    },
+    {
+      "label": "seed-31",
+      "path": "ml/warzone_tactical/runs/stage2-review6-seeds17-31/seed-31/training.jsonl",
+      "blocks": [
+        {
+          "iteration": 10.0,
+          "time_in_band_fraction": 0.34543943405151367,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34543943405151367
+        },
+        {
+          "iteration": 19.0,
+          "time_in_band_fraction": 0.3478059768676758,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3466227054595947
+        },
+        {
+          "iteration": 29.0,
+          "time_in_band_fraction": 0.3529931604862213,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3487461904684703
+        },
+        {
+          "iteration": 38.0,
+          "time_in_band_fraction": 0.35356444120407104,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34995075315237045
+        },
+        {
+          "iteration": 47.0,
+          "time_in_band_fraction": 0.35676759481430054,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3513141214847565
+        },
+        {
+          "iteration": 57.0,
+          "time_in_band_fraction": 0.3582080006599426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35386783480644224
+        },
+        {
+          "iteration": 66.0,
+          "time_in_band_fraction": 0.3509537875652313,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3544973969459534
+        },
+        {
+          "iteration": 75.0,
+          "time_in_band_fraction": 0.35069334506988525,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35403743386268616
+        },
+        {
+          "iteration": 85.0,
+          "time_in_band_fraction": 0.3315185606479645,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34962825775146483
+        },
+        {
+          "iteration": 94.0,
+          "time_in_band_fraction": 0.3370833396911621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3456914067268372
+        },
+        {
+          "iteration": 104.0,
+          "time_in_band_fraction": 0.33043459057807967,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3401367247104646
+        },
+        {
+          "iteration": 113.0,
+          "time_in_band_fraction": 0.33207845687866167,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33636165857315065
+        },
+        {
+          "iteration": 122.0,
+          "time_in_band_fraction": 0.33042970299720764,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3323089301586151
+        },
+        {
+          "iteration": 132.0,
+          "time_in_band_fraction": 0.33567383885383606,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33313998579978943
+        },
+        {
+          "iteration": 141.0,
+          "time_in_band_fraction": 0.3423079252243042,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.33418490290641784
+        },
+        {
+          "iteration": 150.0,
+          "time_in_band_fraction": 0.3473600149154663,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3375699877738952
+        },
+        {
+          "iteration": 160.0,
+          "time_in_band_fraction": 0.3467968702316284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34051367044448855
+        },
+        {
+          "iteration": 169.0,
+          "time_in_band_fraction": 0.3565022945404053,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34572818875312805
+        },
+        {
+          "iteration": 179.0,
+          "time_in_band_fraction": 0.359375,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35046842098236086
+        },
+        {
+          "iteration": 188.0,
+          "time_in_band_fraction": 0.3653043508529663,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35506770610809324
+        },
+        {
+          "iteration": 197.0,
+          "time_in_band_fraction": 0.3743847608566284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36047265529632566
+        },
+        {
+          "iteration": 207.0,
+          "time_in_band_fraction": 0.37535154819488525,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36618359088897706
+        },
+        {
+          "iteration": 216.0,
+          "time_in_band_fraction": 0.3891292214393616,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3727089762687683
+        },
+        {
+          "iteration": 225.0,
+          "time_in_band_fraction": 0.3925895094871521,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.37935187816619875
+        },
+        {
+          "iteration": 235.0,
+          "time_in_band_fraction": 0.3908170759677887,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.38445442318916323
+        },
+        {
+          "iteration": 244.0,
+          "time_in_band_fraction": 0.3990234434604645,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3893821597099304
+        },
+        {
+          "iteration": 254.0,
+          "time_in_band_fraction": 0.3985303044319153,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3940179109573364
+        },
+        {
+          "iteration": 263.0,
+          "time_in_band_fraction": 0.3905452489852905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3943011164665222
+        },
+        {
+          "iteration": 272.0,
+          "time_in_band_fraction": 0.39600422978401184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3949840605258942
+        },
+        {
+          "iteration": 282.0,
+          "time_in_band_fraction": 0.3976285755634308,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3963463604450226
+        },
+        {
+          "iteration": 291.0,
+          "time_in_band_fraction": 0.39438802003860474,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3954192757606506
+        },
+        {
+          "iteration": 300.0,
+          "time_in_band_fraction": 0.3870214819908142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.39311751127243044
+        },
+        {
+          "iteration": 310.0,
+          "time_in_band_fraction": 0.36951982975006104,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3889124274253845
+        },
+        {
+          "iteration": 319.0,
+          "time_in_band_fraction": 0.3654020130634308,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3827919840812683
+        },
+        {
+          "iteration": 329.0,
+          "time_in_band_fraction": 0.3434765338897705,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.37196157574653627
+        },
+        {
+          "iteration": 338.0,
+          "time_in_band_fraction": 0.3336946666240692,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.35982290506362913
+        },
+        {
+          "iteration": 347.0,
+          "time_in_band_fraction": 0.3349365293979645,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3494059145450592
+        },
+        {
+          "iteration": 357.0,
+          "time_in_band_fraction": 0.35302573442459106,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3461070954799652
+        },
+        {
+          "iteration": 366.0,
+          "time_in_band_fraction": 0.36181640625,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.34538997411727906
+        },
+        {
+          "iteration": 375.0,
+          "time_in_band_fraction": 0.37890464067459106,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3524755954742432
+        },
+        {
+          "iteration": 385.0,
+          "time_in_band_fraction": 0.38025715947151184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3617880940437317
+        },
+        {
+          "iteration": 394.0,
+          "time_in_band_fraction": 0.3739811182022095,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3695970118045807
+        },
+        {
+          "iteration": 404.0,
+          "time_in_band_fraction": 0.39539548754692255,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.378070962429047
+        },
+        {
+          "iteration": 413.0,
+          "time_in_band_fraction": 0.4137825369834882,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3884641885757446
+        },
+        {
+          "iteration": 422.0,
+          "time_in_band_fraction": 0.4143131673336029,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.395545893907547
+        },
+        {
+          "iteration": 432.0,
+          "time_in_band_fraction": 0.4020459055900574,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3999036431312561
+        },
+        {
+          "iteration": 441.0,
+          "time_in_band_fraction": 0.428204745054245,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4107483685016632
+        },
+        {
+          "iteration": 450.0,
+          "time_in_band_fraction": 0.4304378032684326,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4177568316459652
+        },
+        {
+          "iteration": 460.0,
+          "time_in_band_fraction": 0.3140755295753479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3978154301643372
+        },
+        {
+          "iteration": 469.0,
+          "time_in_band_fraction": 0.24984049797058105,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3649208962917328
+        },
+        {
+          "iteration": 479.0,
+          "time_in_band_fraction": 0.27201661467552185,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3389150381088257
+        },
+        {
+          "iteration": 488.0,
+          "time_in_band_fraction": 0.26362791657447815,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3059996724128723
+        },
+        {
+          "iteration": 497.0,
+          "time_in_band_fraction": 0.2517154812812805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2702552080154419
+        },
+        {
+          "iteration": 507.0,
+          "time_in_band_fraction": 0.24421223998069763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.25628255009651185
+        },
+        {
+          "iteration": 516.0,
+          "time_in_band_fraction": 0.2312125563621521,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.25255696177482606
+        },
+        {
+          "iteration": 525.0,
+          "time_in_band_fraction": 0.24440592527389526,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.24703482389450074
+        },
+        {
+          "iteration": 535.0,
+          "time_in_band_fraction": 0.24787110090255737,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.24388346076011658
+        },
+        {
+          "iteration": 544.0,
+          "time_in_band_fraction": 0.25104817748069763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.24375
+        },
+        {
+          "iteration": 554.0,
+          "time_in_band_fraction": 0.25914064049720764,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.246735680103302
+        },
+        {
+          "iteration": 563.0,
+          "time_in_band_fraction": 0.27199870347976685,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.254892909526825
+        },
+        {
+          "iteration": 572.0,
+          "time_in_band_fraction": 0.2801123261451721,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.26203418970108033
+        },
+        {
+          "iteration": 582.0,
+          "time_in_band_fraction": 0.2656722068786621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.26559441089630126
+        },
+        {
+          "iteration": 591.0,
+          "time_in_band_fraction": 0.2651790380477905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2684205830097198
+        },
+        {
+          "iteration": 600.0,
+          "time_in_band_fraction": 0.267351895570755,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2700628340244293
+        },
+        {
+          "iteration": 610.0,
+          "time_in_band_fraction": 0.26730793714523315,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2691246807575226
+        },
+        {
+          "iteration": 619.0,
+          "time_in_band_fraction": 0.2725260257720947,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2676074206829071
+        },
+        {
+          "iteration": 629.0,
+          "time_in_band_fraction": 0.28614094853401184,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.27170116901397706
+        },
+        {
+          "iteration": 638.0,
+          "time_in_band_fraction": 0.3024560511112213,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.2791565716266632
+        },
+        {
+          "iteration": 647.0,
+          "time_in_band_fraction": 0.3086881637573242,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.28742382526397703
+        },
+        {
+          "iteration": 657.0,
+          "time_in_band_fraction": 0.3250960111618042,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.29898144006729127
+        },
+        {
+          "iteration": 666.0,
+          "time_in_band_fraction": 0.3460465371608734,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.313685542345047
+        },
+        {
+          "iteration": 675.0,
+          "time_in_band_fraction": 0.35905274748802185,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.328267902135849
+        },
+        {
+          "iteration": 685.0,
+          "time_in_band_fraction": 0.3722672462463379,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3422301411628723
+        },
+        {
+          "iteration": 694.0,
+          "time_in_band_fraction": 0.4197119176387787,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.36443489193916323
+        },
+        {
+          "iteration": 704.0,
+          "time_in_band_fraction": 0.4456803202629125,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.3885517537593849
+        },
+        {
+          "iteration": 713.0,
+          "time_in_band_fraction": 0.4557503163814509,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.41049250960350037
+        },
+        {
+          "iteration": 722.0,
+          "time_in_band_fraction": 0.4681608080863988,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.43231412172317574
+        },
+        {
+          "iteration": 732.0,
+          "time_in_band_fraction": 0.4796842336654592,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.453797519207
+        },
+        {
+          "iteration": 741.0,
+          "time_in_band_fraction": 0.48969891667366383,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4677949190139771
+        },
+        {
+          "iteration": 750.0,
+          "time_in_band_fraction": 0.5075879096984863,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4801764369010918
+        },
+        {
+          "iteration": 760.0,
+          "time_in_band_fraction": 0.5125488042831421,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.4915361344814301
+        },
+        {
+          "iteration": 769.0,
+          "time_in_band_fraction": 0.5139583349227905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5006956398487084
+        },
+        {
+          "iteration": 779.0,
+          "time_in_band_fraction": 0.5125976800918579,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5072783291339882
+        },
+        {
+          "iteration": 788.0,
+          "time_in_band_fraction": 0.5229475498199463,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5139280557632446
+        },
+        {
+          "iteration": 797.0,
+          "time_in_band_fraction": 0.4951025545597041,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5114309847354882
+        },
+        {
+          "iteration": 807.0,
+          "time_in_band_fraction": 0.5109651684761083,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5111142575740815
+        },
+        {
+          "iteration": 816.0,
+          "time_in_band_fraction": 0.5323860645294225,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5147998034954078
+        },
+        {
+          "iteration": 825.0,
+          "time_in_band_fraction": 0.532719731330868,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5188242137432099
+        },
+        {
+          "iteration": 835.0,
+          "time_in_band_fraction": 0.541811466217041,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5225969970226287
+        },
+        {
+          "iteration": 844.0,
+          "time_in_band_fraction": 0.536119818687439,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5308004498481758
+        },
+        {
+          "iteration": 854.0,
+          "time_in_band_fraction": 0.5440836548805237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5374241471290588
+        },
+        {
+          "iteration": 863.0,
+          "time_in_band_fraction": 0.5392334461212158,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5387936234474175
+        },
+        {
+          "iteration": 872.0,
+          "time_in_band_fraction": 0.5466763973236084,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5415849566459656
+        },
+        {
+          "iteration": 882.0,
+          "time_in_band_fraction": 0.5446141958236694,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5421455025672912
+        },
+        {
+          "iteration": 891.0,
+          "time_in_band_fraction": 0.5577604174613953,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5464736223220825
+        },
+        {
+          "iteration": 900.0,
+          "time_in_band_fraction": 0.551684558391571,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.547993803024292
+        },
+        {
+          "iteration": 910.0,
+          "time_in_band_fraction": 0.5580891966819763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5517649531364441
+        },
+        {
+          "iteration": 919.0,
+          "time_in_band_fraction": 0.56171715259552,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5547731041908264
+        },
+        {
+          "iteration": 929.0,
+          "time_in_band_fraction": 0.5533886551856995,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5565279960632324
+        },
+        {
+          "iteration": 938.0,
+          "time_in_band_fraction": 0.5701367259025574,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5590032577514649
+        },
+        {
+          "iteration": 947.0,
+          "time_in_band_fraction": 0.5751937031745911,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5637050867080688
+        },
+        {
+          "iteration": 957.0,
+          "time_in_band_fraction": 0.5724283456802368,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5665729165077209
+        },
+        {
+          "iteration": 966.0,
+          "time_in_band_fraction": 0.5697363615036011,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5681767582893371
+        },
+        {
+          "iteration": 975.0,
+          "time_in_band_fraction": 0.572106122970581,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5719202518463135
+        },
+        {
+          "iteration": 985.0,
+          "time_in_band_fraction": 0.5759749412536621,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5730878949165344
+        },
+        {
+          "iteration": 994.0,
+          "time_in_band_fraction": 0.5704410672187805,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5721373677253723
+        },
+        {
+          "iteration": 1004.0,
+          "time_in_band_fraction": 0.5670719146728516,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5710660815238953
+        },
+        {
+          "iteration": 1013.0,
+          "time_in_band_fraction": 0.5613216161727905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5693831324577332
+        },
+        {
+          "iteration": 1022.0,
+          "time_in_band_fraction": 0.5586947202682495,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5667008519172668
+        },
+        {
+          "iteration": 1032.0,
+          "time_in_band_fraction": 0.5278922319412231,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5570843100547791
+        },
+        {
+          "iteration": 1041.0,
+          "time_in_band_fraction": 0.4544515013694763,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5338863968849182
+        },
+        {
+          "iteration": 1050.0,
+          "time_in_band_fraction": 0.4265299439430237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5057780027389527
+        },
+        {
+          "iteration": 1060.0,
+          "time_in_band_fraction": 0.545361340045929,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5025859475135803
+        },
+        {
+          "iteration": 1069.0,
+          "time_in_band_fraction": 0.5582681894302368,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5025006413459778
+        },
+        {
+          "iteration": 1079.0,
+          "time_in_band_fraction": 0.5637028217315674,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5096627593040466
+        },
+        {
+          "iteration": 1088.0,
+          "time_in_band_fraction": 0.56110680103302,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5309938192367554
+        },
+        {
+          "iteration": 1097.0,
+          "time_in_band_fraction": 0.5645068883895874,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5585892081260682
+        },
+        {
+          "iteration": 1107.0,
+          "time_in_band_fraction": 0.5712255835533142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5637620568275452
+        },
+        {
+          "iteration": 1116.0,
+          "time_in_band_fraction": 0.5645703077316284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5650224804878234
+        },
+        {
+          "iteration": 1125.0,
+          "time_in_band_fraction": 0.564368486404419,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5651556134223938
+        },
+        {
+          "iteration": 1135.0,
+          "time_in_band_fraction": 0.5710238218307495,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5671390175819397
+        },
+        {
+          "iteration": 1144.0,
+          "time_in_band_fraction": 0.5776529908180237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.569768238067627
+        },
+        {
+          "iteration": 1154.0,
+          "time_in_band_fraction": 0.580040693283081,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5715312600135803
+        },
+        {
+          "iteration": 1163.0,
+          "time_in_band_fraction": 0.5764338970184326,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5739039778709412
+        },
+        {
+          "iteration": 1172.0,
+          "time_in_band_fraction": 0.5771370530128479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5764576911926269
+        },
+        {
+          "iteration": 1182.0,
+          "time_in_band_fraction": 0.5772900581359863,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5777109384536743
+        },
+        {
+          "iteration": 1191.0,
+          "time_in_band_fraction": 0.5820394158363342,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5785882234573364
+        },
+        {
+          "iteration": 1200.0,
+          "time_in_band_fraction": 0.5786426067352295,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5783086061477661
+        },
+        {
+          "iteration": 1210.0,
+          "time_in_band_fraction": 0.5776790380477905,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5785576343536377
+        },
+        {
+          "iteration": 1219.0,
+          "time_in_band_fraction": 0.579430341720581,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5790162920951843
+        },
+        {
+          "iteration": 1229.0,
+          "time_in_band_fraction": 0.5829801559448242,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5801543116569519
+        },
+        {
+          "iteration": 1238.0,
+          "time_in_band_fraction": 0.5833902955055237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5804244875907898
+        },
+        {
+          "iteration": 1247.0,
+          "time_in_band_fraction": 0.5780013203620911,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5802962303161621
+        },
+        {
+          "iteration": 1257.0,
+          "time_in_band_fraction": 0.5793668627738953,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.580633795261383
+        },
+        {
+          "iteration": 1266.0,
+          "time_in_band_fraction": 0.582812488079071,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.581310224533081
+        },
+        {
+          "iteration": 1275.0,
+          "time_in_band_fraction": 0.5855973362922668,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5818336606025696
+        },
+        {
+          "iteration": 1285.0,
+          "time_in_band_fraction": 0.5833495855331421,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5818255186080933
+        },
+        {
+          "iteration": 1294.0,
+          "time_in_band_fraction": 0.5826302170753479,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5827512979507447
+        },
+        {
+          "iteration": 1304.0,
+          "time_in_band_fraction": 0.5872265696525574,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.584323239326477
+        },
+        {
+          "iteration": 1313.0,
+          "time_in_band_fraction": 0.5890901684761047,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5855787754058838
+        },
+        {
+          "iteration": 1322.0,
+          "time_in_band_fraction": 0.5883463621139597,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5861285805702223
+        },
+        {
+          "iteration": 1332.0,
+          "time_in_band_fraction": 0.5865006446838308,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5867587924003601
+        },
+        {
+          "iteration": 1341.0,
+          "time_in_band_fraction": 0.5848974585533142,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5872122406959533
+        },
+        {
+          "iteration": 1350.0,
+          "time_in_band_fraction": 0.5900195240974426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5877708315849304
+        },
+        {
+          "iteration": 1360.0,
+          "time_in_band_fraction": 0.5931494235992432,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5885826826095581
+        },
+        {
+          "iteration": 1369.0,
+          "time_in_band_fraction": 0.5920947194099426,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5893323540687547
+        },
+        {
+          "iteration": 1379.0,
+          "time_in_band_fraction": 0.5908203125,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5901962876319885
+        },
+        {
+          "iteration": 1388.0,
+          "time_in_band_fraction": 0.5971939563751221,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5926555871963501
+        },
+        {
+          "iteration": 1397.0,
+          "time_in_band_fraction": 0.5970491170883179,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5940615057945251
+        },
+        {
+          "iteration": 1407.0,
+          "time_in_band_fraction": 0.5969498753547668,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5948215961456299
+        },
+        {
+          "iteration": 1416.0,
+          "time_in_band_fraction": 0.5933789014816284,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5950784325599671
+        },
+        {
+          "iteration": 1425.0,
+          "time_in_band_fraction": 0.5957145094871521,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5960572719573974
+        },
+        {
+          "iteration": 1435.0,
+          "time_in_band_fraction": 0.5963704586029053,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5958925724029541
+        },
+        {
+          "iteration": 1444.0,
+          "time_in_band_fraction": 0.5961360931396484,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5957099676132203
+        },
+        {
+          "iteration": 1454.0,
+          "time_in_band_fraction": 0.5969759225845337,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5957151770591735
+        },
+        {
+          "iteration": 1463.0,
+          "time_in_band_fraction": 0.5976725220680237,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5965739011764526
+        },
+        {
+          "iteration": 1472.0,
+          "time_in_band_fraction": 0.5995084643363953,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5973326921463012
+        },
+        {
+          "iteration": 1482.0,
+          "time_in_band_fraction": 0.6002815961837769,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.5981149196624755
+        },
+        {
+          "iteration": 1491.0,
+          "time_in_band_fraction": 0.5955729484558105,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.598002290725708
+        },
+        {
+          "iteration": 1500.0,
+          "time_in_band_fraction": 0.5935513973236084,
+          "episodes": 2048.0,
+          "rolling_five_blocks": 0.597317385673523
+        }
+      ]
+    }
+  ]
+}

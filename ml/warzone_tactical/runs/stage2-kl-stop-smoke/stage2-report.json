@@ -1,0 +1,86 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 2,
+  "kind": "three_seed_screening",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 64,
+    "rollout_steps": 32,
+    "iterations": 4,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "target_kl": 0.015,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.002,
+    "retention_coefficient": 0.1,
+    "range_objective_coefficient": 1.0,
+    "range_progress_coefficient": 0.1,
+    "heading_alignment_coefficient": 0.02,
+    "speed_settling_coefficient": 0.02,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5,
+    "initial_log_std": -0.35
+  },
+  "evaluation_episodes_per_seed": 32,
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 31,
+  "range_band": {
+    "lower": 512,
+    "lower_inclusive": false,
+    "upper": 1088,
+    "upper_inclusive": true
+  },
+  "primary_metric": "episode_time_in_band_fraction",
+  "scripted_rangekeeper_v1": {
+    "episodes": 32,
+    "mean_time_in_band_fraction": 0.9366666674613953,
+    "median_time_in_band_fraction": 0.9466667175292969,
+    "p10_time_in_band_fraction": 0.8666666746139526,
+    "mean_normalized_band_violation": 0.02815954200923443,
+    "median_normalized_band_violation": 0.005098380148410797,
+    "mean_final_distance": 727.09375
+  },
+  "do_nothing_v1": {
+    "episodes": 32,
+    "mean_time_in_band_fraction": 0.28125,
+    "median_time_in_band_fraction": 0.0,
+    "p10_time_in_band_fraction": 0.0,
+    "mean_normalized_band_violation": 0.32432711124420166,
+    "median_normalized_band_violation": 0.213542178273201,
+    "mean_final_distance": 741.90625
+  },
+  "seeds": [
+    {
+      "seed": 4,
+      "evaluation": {
+        "episodes": 32,
+        "mean_time_in_band_fraction": 0.3226041793823242,
+        "median_time_in_band_fraction": 0.3400000035762787,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.3835098445415497,
+        "median_normalized_band_violation": 0.10689817368984222,
+        "mean_final_distance": 1094.5625
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "time_in_band_above_do_nothing": 0.04135417938232422,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true
+    }
+  ],
+  "mean_time_in_band_fraction": 0.3226041793823242,
+  "mean_time_in_band_above_do_nothing": 0.04135417938232422,
+  "lowest_seed_time_in_band_fraction": 0.3226041793823242,
+  "mean_normalized_band_violation": 0.3835098445415497,
+  "mean_gate_passed": false,
+  "five_point_seed_floor_passed": false,
+  "violation_gate_passed": false,
+  "retention_gate_passed": true,
+  "screening_gate_passed": false,
+  "promotion_gate_passed": null
+}
