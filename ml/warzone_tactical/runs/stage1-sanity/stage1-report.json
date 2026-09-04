@@ -1,0 +1,89 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 1,
+  "kind": "three_seed_learning_sanity",
+  "stats_sha256": "d395a7e948f54c263982c1c03e0fbddd177e43a0da33bf2120907084b925dd63",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 32,
+    "iterations": 24,
+    "max_episode_steps": 100,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.01,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5
+  },
+  "sanity_episodes_per_seed": 1000,
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 999,
+  "per_arena_random_stream": true,
+  "scripted_nearest_v1": {
+    "episodes": 1000,
+    "clears": 984,
+    "unfinished": 16,
+    "clear_rate": 0.984000027179718,
+    "median_clear_ticks": 5000.0,
+    "mean_clear_ticks": 5133.739837398374,
+    "projectile_drops": 0
+  },
+  "seeds": [
+    {
+      "seed": 0,
+      "evaluation": {
+        "episodes": 1000,
+        "clears": 980,
+        "unfinished": 20,
+        "clear_rate": 0.9800000190734863,
+        "median_clear_ticks": 5000.0,
+        "mean_clear_ticks": 5128.163265306122,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    },
+    {
+      "seed": 1,
+      "evaluation": {
+        "episodes": 1000,
+        "clears": 979,
+        "unfinished": 21,
+        "clear_rate": 0.9790000319480896,
+        "median_clear_ticks": 5000.0,
+        "mean_clear_ticks": 5171.807967313585,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    },
+    {
+      "seed": 2,
+      "evaluation": {
+        "episodes": 1000,
+        "clears": 980,
+        "unfinished": 20,
+        "clear_rate": 0.9800000190734863,
+        "median_clear_ticks": 5000.0,
+        "mean_clear_ticks": 5128.163265306122,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    }
+  ],
+  "mean_clear_rate": 0.9796666900316874,
+  "lowest_seed_clear_rate": 0.9790000319480896,
+  "mean_gate_passed": true,
+  "five_point_floor_passed": true,
+  "sanity_gate_passed": true,
+  "contract_v1_promotion_evaluated": false,
+  "promotion_training_seeds": [
+    4,
+    17,
+    31
+  ]
+}

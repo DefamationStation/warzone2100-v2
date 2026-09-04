@@ -1,0 +1,1 @@
+{"iteration":1,"environment_steps":256,"completed_clears":0,"completed_unfinished":0,"clear_rate":0.0,"mean_reward":0.0013158480869606137,"elapsed_seconds":1.0092048999940744,"policy_loss":-0.006605359259992838,"value_loss":0.001974343089386821,"entropy":1.7750478982925415,"approximate_kl":0.005000141449272633,"clip_fraction":0.046875,"grad_norm":0.332904577255249}

@@ -1,0 +1,2124 @@
+{
+  "split": {
+    "near": {
+      "episodes": 336,
+      "mean_time_in_band_fraction": 0.007529762573540211,
+      "mean_final_distance": 203.19345092773438
+    },
+    "in_band": {
+      "episodes": 330,
+      "mean_time_in_band_fraction": 0.42914140224456787,
+      "mean_final_distance": 434.8272705078125
+    },
+    "far": {
+      "episodes": 334,
+      "mean_time_in_band_fraction": 0.15706588327884674,
+      "mean_final_distance": 995.3922729492188
+    }
+  },
+  "trajectory": {
+    "scenario_seed": 894,
+    "rows": [
+      {
+        "tick": 1,
+        "distance": 2106,
+        "heading_delta_q": -53,
+        "speed_fraction_q": 67,
+        "in_band": false
+      },
+      {
+        "tick": 2,
+        "distance": 2109,
+        "heading_delta_q": -85,
+        "speed_fraction_q": 187,
+        "in_band": false
+      },
+      {
+        "tick": 3,
+        "distance": 2113,
+        "heading_delta_q": -102,
+        "speed_fraction_q": 251,
+        "in_band": false
+      },
+      {
+        "tick": 4,
+        "distance": 2121,
+        "heading_delta_q": -111,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 5,
+        "distance": 2130,
+        "heading_delta_q": -117,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 6,
+        "distance": 2138,
+        "heading_delta_q": -121,
+        "speed_fraction_q": 256,
+        "in_band": false
+      },
+      {
+        "tick": 7,
+        "distance": 2146,
+        "heading_delta_q": -123,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 8,
+        "distance": 2154,
+        "heading_delta_q": -125,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 9,
+        "distance": 2161,
+        "heading_delta_q": -126,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 10,
+        "distance": 2167,
+        "heading_delta_q": -126,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 11,
+        "distance": 2173,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 12,
+        "distance": 2178,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 13,
+        "distance": 2182,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 14,
+        "distance": 2185,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 15,
+        "distance": 2188,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 255,
+        "in_band": false
+      },
+      {
+        "tick": 16,
+        "distance": 2190,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 254,
+        "in_band": false
+      },
+      {
+        "tick": 17,
+        "distance": 2190,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 254,
+        "in_band": false
+      },
+      {
+        "tick": 18,
+        "distance": 2190,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 254,
+        "in_band": false
+      },
+      {
+        "tick": 19,
+        "distance": 2190,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 253,
+        "in_band": false
+      },
+      {
+        "tick": 20,
+        "distance": 2188,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 253,
+        "in_band": false
+      },
+      {
+        "tick": 21,
+        "distance": 2185,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 252,
+        "in_band": false
+      },
+      {
+        "tick": 22,
+        "distance": 2182,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 252,
+        "in_band": false
+      },
+      {
+        "tick": 23,
+        "distance": 2178,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 251,
+        "in_band": false
+      },
+      {
+        "tick": 24,
+        "distance": 2173,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 251,
+        "in_band": false
+      },
+      {
+        "tick": 25,
+        "distance": 2167,
+        "heading_delta_q": -127,
+        "speed_fraction_q": 250,
+        "in_band": false
+      },
+      {
+        "tick": 26,
+        "distance": 2160,
+        "heading_delta_q": -126,
+        "speed_fraction_q": 249,
+        "in_band": false
+      },
+      {
+        "tick": 27,
+        "distance": 2153,
+        "heading_delta_q": -126,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 28,
+        "distance": 2146,
+        "heading_delta_q": -125,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 29,
+        "distance": 2137,
+        "heading_delta_q": -124,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 30,
+        "distance": 2128,
+        "heading_delta_q": -122,
+        "speed_fraction_q": 246,
+        "in_band": false
+      },
+      {
+        "tick": 31,
+        "distance": 2120,
+        "heading_delta_q": -118,
+        "speed_fraction_q": 245,
+        "in_band": false
+      },
+      {
+        "tick": 32,
+        "distance": 2111,
+        "heading_delta_q": -113,
+        "speed_fraction_q": 245,
+        "in_band": false
+      },
+      {
+        "tick": 33,
+        "distance": 2102,
+        "heading_delta_q": -103,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 34,
+        "distance": 2092,
+        "heading_delta_q": -89,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 35,
+        "distance": 2081,
+        "heading_delta_q": -66,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 36,
+        "distance": 2070,
+        "heading_delta_q": -35,
+        "speed_fraction_q": 245,
+        "in_band": false
+      },
+      {
+        "tick": 37,
+        "distance": 2059,
+        "heading_delta_q": -6,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 38,
+        "distance": 2047,
+        "heading_delta_q": 6,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 39,
+        "distance": 2035,
+        "heading_delta_q": 7,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 40,
+        "distance": 2023,
+        "heading_delta_q": 3,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 41,
+        "distance": 2011,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 42,
+        "distance": 1998,
+        "heading_delta_q": -1,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 43,
+        "distance": 1986,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 44,
+        "distance": 1975,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 45,
+        "distance": 1962,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 46,
+        "distance": 1950,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 248,
+        "in_band": false
+      },
+      {
+        "tick": 47,
+        "distance": 1938,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 48,
+        "distance": 1926,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 49,
+        "distance": 1914,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 50,
+        "distance": 1902,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 51,
+        "distance": 1890,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 52,
+        "distance": 1879,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 247,
+        "in_band": false
+      },
+      {
+        "tick": 53,
+        "distance": 1866,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 246,
+        "in_band": false
+      },
+      {
+        "tick": 54,
+        "distance": 1854,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 246,
+        "in_band": false
+      },
+      {
+        "tick": 55,
+        "distance": 1842,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 246,
+        "in_band": false
+      },
+      {
+        "tick": 56,
+        "distance": 1830,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 246,
+        "in_band": false
+      },
+      {
+        "tick": 57,
+        "distance": 1818,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 246,
+        "in_band": false
+      },
+      {
+        "tick": 58,
+        "distance": 1806,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 245,
+        "in_band": false
+      },
+      {
+        "tick": 59,
+        "distance": 1795,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 245,
+        "in_band": false
+      },
+      {
+        "tick": 60,
+        "distance": 1783,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 245,
+        "in_band": false
+      },
+      {
+        "tick": 61,
+        "distance": 1771,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 62,
+        "distance": 1759,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 63,
+        "distance": 1747,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 64,
+        "distance": 1735,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 65,
+        "distance": 1723,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 244,
+        "in_band": false
+      },
+      {
+        "tick": 66,
+        "distance": 1711,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 243,
+        "in_band": false
+      },
+      {
+        "tick": 67,
+        "distance": 1700,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 243,
+        "in_band": false
+      },
+      {
+        "tick": 68,
+        "distance": 1687,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 242,
+        "in_band": false
+      },
+      {
+        "tick": 69,
+        "distance": 1676,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 242,
+        "in_band": false
+      },
+      {
+        "tick": 70,
+        "distance": 1664,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 242,
+        "in_band": false
+      },
+      {
+        "tick": 71,
+        "distance": 1652,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 241,
+        "in_band": false
+      },
+      {
+        "tick": 72,
+        "distance": 1641,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 241,
+        "in_band": false
+      },
+      {
+        "tick": 73,
+        "distance": 1629,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 241,
+        "in_band": false
+      },
+      {
+        "tick": 74,
+        "distance": 1617,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 240,
+        "in_band": false
+      },
+      {
+        "tick": 75,
+        "distance": 1605,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 240,
+        "in_band": false
+      },
+      {
+        "tick": 76,
+        "distance": 1594,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 239,
+        "in_band": false
+      },
+      {
+        "tick": 77,
+        "distance": 1582,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 238,
+        "in_band": false
+      },
+      {
+        "tick": 78,
+        "distance": 1571,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 238,
+        "in_band": false
+      },
+      {
+        "tick": 79,
+        "distance": 1559,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 237,
+        "in_band": false
+      },
+      {
+        "tick": 80,
+        "distance": 1547,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 236,
+        "in_band": false
+      },
+      {
+        "tick": 81,
+        "distance": 1537,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 236,
+        "in_band": false
+      },
+      {
+        "tick": 82,
+        "distance": 1525,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 236,
+        "in_band": false
+      },
+      {
+        "tick": 83,
+        "distance": 1513,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 235,
+        "in_band": false
+      },
+      {
+        "tick": 84,
+        "distance": 1501,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 234,
+        "in_band": false
+      },
+      {
+        "tick": 85,
+        "distance": 1490,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 233,
+        "in_band": false
+      },
+      {
+        "tick": 86,
+        "distance": 1479,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 232,
+        "in_band": false
+      },
+      {
+        "tick": 87,
+        "distance": 1468,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 231,
+        "in_band": false
+      },
+      {
+        "tick": 88,
+        "distance": 1456,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 230,
+        "in_band": false
+      },
+      {
+        "tick": 89,
+        "distance": 1445,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 229,
+        "in_band": false
+      },
+      {
+        "tick": 90,
+        "distance": 1434,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 227,
+        "in_band": false
+      },
+      {
+        "tick": 91,
+        "distance": 1423,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 225,
+        "in_band": false
+      },
+      {
+        "tick": 92,
+        "distance": 1412,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 223,
+        "in_band": false
+      },
+      {
+        "tick": 93,
+        "distance": 1402,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 220,
+        "in_band": false
+      },
+      {
+        "tick": 94,
+        "distance": 1391,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 217,
+        "in_band": false
+      },
+      {
+        "tick": 95,
+        "distance": 1380,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 212,
+        "in_band": false
+      },
+      {
+        "tick": 96,
+        "distance": 1370,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 206,
+        "in_band": false
+      },
+      {
+        "tick": 97,
+        "distance": 1360,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 196,
+        "in_band": false
+      },
+      {
+        "tick": 98,
+        "distance": 1352,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 178,
+        "in_band": false
+      },
+      {
+        "tick": 99,
+        "distance": 1343,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 140,
+        "in_band": false
+      },
+      {
+        "tick": 100,
+        "distance": 1335,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 64,
+        "in_band": false
+      },
+      {
+        "tick": 101,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 7,
+        "in_band": false
+      },
+      {
+        "tick": 102,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 103,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 104,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 105,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 106,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 107,
+        "distance": 1332,
+        "heading_delta_q": -1,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 108,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 109,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 110,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 111,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 112,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 113,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 114,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 115,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 116,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 117,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 118,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 119,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 120,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 121,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 122,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 123,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 124,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 125,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 126,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 127,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 128,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 129,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 130,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 131,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 132,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 133,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 1,
+        "in_band": false
+      },
+      {
+        "tick": 134,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 135,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 136,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 137,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 138,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 139,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 140,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 141,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 142,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 143,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 144,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 145,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 146,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 147,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 148,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 149,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 150,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 151,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 152,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 153,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 154,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 155,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 156,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 157,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 158,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 159,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 160,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 161,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 162,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 163,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 164,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 165,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 166,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 167,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 168,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 169,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 170,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 171,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 172,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 173,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 174,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 175,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 176,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 177,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 178,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 179,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 180,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 181,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 182,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 183,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 184,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 185,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 186,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 187,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 188,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 189,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 190,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 191,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 192,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 193,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 194,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 195,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 196,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 197,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 198,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 199,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 200,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 201,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 202,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 203,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 204,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 205,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 206,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 207,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 208,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 209,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 210,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 211,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 212,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 213,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 214,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 215,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 216,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 217,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 218,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 219,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 220,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 221,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 222,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 223,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 224,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 225,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 226,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 227,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 228,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 229,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 230,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 231,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 232,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 233,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 234,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 235,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 236,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 237,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 238,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 239,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 240,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 241,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 242,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 243,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 244,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 245,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 246,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 247,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 248,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 249,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 250,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 251,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 252,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 253,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 254,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 255,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 256,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 257,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 258,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 259,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 260,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 261,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 262,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 263,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 264,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 265,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 266,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 267,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 268,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 269,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 270,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 271,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 272,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 273,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 274,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 275,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 276,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 277,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 278,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 279,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 280,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 281,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 282,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 283,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 284,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 285,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 286,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 287,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 288,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 289,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 290,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 291,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 292,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 293,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 294,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 295,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 296,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 297,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 298,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 299,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      },
+      {
+        "tick": 300,
+        "distance": 1332,
+        "heading_delta_q": 0,
+        "speed_fraction_q": 0,
+        "in_band": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\stage2.py", line 756, in <module>
+    main()
+  File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\stage2.py", line 743, in main
+    report = run_three_seed_stage2(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\stage2.py", line 662, in run_three_seed_stage2
+    actor, log_std = train_stage2_seed(
+                     ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\stage2.py", line 542, in train_stage2_seed
+    metrics = _ppo_update(
+              ^^^^^^^^^^^^
+  File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\stage2.py", line 379, in _ppo_update
+    new_log_probability, entropy = _evaluate_drive_action(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\stage2.py", line 343, in _evaluate_drive_action
+    heading_distribution = Normal(torch.tanh(output[..., 0]), log_std[0].exp())
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\frenz\Documents\ChatGPT\ML-Game-v3\.venv\Lib\site-packages\torch\distributions\normal.py", line 59, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "C:\Users\frenz\Documents\ChatGPT\ML-Game-v3\.venv\Lib\site-packages\torch\distributions\distribution.py", line 70, in __init__
+    if not valid.all():
+RuntimeError: CUDA error: an illegal memory access was encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

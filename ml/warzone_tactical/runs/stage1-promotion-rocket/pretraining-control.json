@@ -1,0 +1,27 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 1,
+  "evaluation_episodes": 1000,
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 999,
+  "max_episode_steps": 300,
+  "scripted_nearest_v1": {
+    "clears": 1000,
+    "unfinished": 0,
+    "clear_rate": 1.0,
+    "median_clear_ticks": 12600.0,
+    "mean_clear_ticks": 12791.0,
+    "p90_clear_ticks": 19500.0,
+    "projectile_drops": 0
+  },
+  "random_initial_seed_4": {
+    "clears": 0,
+    "unfinished": 1000,
+    "clear_rate": 0.0,
+    "median_clear_ticks": null,
+    "mean_clear_ticks": null,
+    "p90_clear_ticks": null,
+    "projectile_drops": 0
+  },
+  "conclusion": "The redesigned task separates a random policy from the scripted controller before training."
+}

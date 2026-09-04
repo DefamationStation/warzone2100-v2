@@ -1,0 +1,52 @@
+{
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "resolved_stats_path": "runs/review5-revalidation-smoke-3/acceptance/seed-0/resolved-stats.json",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "memory_limit_bytes": 14595312844,
+  "gate_decisions_per_second": 300000,
+  "selected_arenas": 8192,
+  "gate_passed": true,
+  "ppo_update_kind": "single_actor_backward_smoke",
+  "compiled_simulator": true,
+  "measurements": [
+    {
+      "arenas": 512,
+      "environment_updates_per_second": 316799.0426679084,
+      "wall_steps_per_second": 618.7481302107586,
+      "wall_ms_per_step": 1.6161665000254288,
+      "unit_decisions_per_second": 1267196.1706716337,
+      "hours_per_billion_decisions": 0.21920661078903925,
+      "gpu_memory_bytes": 266260992,
+      "simulator_ms": 0.9637329983524978,
+      "policy_forward_ms": 0.6518165022134781,
+      "ppo_update_ms": 1.5334000054281205,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 2048,
+      "environment_updates_per_second": 1337436.6342350952,
+      "wall_steps_per_second": 653.0452315601051,
+      "wall_ms_per_step": 1.5312874999654014,
+      "unit_decisions_per_second": 5349746.536940381,
+      "hours_per_billion_decisions": 0.051923539902255636,
+      "gpu_memory_bytes": 311521792,
+      "simulator_ms": 0.9318179999536369,
+      "policy_forward_ms": 0.598848999798065,
+      "ppo_update_ms": 1.0737999982666224,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 8192,
+      "environment_updates_per_second": 3874268.815636586,
+      "wall_steps_per_second": 472.93320503376293,
+      "wall_ms_per_step": 2.114463500038255,
+      "unit_decisions_per_second": 15497075.262546344,
+      "hours_per_billion_decisions": 0.01792452918191066,
+      "gpu_memory_bytes": 423627264,
+      "simulator_ms": 1.0578575010003988,
+      "policy_forward_ms": 1.0559344984358177,
+      "ppo_update_ms": 1.1059999815188348,
+      "projectile_drops": 0
+    }
+  ]
+}

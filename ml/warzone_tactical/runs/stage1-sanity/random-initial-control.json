@@ -1,0 +1,40 @@
+{
+  "contract": "warzone-tactical-v1",
+  "purpose": "Check whether Stage 1 separates trained policies from their random initial states.",
+  "resolved_stats": "../final-acceptance/seed-0/resolved-stats.json",
+  "evaluation_episodes": 1000,
+  "scenario_seed_start": 0,
+  "max_episode_steps": 60,
+  "random_initial_policies": [
+    {
+      "seed": 0,
+      "clears": 139,
+      "unfinished": 861,
+      "clear_rate": 0.139,
+      "median_clear_ticks": 4600.0,
+      "projectile_drops": 0
+    },
+    {
+      "seed": 1,
+      "clears": 0,
+      "unfinished": 1000,
+      "clear_rate": 0.0,
+      "median_clear_ticks": null,
+      "projectile_drops": 0
+    },
+    {
+      "seed": 2,
+      "clears": 0,
+      "unfinished": 1000,
+      "clear_rate": 0.0,
+      "median_clear_ticks": null,
+      "projectile_drops": 0
+    }
+  ],
+  "trained_policy_clear_rates": {
+    "seed_0": 0.98,
+    "seed_1": 0.979,
+    "seed_2": 0.98
+  },
+  "conclusion": "PPO changed all three policies and removed the random-initialization failure. The task remains too simple for a promotion claim."
+}

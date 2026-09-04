@@ -1,0 +1,76 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 2,
+  "kind": "three_seed_screening",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 32,
+    "iterations": 0,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.002,
+    "retention_coefficient": 0.1,
+    "range_progress_coefficient": 1.0,
+    "heading_alignment_coefficient": 0.01,
+    "speed_settling_coefficient": 0.01,
+    "action_guidance_coefficient": 0.0,
+    "behavior_clone_updates": 512,
+    "behavior_clone_learning_rate": 0.001,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5,
+    "initial_log_std": -0.35
+  },
+  "evaluation_episodes_per_seed": 100,
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 99,
+  "range_band": {
+    "lower": 512,
+    "lower_inclusive": false,
+    "upper": 1088,
+    "upper_inclusive": true
+  },
+  "primary_metric": "episode_time_in_band_fraction",
+  "scripted_rangekeeper_v1": {
+    "episodes": 100,
+    "mean_time_in_band_fraction": 0.931066632270813,
+    "median_time_in_band_fraction": 0.9433333277702332,
+    "p10_time_in_band_fraction": 0.8166666626930237,
+    "mean_normalized_band_violation": 0.031532466411590576,
+    "median_normalized_band_violation": 0.007129629608243704,
+    "mean_final_distance": 773.2000122070312
+  },
+  "seeds": [
+    {
+      "seed": 4,
+      "evaluation": {
+        "episodes": 100,
+        "mean_time_in_band_fraction": 0.25540000200271606,
+        "median_time_in_band_fraction": 0.0033333334140479565,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.3513658940792084,
+        "median_normalized_band_violation": 0.30118128657341003,
+        "mean_final_distance": 587.5399780273438
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true
+    }
+  ],
+  "mean_time_in_band_fraction": 0.25540000200271606,
+  "lowest_seed_time_in_band_fraction": 0.25540000200271606,
+  "mean_normalized_band_violation": 0.3513658940792084,
+  "mean_gate_passed": false,
+  "five_point_seed_floor_passed": false,
+  "violation_gate_passed": false,
+  "retention_gate_passed": true,
+  "screening_gate_passed": false,
+  "promotion_gate_passed": null
+}

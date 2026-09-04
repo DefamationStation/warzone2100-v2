@@ -1,0 +1,74 @@
+{
+  "contract": "warzone-tactical-v1",
+  "review": 6,
+  "stage_2": {
+    "status": "three_seed_screening_failed_not_promoted",
+    "configuration": {
+      "arenas": 2048,
+      "rollout_steps": 32,
+      "iterations": 1500,
+      "evaluation_episodes_per_seed": 1000,
+      "training_seeds": [4, 17, 31]
+    },
+    "reward": {
+      "range_objective_coefficient": 1.0,
+      "range_progress_coefficient": 0.1,
+      "heading_alignment_coefficient": 0.02,
+      "speed_settling_coefficient": 0.02,
+      "scripted_action_guidance": false,
+      "behavior_clone_warm_start": false
+    },
+    "do_nothing_time_in_band_fraction": 0.33000001311302185,
+    "scripted_rangekeeper_time_in_band_fraction": 0.9219767451286316,
+    "seeds": [
+      {
+        "seed": 4,
+        "time_in_band_fraction": 0.603276789188385,
+        "normalized_band_violation": 0.1425352394580841,
+        "stage1_clear_rate_after": 0.999000072479248,
+        "source_report": "stage2-review6-seed4/stage2-report.json"
+      },
+      {
+        "seed": 17,
+        "time_in_band_fraction": 0.3240833282470703,
+        "normalized_band_violation": 0.26547476649284363,
+        "stage1_clear_rate_after": 0.999000072479248,
+        "source_report": "stage2-review6-seeds17-31/stage2-report.json"
+      },
+      {
+        "seed": 31,
+        "time_in_band_fraction": 0.600600004196167,
+        "normalized_band_violation": 0.1457325518131256,
+        "stage1_clear_rate_after": 0.9170000553131104,
+        "source_report": "stage2-review6-seeds17-31/stage2-report.json"
+      }
+    ],
+    "mean_time_in_band_fraction": 0.5093200405438741,
+    "mean_time_in_band_above_do_nothing": 0.1793200274308523,
+    "lowest_seed_time_in_band_fraction": 0.3240833282470703,
+    "mean_normalized_band_violation": 0.1845808525880178,
+    "screening_gate_passed": false,
+    "failure_reasons": [
+      "The mean time-in-band result is below 0.70.",
+      "Seed 17 is below the 0.65 seed floor and below the do-nothing baseline.",
+      "The mean normalized violation is above 0.10.",
+      "Seed 31 regressed Stage 1 by eight percentage points."
+    ]
+  },
+  "q15_spawn_diagnostic": {
+    "episodes": 10000,
+    "enemy_local_x_unique_values": 3102,
+    "enemy_local_y_unique_values": 3075,
+    "zero_position_pairs": 0,
+    "distance_recovery_mean_absolute_error": 0.6729549220473107,
+    "distance_recovery_maximum_absolute_error": 57.490828210265136,
+    "near_radial_q15_range": [2521.90443910946, 8186.914559221929],
+    "in_band_radial_q15_range": [8219.286708711408, 17384.220028520118],
+    "far_radial_q15_range": [17422.576675107503, 33747.12174393544],
+    "position_signal_is_degenerate": false
+  },
+  "next_training_change": {
+    "target_kl": 0.015,
+    "reason": "Successful seeds had large KL and clipped-sample spikes. The failed seed and retention loss show that PPO updates are not stable across seeds."
+  }
+}

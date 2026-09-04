@@ -1,0 +1,106 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 1,
+  "kind": "three_seed_promotion",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 32,
+    "iterations": 24,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.01,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5
+  },
+  "sanity_episodes_per_seed": 10000,
+  "evaluation_episodes_per_seed": 10000,
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 9999,
+  "per_arena_random_stream": true,
+  "target_required_hits": [
+    1,
+    2,
+    4
+  ],
+  "target_range_layout": "one short-range band and two distinct long-range bands",
+  "scripted_nearest_v1": {
+    "episodes": 10000,
+    "clears": 9974,
+    "unfinished": 26,
+    "clear_rate": 0.9973999857902527,
+    "median_clear_ticks": 12500.0,
+    "mean_clear_ticks": 12661.259274112694,
+    "p90_clear_ticks": 19300.0,
+    "projectile_drops": 0
+  },
+  "seeds": [
+    {
+      "seed": 4,
+      "evaluation": {
+        "episodes": 10000,
+        "clears": 9975,
+        "unfinished": 25,
+        "clear_rate": 0.9975000023841858,
+        "median_clear_ticks": 12500.0,
+        "mean_clear_ticks": 12638.456140350878,
+        "p90_clear_ticks": 19300.0,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    },
+    {
+      "seed": 17,
+      "evaluation": {
+        "episodes": 10000,
+        "clears": 9970,
+        "unfinished": 30,
+        "clear_rate": 0.996999979019165,
+        "median_clear_ticks": 12400.0,
+        "mean_clear_ticks": 12624.132397191575,
+        "p90_clear_ticks": 19200.0,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    },
+    {
+      "seed": 31,
+      "evaluation": {
+        "episodes": 10000,
+        "clears": 9970,
+        "unfinished": 30,
+        "clear_rate": 0.996999979019165,
+        "median_clear_ticks": 12400.0,
+        "mean_clear_ticks": 12624.132397191575,
+        "p90_clear_ticks": 19200.0,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    }
+  ],
+  "mean_clear_rate": 0.997166653474172,
+  "lowest_seed_clear_rate": 0.996999979019165,
+  "mean_gate_passed": true,
+  "five_point_floor_passed": true,
+  "sanity_gate_passed": true,
+  "promotion_gate_passed": true,
+  "contract_v1_promotion_evaluated": true,
+  "promotion_training_seeds": [
+    4,
+    17,
+    31
+  ],
+  "training_seeds": [
+    4,
+    17,
+    31
+  ]
+}

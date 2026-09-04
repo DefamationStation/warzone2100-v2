@@ -1,0 +1,26 @@
+{
+  "short": {
+    "samples": 100000,
+    "range_band": "short",
+    "displayed_hit_chance": 40,
+    "successful_integer_rolls": 41,
+    "engine_hits": 40925,
+    "simulator_hits": 40925,
+    "engine_rate": 0.40925,
+    "simulator_rate": 0.40925,
+    "rate_difference": 0.0,
+    "passes": true
+  },
+  "long": {
+    "samples": 100000,
+    "range_band": "long",
+    "displayed_hit_chance": 50,
+    "successful_integer_rolls": 51,
+    "engine_hits": 50932,
+    "simulator_hits": 50932,
+    "engine_rate": 0.50932,
+    "simulator_rate": 0.50932,
+    "rate_difference": 0.0,
+    "passes": true
+  }
+}

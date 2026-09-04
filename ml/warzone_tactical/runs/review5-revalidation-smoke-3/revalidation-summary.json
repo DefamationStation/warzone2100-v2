@@ -1,0 +1,59 @@
+{
+  "contract": "warzone-tactical-v1",
+  "acceptance": {
+    "contract": "warzone-tactical-v1",
+    "battles": 3,
+    "results": {
+      "team_0_win": 2,
+      "team_1_win": 1,
+      "draw": 0,
+      "unfinished": 0
+    },
+    "same_seed_actions_identical": true,
+    "same_seed_crc_identical": true,
+    "turret_motion_visible": true,
+    "weapon_delay_visible": true,
+    "out_of_range_fire_blocked": true,
+    "invalid_target_fire_requests": 0,
+    "native_fixture_loaded": true,
+    "zero_speed_body_turns": true,
+    "stats_mismatch_fails_loudly": true,
+    "nonfinite_model_fails_loudly": true,
+    "native_fixture_wzml_sha256": "838b66202a221b0fa979c270c70154f8f7b4e5de2b7ead44a32b0c149a65fcaf"
+  },
+  "golden": {
+    "golden_states": 3000,
+    "observation_q15_exact": true,
+    "fixture_action_rows": 3604,
+    "fixture_actions_exact": true
+  },
+  "fidelity_gate_passes": true,
+  "hit_rates": {
+    "short": {
+      "samples": 100000,
+      "range_band": "short",
+      "displayed_hit_chance": 40,
+      "successful_integer_rolls": 41,
+      "engine_hits": 40925,
+      "simulator_hits": 40925,
+      "engine_rate": 0.40925,
+      "simulator_rate": 0.40925,
+      "rate_difference": 0.0,
+      "passes": true
+    },
+    "long": {
+      "samples": 100000,
+      "range_band": "long",
+      "displayed_hit_chance": 50,
+      "successful_integer_rolls": 51,
+      "engine_hits": 50932,
+      "simulator_hits": 50932,
+      "engine_rate": 0.50932,
+      "simulator_rate": 0.50932,
+      "rate_difference": 0.0,
+      "passes": true
+    }
+  },
+  "trained_actions_exact": true,
+  "passes": true
+}

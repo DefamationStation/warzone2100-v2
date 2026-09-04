@@ -1,0 +1,54 @@
+{
+  "contract": "warzone-tactical-v1",
+  "review": 5,
+  "contract_corrections": {
+    "stage_2_range_band": "512 < distance <= 1088",
+    "stage_2_primary_metric": "episode_time_in_band_fraction",
+    "stage_2_mean_gate": 0.70,
+    "stage_2_per_seed_floor": 0.65,
+    "stage_2_mean_normalized_violation_maximum": 0.10,
+    "stage_3_time_limit_ticks": 60000,
+    "stage_4_time_limit_ticks": 90000,
+    "stage_1_evidence_scope": "valid targeting and fire only",
+    "throughput_optimization_revisit_stage": 5
+  },
+  "engine_revalidation_smoke": {
+    "battles": 3,
+    "golden_states": 3000,
+    "fixture_action_rows": 3604,
+    "crc_repeat_passed": true,
+    "action_repeat_passed": true,
+    "observation_parity_passed": true,
+    "fixture_action_parity_passed": true,
+    "trained_action_parity_passed": true,
+    "forced_hit_fidelity_passed": true,
+    "short_hit_chance": 40,
+    "short_engine_rate": 0.40925,
+    "short_simulator_rate": 0.40925,
+    "long_hit_chance": 50,
+    "long_engine_rate": 0.50932,
+    "long_simulator_rate": 0.50932,
+    "passes": true,
+    "note": "The one-command defaults remain 100 battles and 10000 golden states."
+  },
+  "stage_2": {
+    "status": "screening_failed_not_promoted",
+    "scripted_rangekeeper_time_in_band_fraction": 0.931066632270813,
+    "untrained_smoke_range": [0.34003332257270813, 0.37033331394195557],
+    "best_completed_tuning_time_in_band_fraction": 0.3775666654109955,
+    "gate": 0.70,
+    "stage_1_retention_observed": true,
+    "three_seed_screening_run": false,
+    "reason_three_seed_run_stopped": "Seed 4 did not approach the fixed gate, so more seeds would spend compute without promotion evidence.",
+    "trainer_corrections": [
+      "Separate actor and critic gradient clipping.",
+      "Use a wrapped circular Normal distribution for heading exploration.",
+      "Keep deterministic output quantization identical to the native action contract."
+    ],
+    "next_experiment": "Test a smaller Stage 2 scenario range or a stronger circular-policy method. Keep the fixed 1000-episode evaluation unchanged."
+  },
+  "tests": {
+    "python_tests_passed": 38,
+    "engine_build_passed": true
+  }
+}

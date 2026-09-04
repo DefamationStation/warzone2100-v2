@@ -1,0 +1,52 @@
+{
+  "movement": {
+    "ticks_checked": 100,
+    "rows_checked": 400,
+    "position_exact": true,
+    "body_heading_exact": true,
+    "speed_exact": true,
+    "body_exact": true,
+    "damage_exact": true,
+    "weapon_time_exact": true,
+    "maximum_position_error": 0,
+    "maximum_body_heading_error": 0,
+    "maximum_speed_error": 0,
+    "maximum_body_error": 0,
+    "maximum_damage_timing_error_ticks": 0,
+    "maximum_simulator_damage_lead_ticks": 0,
+    "maximum_simulator_damage_lag_ticks": 0,
+    "engine_damage_events": 512,
+    "simulator_damage_events": 512,
+    "engine_damage_events_by_droid": {
+      "160325": 128,
+      "160327": 128,
+      "160329": 128,
+      "160331": 128
+    },
+    "simulator_damage_events_by_droid": {
+      "160325": 128,
+      "160327": 128,
+      "160329": 128,
+      "160331": 128
+    },
+    "maximum_weapon_time_error": 0,
+    "first_mismatch": null
+  },
+  "combat_order": {
+    "ticks_checked": 100,
+    "rows_checked": 400,
+    "turret_exact": true,
+    "cooldown_exact": true,
+    "shot_eligibility_exact": true,
+    "masks_exact": true,
+    "combat_order_alignment_mismatches": 0,
+    "combat_order_shot_mismatches": 0,
+    "maximum_target_distance_error": 0,
+    "first_mismatch": null
+  },
+  "combat_order_resolution": "eliminated_by_engine_tick_start_snapshot",
+  "movement_gate_passes": true,
+  "projectile_timing_gate_passes": true,
+  "combat_order_gate_passes": true,
+  "fidelity_gate_passes": true
+}

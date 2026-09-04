@@ -1,0 +1,6 @@
+{
+  "golden_states": 3000,
+  "observation_q15_exact": true,
+  "fixture_action_rows": 3604,
+  "fixture_actions_exact": true
+}

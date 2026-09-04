@@ -1,0 +1,77 @@
+{
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "resolved_stats_path": "runs/review5-revalidation-smoke-3/acceptance/seed-0/resolved-stats.json",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "memory_limit_bytes": 14595312844,
+  "gate_decisions_per_second": 300000,
+  "selected_arenas": 8192,
+  "gate_passed": true,
+  "ppo_update_kind": "single_actor_backward_smoke",
+  "measurements": [
+    {
+      "arenas": 512,
+      "environment_updates_per_second": 10804.715135465498,
+      "wall_steps_per_second": 21.10295924895605,
+      "wall_ms_per_step": 47.38671900006011,
+      "unit_decisions_per_second": 43218.86054186199,
+      "hours_per_billion_decisions": 6.427235107430028,
+      "gpu_memory_bytes": 23142912,
+      "simulator_ms": 46.63008599934983,
+      "policy_forward_ms": 0.7558484999754,
+      "ppo_update_ms": 2.1871000062674284,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 1024,
+      "environment_updates_per_second": 20831.687209584925,
+      "wall_steps_per_second": 20.343444540610278,
+      "wall_ms_per_step": 49.15588400006527,
+      "unit_decisions_per_second": 83326.7488383397,
+      "hours_per_billion_decisions": 3.333596733945399,
+      "gpu_memory_bytes": 37039616,
+      "simulator_ms": 48.3993555008783,
+      "policy_forward_ms": 0.7556734999525361,
+      "ppo_update_ms": 0.9239999926649034,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 2048,
+      "environment_updates_per_second": 39361.36606388749,
+      "wall_steps_per_second": 19.219417023382565,
+      "wall_ms_per_step": 52.030714499996975,
+      "unit_decisions_per_second": 157445.46425554997,
+      "hours_per_billion_decisions": 1.7642793273924755,
+      "gpu_memory_bytes": 55049728,
+      "simulator_ms": 51.24506499822019,
+      "policy_forward_ms": 0.784676500770729,
+      "ppo_update_ms": 1.1331999849062413,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 4096,
+      "environment_updates_per_second": 85098.01339231544,
+      "wall_steps_per_second": 20.77588217585826,
+      "wall_ms_per_step": 48.13273350009695,
+      "unit_decisions_per_second": 340392.05356926174,
+      "hours_per_billion_decisions": 0.8160524749772295,
+      "gpu_memory_bytes": 89759232,
+      "simulator_ms": 47.38053250068333,
+      "policy_forward_ms": 0.7513594995543826,
+      "ppo_update_ms": 1.0332000092603266,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 8192,
+      "environment_updates_per_second": 167896.5364646297,
+      "wall_steps_per_second": 20.495182673904992,
+      "wall_ms_per_step": 48.79195350004011,
+      "unit_decisions_per_second": 671586.1458585188,
+      "hours_per_billion_decisions": 0.4136145146691225,
+      "gpu_memory_bytes": 161930752,
+      "simulator_ms": 47.545907001331216,
+      "policy_forward_ms": 1.245237498806091,
+      "ppo_update_ms": 1.0996000200975686,
+      "projectile_drops": 0
+    }
+  ]
+}

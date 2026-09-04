@@ -1,0 +1,7 @@
+{
+  "contract": "warzone-tactical-v1",
+  "golden_states": 3604,
+  "observation_q15_exact": true,
+  "native_actions_checked": true,
+  "native_actions_exact": true
+}

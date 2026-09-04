@@ -1,0 +1,80 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 1,
+  "kind": "three_seed_sanity_screening",
+  "stats_sha256": "d395a7e948f54c263982c1c03e0fbddd177e43a0da33bf2120907084b925dd63",
+  "config": {
+    "arenas": 32,
+    "rollout_steps": 8,
+    "iterations": 1,
+    "max_episode_steps": 100,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.01,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5
+  },
+  "screening_episodes_per_seed": 16,
+  "scripted_nearest_v1": {
+    "episodes": 16,
+    "clears": 16,
+    "unfinished": 0,
+    "clear_rate": 1.0,
+    "median_clear_ticks": 4650.0,
+    "mean_clear_ticks": 5312.5,
+    "projectile_drops": 0
+  },
+  "seeds": [
+    {
+      "seed": 0,
+      "evaluation": {
+        "episodes": 16,
+        "clears": 14,
+        "unfinished": 2,
+        "clear_rate": 0.875,
+        "median_clear_ticks": 4450.0,
+        "mean_clear_ticks": 4657.142857142857,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    },
+    {
+      "seed": 1,
+      "evaluation": {
+        "episodes": 16,
+        "clears": 15,
+        "unfinished": 1,
+        "clear_rate": 0.9375,
+        "median_clear_ticks": 4200.0,
+        "mean_clear_ticks": 4513.333333333333,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": true,
+      "projectile_gate_passed": true
+    },
+    {
+      "seed": 2,
+      "evaluation": {
+        "episodes": 16,
+        "clears": 0,
+        "unfinished": 16,
+        "clear_rate": 0.0,
+        "median_clear_ticks": null,
+        "mean_clear_ticks": null,
+        "projectile_drops": 0
+      },
+      "clear_time_gate_passed": false,
+      "projectile_gate_passed": true
+    }
+  ],
+  "mean_clear_rate": 0.6041666666666666,
+  "lowest_seed_clear_rate": 0.0,
+  "mean_gate_passed": false,
+  "five_point_floor_passed": false,
+  "promotion_gate_passed": false
+}
