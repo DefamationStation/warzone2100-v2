@@ -1,0 +1,27 @@
+{
+  "contract": "warzone-tactical-v1",
+  "format_version": 1,
+  "observation": {
+    "size": 200,
+    "storage": "signed_q15",
+    "model_scale": "2^-15"
+  },
+  "action": {
+    "heading_steps_per_turn": 4096,
+    "speed_steps": 256,
+    "enemy_slots": 8,
+    "none_target": -1
+  },
+  "network": [
+    200,
+    256,
+    256,
+    12
+  ],
+  "onnx_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\stage2-escape-screen-current-12\\seed-9\\artifacts\\policy.onnx",
+  "onnx_sha256": "87ad1fc1dfc2885ff63b063e30890b74497e9e80327a1cb72794b795770cca7a",
+  "wzml_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\stage2-escape-screen-current-12\\seed-9\\artifacts\\policy.wzml",
+  "wzml_sha256": "0c618fbeb2d62535c5f1c96dd6da4c602c5991479057069beefbb2ac7b099503",
+  "resolved_stats_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\review5-revalidation-smoke-3\\acceptance\\seed-0\\resolved-stats.json",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0"
+}

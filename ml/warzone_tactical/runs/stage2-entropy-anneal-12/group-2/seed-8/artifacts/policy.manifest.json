@@ -1,0 +1,27 @@
+{
+  "contract": "warzone-tactical-v1",
+  "format_version": 1,
+  "observation": {
+    "size": 200,
+    "storage": "signed_q15",
+    "model_scale": "2^-15"
+  },
+  "action": {
+    "heading_steps_per_turn": 4096,
+    "speed_steps": 256,
+    "enemy_slots": 8,
+    "none_target": -1
+  },
+  "network": [
+    200,
+    256,
+    256,
+    12
+  ],
+  "onnx_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\stage2-entropy-anneal-12\\group-2\\seed-8\\artifacts\\policy.onnx",
+  "onnx_sha256": "5180080de189a6dbd6d37a3fcc8d01eec07935bd1c0c651f6bd7b13eac2db962",
+  "wzml_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\stage2-entropy-anneal-12\\group-2\\seed-8\\artifacts\\policy.wzml",
+  "wzml_sha256": "822433b2b55b745dde514fb677597ace3cf2fad32894f7c0e2e81c57ff199c45",
+  "resolved_stats_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\review4-fidelity-forced-hit-paired\\resolved-stats.json",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0"
+}

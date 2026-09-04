@@ -1,0 +1,27 @@
+{
+  "contract": "warzone-tactical-v1",
+  "format_version": 1,
+  "observation": {
+    "size": 200,
+    "storage": "signed_q15",
+    "model_scale": "2^-15"
+  },
+  "action": {
+    "heading_steps_per_turn": 4096,
+    "speed_steps": 256,
+    "enemy_slots": 8,
+    "none_target": -1
+  },
+  "network": [
+    200,
+    256,
+    256,
+    12
+  ],
+  "onnx_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\stage2-heading-scale-128-full-seeds4-17-31\\seed-17\\artifacts\\policy.onnx",
+  "onnx_sha256": "4edda98f03b02fba68f5f902a0608217248eede8f6d1090d93769d2d229360fa",
+  "wzml_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\stage2-heading-scale-128-full-seeds4-17-31\\seed-17\\artifacts\\policy.wzml",
+  "wzml_sha256": "3646daefcf9febdd25a8432484f821ef33ab93edf7d3edaf4928d7954b1454b8",
+  "resolved_stats_path": "C:\\Users\\frenz\\Documents\\ChatGPT\\warzone2100-v2\\ml\\warzone_tactical\\runs\\review5-revalidation-smoke-3\\acceptance\\seed-0\\resolved-stats.json",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0"
+}

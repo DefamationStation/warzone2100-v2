@@ -1,0 +1,399 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 2,
+  "kind": "three_seed_screening",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 8,
+    "iterations": 38,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "target_kl": 0.015,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.002,
+    "retention_coefficient": 0.1,
+    "rehearsal_fraction": 0.2,
+    "range_objective_coefficient": 1.0,
+    "range_progress_coefficient": 0.1,
+    "heading_alignment_coefficient": 0.02,
+    "range_progress_start_coefficient": 1.0,
+    "heading_alignment_start_coefficient": 0.2,
+    "approach_anneal_iterations": 500,
+    "speed_settling_coefficient": 0.02,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5,
+    "initial_log_std": -0.35,
+    "compile_simulator": true
+  },
+  "stage1_checkpoint_seed": 4,
+  "evaluation_episodes_per_seed": 1000,
+  "evaluation_tier": "screening",
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 999,
+  "range_band": {
+    "lower": 512,
+    "lower_inclusive": false,
+    "upper": 1088,
+    "upper_inclusive": true
+  },
+  "primary_metric": "episode_time_in_band_fraction",
+  "scripted_rangekeeper_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.9219767451286316,
+    "median_time_in_band_fraction": 0.9399999976158142,
+    "p10_time_in_band_fraction": 0.7833333611488342,
+    "mean_normalized_band_violation": 0.04023345559835434,
+    "median_normalized_band_violation": 0.008964120410382748,
+    "mean_final_distance": 799.0530395507812
+  },
+  "do_nothing_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.33000001311302185,
+    "median_time_in_band_fraction": 0.0,
+    "p10_time_in_band_fraction": 0.0,
+    "mean_normalized_band_violation": 0.401154488325119,
+    "median_normalized_band_violation": 0.234375,
+    "mean_final_distance": 910.7290649414062
+  },
+  "seeds": [
+    {
+      "seed": 0,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.40116021037101746,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 910.7310180664062
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 2
+    },
+    {
+      "seed": 1,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.2725633680820465,
+        "median_time_in_band_fraction": 0.2566666603088379,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.8214473128318787,
+        "median_normalized_band_violation": 0.6077834963798523,
+        "mean_final_distance": 2180.753173828125
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.05743664503097534,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1
+    },
+    {
+      "seed": 2,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.23684334754943848,
+        "median_time_in_band_fraction": 0.2866666615009308,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.9389160871505737,
+        "median_normalized_band_violation": 0.5864698886871338,
+        "mean_final_distance": 2136.583984375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.09315666556358337,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1
+    },
+    {
+      "seed": 3,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.36403003334999084,
+        "median_time_in_band_fraction": 0.3733333349227905,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.45613619685173035,
+        "median_normalized_band_violation": 0.2229919284582138,
+        "mean_final_distance": 1283.3050537109375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.034030020236968994,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 2
+    },
+    {
+      "seed": 4,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.20376335084438324,
+        "median_time_in_band_fraction": 0.1899999976158142,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 1.2911622524261475,
+        "median_normalized_band_violation": 1.1530208587646484,
+        "mean_final_distance": 2962.2001953125
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.1262366622686386,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 11
+    },
+    {
+      "seed": 5,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.4016333222389221,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 911.218017578125
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1
+    },
+    {
+      "seed": 6,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.4284593164920807,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 950.0620727539062
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 2
+    },
+    {
+      "seed": 7,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.31486669182777405,
+        "median_time_in_band_fraction": 0.36666667461395264,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.6574520468711853,
+        "median_normalized_band_violation": 0.3218865394592285,
+        "mean_final_distance": 1775.3790283203125
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.015133321285247803,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 0
+    },
+    {
+      "seed": 8,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33666667342185974,
+        "median_time_in_band_fraction": 0.4000000059604645,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.5621710419654846,
+        "median_normalized_band_violation": 0.2665683329105377,
+        "mean_final_distance": 1583.6060791015625
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.006666660308837891,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1
+    },
+    {
+      "seed": 9,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.34667670726776123,
+        "median_time_in_band_fraction": 0.3933333456516266,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.5113077759742737,
+        "median_normalized_band_violation": 0.26033568382263184,
+        "mean_final_distance": 1530.695068359375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.01667669415473938,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 0
+    },
+    {
+      "seed": 10,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.30025336146354675,
+        "median_time_in_band_fraction": 0.3733333349227905,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.6857028007507324,
+        "median_normalized_band_violation": 0.30281826853752136,
+        "mean_final_distance": 1787.4271240234375
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.029746651649475098,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 0
+    },
+    {
+      "seed": 11,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.3238333463668823,
+        "median_time_in_band_fraction": 0.3566666841506958,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.6272869110107422,
+        "median_normalized_band_violation": 0.3333159387111664,
+        "mean_final_distance": 1754.384033203125
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": -0.006166666746139526,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 0
+    }
+  ],
+  "mean_time_in_band_fraction": 0.3074580766260624,
+  "mean_time_in_band_above_do_nothing": -0.022541936486959457,
+  "lowest_seed_time_in_band_fraction": 0.20376335084438324,
+  "mean_normalized_band_violation": 0.6485696062445641,
+  "mean_gate_passed": false,
+  "five_point_seed_floor_passed": false,
+  "violation_gate_passed": false,
+  "retention_gate_passed": true,
+  "screening_gate_passed": false,
+  "promotion_gate_passed": null
+}
