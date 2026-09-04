@@ -1,0 +1,116 @@
+{
+  "rollout_ms": 48.51970000891015,
+  "gae_ms": 1.0466999956406653,
+  "ppo_update_ms": 103.58620001352392,
+  "ppo_detail": {
+    "epochs": [
+      {
+        "epoch": 1,
+        "total_ms": 29.028300021309406,
+        "minibatches": [
+          {
+            "minibatch": 1.0,
+            "total_ms": 9.901899989927188,
+            "kl_check_ms": 1.6686000162735581
+          },
+          {
+            "minibatch": 2.0,
+            "total_ms": 6.561000016517937,
+            "kl_check_ms": 0.04300000728107989
+          },
+          {
+            "minibatch": 3.0,
+            "total_ms": 6.924900022568181,
+            "kl_check_ms": 0.025800021830946207
+          },
+          {
+            "minibatch": 4.0,
+            "total_ms": 5.343800003174692,
+            "kl_check_ms": 0.033499993151053786
+          }
+        ]
+      },
+      {
+        "epoch": 2,
+        "total_ms": 24.442800000542775,
+        "minibatches": [
+          {
+            "minibatch": 1.0,
+            "total_ms": 5.053499975474551,
+            "kl_check_ms": 0.04120002267882228
+          },
+          {
+            "minibatch": 2.0,
+            "total_ms": 5.58860000455752,
+            "kl_check_ms": 0.09099999442696571
+          },
+          {
+            "minibatch": 3.0,
+            "total_ms": 6.298299995251,
+            "kl_check_ms": 0.0447999918833375
+          },
+          {
+            "minibatch": 4.0,
+            "total_ms": 7.308300002478063,
+            "kl_check_ms": 0.23609999334439635
+          }
+        ]
+      },
+      {
+        "epoch": 3,
+        "total_ms": 25.400200014701113,
+        "minibatches": [
+          {
+            "minibatch": 1.0,
+            "total_ms": 8.569199999328703,
+            "kl_check_ms": 0.07660000119358301
+          },
+          {
+            "minibatch": 2.0,
+            "total_ms": 6.067299982532859,
+            "kl_check_ms": 0.04199999966658652
+          },
+          {
+            "minibatch": 3.0,
+            "total_ms": 5.864599981578067,
+            "kl_check_ms": 0.07919999188743532
+          },
+          {
+            "minibatch": 4.0,
+            "total_ms": 4.596499988110736,
+            "kl_check_ms": 0.05060000694356859
+          }
+        ]
+      },
+      {
+        "epoch": 4,
+        "total_ms": 24.426599993603304,
+        "minibatches": [
+          {
+            "minibatch": 1.0,
+            "total_ms": 4.547700023977086,
+            "kl_check_ms": 0.03659998765215278
+          },
+          {
+            "minibatch": 2.0,
+            "total_ms": 6.626299989875406,
+            "kl_check_ms": 0.086499989265576
+          },
+          {
+            "minibatch": 3.0,
+            "total_ms": 6.260699999984354,
+            "kl_check_ms": 0.04740001168102026
+          },
+          {
+            "minibatch": 4.0,
+            "total_ms": 6.8137999915052205,
+            "kl_check_ms": 0.08939998224377632
+          }
+        ]
+      }
+    ]
+  },
+  "metrics_logging_ms": 0.6342999986372888,
+  "total_ms": 153.8029000221286,
+  "section_sum_ms": 153.78690001671202
+}

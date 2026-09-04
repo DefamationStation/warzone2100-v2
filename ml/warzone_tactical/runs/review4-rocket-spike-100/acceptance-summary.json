@@ -1,0 +1,21 @@
+{
+  "contract": "warzone-tactical-v1",
+  "battles": 100,
+  "results": {
+    "team_0_win": 51,
+    "team_1_win": 46,
+    "draw": 3,
+    "unfinished": 0
+  },
+  "same_seed_actions_identical": true,
+  "same_seed_crc_identical": true,
+  "turret_motion_visible": true,
+  "weapon_delay_visible": true,
+  "out_of_range_fire_blocked": true,
+  "invalid_target_fire_requests": 0,
+  "native_fixture_loaded": true,
+  "zero_speed_body_turns": true,
+  "stats_mismatch_fails_loudly": true,
+  "nonfinite_model_fails_loudly": true,
+  "native_fixture_wzml_sha256": "838b66202a221b0fa979c270c70154f8f7b4e5de2b7ead44a32b0c149a65fcaf"
+}

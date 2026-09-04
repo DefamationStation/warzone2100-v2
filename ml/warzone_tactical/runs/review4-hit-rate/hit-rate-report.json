@@ -1,0 +1,11 @@
+{
+  "samples": 100000,
+  "displayed_hit_chance": 75,
+  "successful_integer_rolls": 76,
+  "engine_hits": 76191,
+  "simulator_hits": 76191,
+  "engine_rate": 0.76191,
+  "simulator_rate": 0.76191,
+  "rate_difference": 0.0,
+  "passes": true
+}

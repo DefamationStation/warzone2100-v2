@@ -1,0 +1,18 @@
+{
+  "contract": "warzone-tactical-v1",
+  "seed": 13,
+  "start_game_time": 102,
+  "end_game_time": 30502,
+  "elapsed_ticks": 30400,
+  "result": "team_0_win",
+  "team_0_alive": 2,
+  "team_1_alive": 0,
+  "droid_ids": [
+    160325,
+    160327,
+    160329,
+    160331
+  ],
+  "hit_rate_samples": 0,
+  "hit_rate_hits": 0
+}

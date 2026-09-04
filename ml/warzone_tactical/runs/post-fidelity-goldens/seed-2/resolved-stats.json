@@ -1,0 +1,265 @@
+{
+  "contract": "warzone-tactical-v1",
+  "bMultiPlayer": true,
+  "campaign_tweaks": {
+    "autosaves_only": false,
+    "fast_experience": false,
+    "heavily_damaged_penalty": false,
+    "no_experience": false,
+    "ps1_modifiers": false
+  },
+  "body": {
+    "id": "Body1REC",
+    "health": 335,
+    "armour": 10,
+    "thermal": 4,
+    "weight": 600
+  },
+  "propulsion": {
+    "id": "tracked01",
+    "base_speed": 127,
+    "max_speed": 125,
+    "acceleration": 250,
+    "deceleration": 800,
+    "skid_deceleration": 600,
+    "turn_speed": 60,
+    "spin_speed": 136,
+    "spin_angle": 65,
+    "calculated_max_speed": 125,
+    "propulsion_type": 1
+  },
+  "weapon": {
+    "id": "MG1Mk1",
+    "damage": 10,
+    "effective_damage_before_armour": 4,
+    "effective_hit_damage_zero_experience": 1,
+    "short_range": 512,
+    "long_range": 768,
+    "minimum_range": 0,
+    "short_hit_chance": 75,
+    "long_hit_chance": 55,
+    "fire_pause": 500,
+    "reload_time": 0,
+    "minimum_damage_percent": 33,
+    "projectile_speed": 1500,
+    "rotate": 180,
+    "weight": 200,
+    "turret_rotation_rate": 3276,
+    "turret_pitch_rate": 1638,
+    "muzzle_base_connector": [
+      0,
+      10,
+      23
+    ],
+    "direct": true,
+    "max_elevation": 90,
+    "min_elevation": -60,
+    "fire_on_move": true,
+    "movement_model": 0,
+    "flags": "11111000"
+  },
+  "upgrade_tables": {
+    "body": [
+      {
+        "player": 0,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 1,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 2,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 3,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 4,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 5,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 6,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 7,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 8,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 9,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      },
+      {
+        "player": 10,
+        "armour": 10,
+        "thermal": 4,
+        "hitpoints": 65,
+        "hitpoint_percent": 100
+      }
+    ],
+    "weapon": [
+      {
+        "player": 0,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 1,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 2,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 3,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 4,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 5,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 6,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 7,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 8,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 9,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      },
+      {
+        "player": 10,
+        "short_range": 512,
+        "max_range": 768,
+        "minimum_range": 0,
+        "short_hit_chance": 75,
+        "long_hit_chance": 55,
+        "fire_pause": 500,
+        "reload_time": 0,
+        "damage": 10
+      }
+    ]
+  }
+}

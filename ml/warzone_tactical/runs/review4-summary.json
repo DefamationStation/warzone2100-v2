@@ -1,0 +1,59 @@
+{
+  "contract": "warzone-tactical-v1",
+  "damage_fix": {
+    "weapon": "Rocket-Pod",
+    "reason": "The live Light Cannon is ALL ROUNDER and has splash. Rocket-Pod is direct-fire ANTI TANK with no splash and no magazine reload rule.",
+    "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+    "body_health": 290,
+    "effective_hit_damage": 16,
+    "fire_pause_ms": 1000,
+    "short_hit_chance_integer_outcomes": 41,
+    "long_hit_chance_integer_outcomes": 51
+  },
+  "engine_acceptance": {
+    "battles": 100,
+    "team_0_win": 51,
+    "team_1_win": 46,
+    "draw": 3,
+    "unfinished": 0,
+    "same_seed_actions_identical": true,
+    "same_seed_crc_identical": true,
+    "all_invariants_passed": true
+  },
+  "parity": {
+    "observation_q15_rows": 10000,
+    "observation_q15_exact": true,
+    "fixture_action_rows": 3612,
+    "fixture_actions_exact": true,
+    "trained_seed_4_action_rows": 3604,
+    "trained_seed_4_actions_exact": true,
+    "forced_hit_fidelity_rows": 400,
+    "forced_hit_fidelity_exact": true
+  },
+  "hit_roll": {
+    "samples": 100000,
+    "engine_rate": 0.76191,
+    "simulator_rate": 0.76191,
+    "difference": 0.0
+  },
+  "throughput": {
+    "selected_arenas": 8192,
+    "unit_decisions_per_second": 769121.2736630426,
+    "ppo_512_ms_after_warmup": 1.2283000105526298,
+    "gate_passed": true
+  },
+  "stage_1": {
+    "random_initial_seed_4_clear_rate": 0.0,
+    "scripted_clear_rate": 0.9973999857902527,
+    "seed_4_clear_rate": 0.9975000023841858,
+    "seed_17_clear_rate": 0.996999979019165,
+    "seed_31_clear_rate": 0.996999979019165,
+    "evaluation_episodes_per_seed": 10000,
+    "mean_and_p90_gates_passed": true,
+    "projectile_drops": 0,
+    "promotion_gate_passed": true,
+    "evidence_scope": "PPO changed the policy from no valid fire to reliable valid targeting and fire. Deterministic Stage 1 trajectories have too little resolution to show complex learning or useful seed differences."
+  },
+  "next_stage": 2,
+  "optimization_note": "Do not optimize simulator launch overhead before Stage 5. Revisit torch.compile or CUDA graphs only when league play and longer episodes make measured runtime material."
+}
