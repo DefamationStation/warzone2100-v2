@@ -1,0 +1,82 @@
+===== BEGIN gameTime=202, 80 entries, CRC 0x32775E30 =====
+[removeDroidBase] # droid160035 = p0;pos(4544,15040,100),rot(0,0,0),order0(0,0)^0,action0,secondaryOrder9E,body155,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[removeDroidBase] # droid160001 = p0;pos(4672,14144,100),rot(0,0,0),order0(0,0)^0,action0,secondaryOrder9E,body155,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[removeDroidBase] # droid160005 = p1;pos(1472,2752,22),rot(0,0,0),order0(0,0)^0,action0,secondaryOrder9E,body155,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[removeDroidBase] # droid160003 = p1;pos(1728,2752,22),rot(0,0,0),order0(0,0)^0,action0,secondaryOrder9E,body155,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[generateSynchronisedObjectId] New objectId = 160325
+[generateSynchronisedObjectId] New objectId = 160327
+[generateSynchronisedObjectId] New objectId = 160329
+[generateSynchronisedObjectId] New objectId = 160331
+[syncDebugEconomy] < economy0 = 5583457484800
+[updatePlayerPower] updatePlayerPower0 5583457484800->5583457484800
+[syncDebugEconomy] < economy0 = 5583457484800
+[droidUpdate] < droid160327 = p0;pos(3551,8326,128),rot(18777,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] M droid160327 = p0;pos(3551,8326,128),rot(18777,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] > droid160327 = p0;pos(3554,8326,128),rot(17828,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed25,moveDir17828,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] < droid160325 = p0;pos(3551,8068,128),rot(13991,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] M droid160325 = p0;pos(3551,8068,128),rot(13991,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] > droid160325 = p0;pos(3554,8068,128),rot(14954,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed25,moveDir14954,path0/0,src(0,0),target(0,0),destination(0,0),bump(14954,102,0,0,(3551,8068),0)),exp0
+[syncDebugEconomy] < economy1 = 5583457484800
+[updatePlayerPower] updatePlayerPower1 5583457484800->5583457484800
+[syncDebugEconomy] < economy1 = 5583457484800
+[droidUpdate] < droid160331 = p1;pos(4641,8058,128),rot(51545,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] M droid160331 = p1;pos(4641,8058,128),rot(51545,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] > droid160331 = p1;pos(4607,8058,128),rot(52908,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed25,moveDir50596,path0/0,src(0,0),target(0,0),destination(0,0),bump(50596,102,0,0,(4641,8058),0)),exp0
+[droidUpdate] < droid160329 = p1;pos(4641,8316,128),rot(46759,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] M droid160329 = p1;pos(4641,8316,128),rot(46759,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed0,moveDir0,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[droidUpdate] > droid160329 = p1;pos(4638,8316,128),rot(47722,0,0),order0(0,0)^0,action0,secondaryOrder9E,body335,sMove(status0,speed25,moveDir47722,path0/0,src(0,0),target(0,0),destination(0,0),bump(0,0,0,0,(0,0),0)),exp0
+[syncDebugEconomy] < economy2 = 0
+[updatePlayerPower] updatePlayerPower2 0->0
+[syncDebugEconomy] < economy2 = 0
+[syncDebugEconomy] < economy3 = 0
+[updatePlayerPower] updatePlayerPower3 0->0
+[syncDebugEconomy] < economy3 = 0
+[syncDebugEconomy] < economy4 = 0
+[updatePlayerPower] updatePlayerPower4 0->0
+[syncDebugEconomy] < economy4 = 0
+[syncDebugEconomy] < economy5 = 0
+[updatePlayerPower] updatePlayerPower5 0->0
+[syncDebugEconomy] < economy5 = 0
+[syncDebugEconomy] < economy6 = 0
+[updatePlayerPower] updatePlayerPower6 0->0
+[syncDebugEconomy] < economy6 = 0
+[syncDebugEconomy] < economy7 = 0
+[updatePlayerPower] updatePlayerPower7 0->0
+[syncDebugEconomy] < economy7 = 0
+[syncDebugEconomy] < economy8 = 0
+[updatePlayerPower] updatePlayerPower8 0->0
+[syncDebugEconomy] < economy8 = 0
+[syncDebugEconomy] < economy9 = 0
+[updatePlayerPower] updatePlayerPower9 0->0
+[syncDebugEconomy] < economy9 = 0
+[syncDebugEconomy] < economy10 = 0
+[updatePlayerPower] updatePlayerPower10 0->0
+[syncDebugEconomy] < economy10 = 0
+[countUpdate] counts[0] = {droid: 2, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[1] = {droid: 2, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[2] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[3] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[4] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[5] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[6] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[7] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[8] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[9] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[countUpdate] counts[10] = {droid: 0, command: 0, constructor: 0, mission: 0, transporter: 0}
+[gameLoop] End game state update, gameTime = 102
+[recvPlayerGameTime] GAME_GAME_TIME p0;lat2,ct102,crcA89A,wlat210
+[gameLoop] Begin game state update, gameTime = 202
+[gameStateUpdate] map = "Sk-Startup", pseudorandom 32-bit integer = 0x8C7F0AAC, allocated = 1 0 0 0 0 0 0 0 0 0, position = 0 1 2 3 4 5 6 7 8 9
+[gameStateUpdate] Player 0 = "Player"
+[gameStateUpdate] Player 1 = "ML Empty Controller"
+[gameStateUpdate] Player 2 = "Nexus"
+[gameStateUpdate] Player 3 = "Nexus"
+[gameStateUpdate] Player 4 = "Nexus"
+[gameStateUpdate] Player 5 = "Nexus"
+[gameStateUpdate] Player 6 = "Nexus"
+[gameStateUpdate] Player 7 = "Nexus"
+[gameStateUpdate] Player 8 = "Nexus"
+[gameStateUpdate] Player 9 = "Nexus"
+[gameStateUpdate] Player 10 = "Nexus"
+[gameStateUpdate] My client version = master cb7d0e3
+===== END gameTime=202, 80 entries, CRC 0x32775E30 =====
