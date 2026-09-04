@@ -256,5 +256,8 @@ warzone*.*build
 /ml/warzone_tactical/.pytest_cache/
 /ml/warzone_tactical/.venv/
 /ml/warzone_tactical/*.egg-info/
-/ml/warzone_tactical/runs/
 /ml/warzone_tactical/throughput.json
+
+# Preserve tactical ML training runs in this fork.
+!/ml/warzone_tactical/runs/
+!/ml/warzone_tactical/runs/**
