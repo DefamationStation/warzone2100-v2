@@ -1,0 +1,67 @@
+{
+  "device": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "resolved_stats_path": "ml/warzone_tactical/runs/review5-revalidation-smoke-3/acceptance/seed-0/resolved-stats.json",
+  "resolved_stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "memory_limit_bytes": 14595312844,
+  "gate_decisions_per_second": 300000,
+  "selected_arenas": 8192,
+  "gate_passed": true,
+  "ppo_update_kind": "single_actor_backward_smoke",
+  "measurements": [
+    {
+      "arenas": 512,
+      "environment_updates_per_second": 12676.565744105446,
+      "unit_decisions_per_second": 50706.262976421785,
+      "hours_per_billion_decisions": 5.478174913164936,
+      "gpu_memory_bytes": 23142912,
+      "simulator_ms": 39.71812799863983,
+      "policy_forward_ms": 0.6706380003015511,
+      "ppo_update_ms": 1.2584999931277707,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 1024,
+      "environment_updates_per_second": 25597.909930570542,
+      "unit_decisions_per_second": 102391.63972228217,
+      "hours_per_billion_decisions": 2.71289510092032,
+      "gpu_memory_bytes": 37039616,
+      "simulator_ms": 39.3318979992182,
+      "policy_forward_ms": 0.6705980002880096,
+      "ppo_update_ms": 0.8578999986639246,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 2048,
+      "environment_updates_per_second": 52427.930283568174,
+      "unit_decisions_per_second": 209711.7211342727,
+      "hours_per_billion_decisions": 1.324569634331141,
+      "gpu_memory_bytes": 55049728,
+      "simulator_ms": 38.44622999924468,
+      "policy_forward_ms": 0.6162059988128021,
+      "ppo_update_ms": 0.7623999990755692,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 4096,
+      "environment_updates_per_second": 104432.5977581926,
+      "unit_decisions_per_second": 417730.3910327704,
+      "hours_per_billion_decisions": 0.664969041613222,
+      "gpu_memory_bytes": 89759232,
+      "simulator_ms": 38.52021199942101,
+      "policy_forward_ms": 0.7004259998211637,
+      "ppo_update_ms": 0.9144000068772584,
+      "projectile_drops": 0
+    },
+    {
+      "arenas": 8192,
+      "environment_updates_per_second": 203465.0050628964,
+      "unit_decisions_per_second": 813860.0202515856,
+      "hours_per_billion_decisions": 0.3413090345584359,
+      "gpu_memory_bytes": 161930752,
+      "simulator_ms": 39.13047000038205,
+      "policy_forward_ms": 1.1312679992988706,
+      "ppo_update_ms": 1.068400000804104,
+      "projectile_drops": 0
+    }
+  ]
+}

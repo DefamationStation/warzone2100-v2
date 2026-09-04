@@ -1,0 +1,8 @@
+skipping cudagraphs due to mutated inputs (10 instances). Found from : 
+   File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\simulator.py", line 780, in step
+    self.previous_body.copy_(self.body)
+
+skipping cudagraphs due to mutated inputs (10 instances). Found from : 
+   File "C:\Users\frenz\Documents\ChatGPT\warzone2100-v2\ml\warzone_tactical\warzone_tactical\simulator.py", line 780, in step
+    self.previous_body.copy_(self.body)
+

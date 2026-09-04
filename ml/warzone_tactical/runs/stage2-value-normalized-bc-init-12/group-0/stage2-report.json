@@ -1,0 +1,188 @@
+{
+  "contract": "warzone-tactical-v1",
+  "stage": 2,
+  "kind": "three_seed_screening",
+  "stats_sha256": "e8bf6c58c80132dff8c82f27c11a7f562bfce6712eca6ddaf4f69f81715acfa0",
+  "config": {
+    "arenas": 2048,
+    "rollout_steps": 8,
+    "iterations": 1500,
+    "max_episode_steps": 300,
+    "learning_rate": 0.0003,
+    "gamma": 0.997,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "target_kl": 0.015,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.002,
+    "retention_coefficient": 0.1,
+    "rehearsal_fraction": 0.2,
+    "range_objective_coefficient": 1.0,
+    "range_progress_coefficient": 0.1,
+    "heading_alignment_coefficient": 0.02,
+    "range_progress_start_coefficient": 0.1,
+    "heading_alignment_start_coefficient": 0.02,
+    "approach_anneal_iterations": 0,
+    "speed_settling_coefficient": 0.02,
+    "epochs": 4,
+    "minibatches": 4,
+    "max_grad_norm": 0.5,
+    "initial_log_std": -0.35,
+    "final_log_std": null,
+    "log_std_anneal_iterations": 0,
+    "clip_level_violation": false,
+    "heading_output_scale": 128,
+    "compile_simulator": true
+  },
+  "stage1_checkpoint_seed": 4,
+  "actor_initial_checkpoint": "runs\\stage2-bc-probe\\checkpoint.pt",
+  "evaluation_episodes_per_seed": 1000,
+  "evaluation_tier": "screening",
+  "scenario_seed_first": 0,
+  "scenario_seed_last_inclusive": 999,
+  "range_band": {
+    "lower": 512,
+    "lower_inclusive": false,
+    "upper": 1088,
+    "upper_inclusive": true
+  },
+  "primary_metric": "episode_time_in_band_fraction",
+  "scripted_rangekeeper_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.9219767451286316,
+    "median_time_in_band_fraction": 0.9399999976158142,
+    "p10_time_in_band_fraction": 0.7833333611488342,
+    "mean_normalized_band_violation": 0.04023345559835434,
+    "median_normalized_band_violation": 0.008964120410382748,
+    "mean_final_distance": 799.0530395507812
+  },
+  "do_nothing_v1": {
+    "episodes": 1000,
+    "mean_time_in_band_fraction": 0.33000001311302185,
+    "median_time_in_band_fraction": 0.0,
+    "p10_time_in_band_fraction": 0.0,
+    "mean_normalized_band_violation": 0.401154488325119,
+    "median_normalized_band_violation": 0.234375,
+    "mean_final_distance": 910.7290649414062
+  },
+  "seeds": [
+    {
+      "seed": 0,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.3418700098991394,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.4033582806587219,
+        "median_normalized_band_violation": 0.21009840071201324,
+        "mean_final_distance": 924.7710571289062
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.011869996786117554,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 281
+    },
+    {
+      "seed": 1,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.401154488325119,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 910.7290649414062
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 1103
+    },
+    {
+      "seed": 2,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.401111364364624,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 910.7040405273438
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 421
+    },
+    {
+      "seed": 3,
+      "evaluation": {
+        "episodes": 1000,
+        "mean_time_in_band_fraction": 0.33000001311302185,
+        "median_time_in_band_fraction": 0.0,
+        "p10_time_in_band_fraction": 0.0,
+        "mean_normalized_band_violation": 0.401154488325119,
+        "median_normalized_band_violation": 0.234375,
+        "mean_final_distance": 910.7290649414062
+      },
+      "stage1_clear_rate_before": 1.0,
+      "stage1_clear_rate_after": 1.0,
+      "stage1_regression": 0.0,
+      "prior_stage_retention": {
+        "stage": 1,
+        "clear_rate_before": 1.0,
+        "clear_rate_after": 1.0,
+        "regression": 0.0,
+        "maximum_allowed_regression": 0.05,
+        "gate_passed": true
+      },
+      "time_in_band_above_do_nothing": 0.0,
+      "continuous_seed_floor_passed": false,
+      "retention_gate_passed": true,
+      "cumulative_kl_stop_count": 198
+    }
+  ],
+  "mean_time_in_band_fraction": 0.33296751230955124,
+  "mean_time_in_band_above_do_nothing": 0.0029674991965293884,
+  "lowest_seed_time_in_band_fraction": 0.33000001311302185,
+  "mean_normalized_band_violation": 0.401694655418396,
+  "mean_gate_passed": false,
+  "five_point_seed_floor_passed": false,
+  "violation_gate_passed": false,
+  "retention_gate_passed": true,
+  "screening_gate_passed": false,
+  "promotion_gate_passed": null
+}
