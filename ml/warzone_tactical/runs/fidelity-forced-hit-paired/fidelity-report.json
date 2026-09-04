@@ -1,0 +1,69 @@
+{
+  "contract": "warzone-tactical-v1",
+  "trace": "ml\\warzone_tactical\\runs\\fidelity-forced-hit-paired\\actions-0.jsonl",
+  "collision_trace": true,
+  "movement": {
+    "ticks_checked": 100,
+    "rows_checked": 400,
+    "position_exact": true,
+    "body_heading_exact": true,
+    "speed_exact": true,
+    "body_exact": false,
+    "damage_exact": true,
+    "weapon_time_exact": true,
+    "maximum_position_error": 0,
+    "maximum_body_heading_error": 0,
+    "maximum_speed_error": 0,
+    "maximum_body_error": 1,
+    "maximum_damage_timing_error_ticks": 100,
+    "engine_damage_events": 64,
+    "simulator_damage_events": 64,
+    "engine_damage_events_by_droid": {
+      "160325": 16,
+      "160327": 16,
+      "160329": 16,
+      "160331": 16
+    },
+    "simulator_damage_events_by_droid": {
+      "160325": 16,
+      "160327": 16,
+      "160329": 16,
+      "160331": 16
+    },
+    "maximum_weapon_time_error": 0,
+    "first_mismatch": {
+      "tick_index": 9,
+      "game_time": 1002,
+      "droid_id": 160329,
+      "engine_position": [
+        4379,
+        7808
+      ],
+      "simulator_position": [
+        4379,
+        7808
+      ],
+      "position_error": 0,
+      "body_heading_error": 0,
+      "speed_error": 0,
+      "body_error": 1,
+      "engine_body": 335,
+      "simulator_body": 334,
+      "weapon_time_error": 0
+    }
+  },
+  "combat_order": {
+    "ticks_checked": 100,
+    "rows_checked": 400,
+    "turret_exact": true,
+    "cooldown_exact": true,
+    "shot_eligibility_exact": true,
+    "masks_exact": true,
+    "combat_order_alignment_mismatches": 0,
+    "combat_order_shot_mismatches": 0,
+    "maximum_target_distance_error": 0,
+    "first_mismatch": null
+  },
+  "movement_gate_passes": true,
+  "combat_order_gate_passes": true
+}
